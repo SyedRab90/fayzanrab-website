@@ -1,0 +1,264 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const lenses = [
+  {
+    roman: 'I',
+    title: 'Western Medicine',
+    desc: 'An MD from Emory and years of clinical training give Fayzan a rigorous, biology-grounded lens on how physiology shapes cognition, behavior, and decision-making under pressure.',
+    bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
+  },
+  {
+    roman: 'II',
+    title: 'Executive Coaching',
+    desc: 'Thousands of hours mapping behavioral patterns, navigating organizational dynamics, and unlocking leadership capacity in high-stakes environments. PCC certified through the ICF.',
+    bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
+  },
+  {
+    roman: 'III',
+    title: 'Technology & Business',
+    desc: 'As a former Google product leader and biotech operator, Fayzan understands the pressures of high-growth environments firsthand and brings that lived experience directly into the coaching relationship.',
+    bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
+  },
+];
+
+const credentials = [
+  { label: 'Education',      value: 'MD, Emory University School of Medicine' },
+  { label: 'Certification',  value: 'PCC, International Coaching Federation' },
+  { label: 'Experience',     value: 'Product Leader at Google · Series C Biotech' },
+  { label: 'Practice',       value: '1,000+ coaching hours with high performers' },
+];
+
+export default function About() {
+  return (
+    <div>
+
+      {/* ── HERO ── */}
+      <section style={{
+        display: 'flex', alignItems: 'flex-start',
+        position: 'relative', overflow: 'hidden',
+        paddingTop: '140px', paddingBottom: '100px',
+      }}>
+        {/* Orbs */}
+        <div className="orb" style={{ width:520, height:520, top:'5%', right:'-6%', background:'radial-gradient(circle,rgba(245,158,11,0.16) 0%,transparent 70%)' }} />
+        <div className="orb" style={{ width:380, height:380, bottom:'10%', left:'-5%', background:'radial-gradient(circle,rgba(234,108,30,0.13) 0%,transparent 70%)' }} />
+
+        <div className="container" style={{ position:'relative', zIndex:1, width:'100%' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'center' }} className="two-col">
+
+            {/* Left - text */}
+            <div>
+              <span className="label">About</span>
+              <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'16px' }}>
+                Fayzan Rab
+              </h1>
+              <p style={{ fontSize:'15px', color:'var(--text-3)', letterSpacing:'0.03em', marginBottom:'32px' }}>
+                MD, Emory University · PCC Certified · Former Google
+              </p>
+              <p style={{ fontSize:'15px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
+                I built a career at Google and in biotech. Successful by every measure, but quietly unfulfilled. That gap led me to medicine, then coaching, then the synthesis of both. The work is helping high performers find the same clarity.
+              </p>
+              <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
+                <Link to="/contact" className="btn btn-primary">Work with me →</Link>
+                <Link to="/coaching" className="btn btn-outline">See services</Link>
+              </div>
+            </div>
+
+            {/* Right - tinted image */}
+            <div style={{ position:'relative' }}>
+              {/* Ambient glow behind image */}
+              <div style={{
+                position:'absolute', inset:'-20px',
+                background:'radial-gradient(ellipse at center, rgba(245,158,11,0.20) 0%, transparent 70%)',
+                borderRadius:'28px',
+              }} />
+              <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden' }}>
+                <img
+                  src="/images/fayzan-cafe.jpg"
+                  alt="Fayzan Rab"
+                  style={{
+                    width:'100%',
+                    height:'440px',
+                    objectFit:'cover',
+                    objectPosition:'center 15%',
+                    display:'block',
+                  }}
+                />
+                {/* Warm amber tint overlay */}
+                <div style={{
+                  position:'absolute', inset:0,
+                  background:'linear-gradient(160deg, rgba(245,158,11,0.22) 0%, rgba(234,108,30,0.18) 40%, rgba(120,53,15,0.35) 100%)',
+                  mixBlendMode:'multiply',
+                }} />
+                {/* Bottom fade */}
+                <div style={{
+                  position:'absolute', bottom:0, left:0, right:0, height:'45%',
+                  background:'linear-gradient(to top, rgba(10,7,0,0.70) 0%, transparent 100%)',
+                }} />
+                {/* Badge */}
+                <div style={{
+                  position:'absolute', bottom:'22px', left:'22px',
+                  background:'rgba(10,7,0,0.55)',
+                  backdropFilter:'blur(12px)',
+                  border:'1px solid rgba(245,158,11,0.20)',
+                  borderRadius:'100px',
+                  padding:'8px 18px',
+                  display:'flex', alignItems:'center', gap:'10px',
+                }}>
+                  <span style={{ fontFamily:"'Instrument Serif',serif", fontSize:'18px', color:'var(--amber-lt)', fontStyle:'italic' }}>1,000+</span>
+                  <span style={{ fontSize:'11px', color:'var(--text-2)' }}>coaching hours</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── STORY + CREDENTIALS ── */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display:'grid', gridTemplateColumns:'1.3fr 1fr', gap:'64px', alignItems:'start' }} className="two-col">
+
+            {/* Story */}
+            <div>
+              <span className="label">The Story</span>
+              <h2 style={{ fontSize:'clamp(26px,3vw,38px)', fontWeight:500, marginBottom:'24px' }}>
+                I was doing everything right. And it wasn't enough.
+              </h2>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+                I worked in Silicon Valley as a product leader at Google and a Series C biotech startup. Successful by most measures. But unfulfilled and unclear on what the highest utilization of my gifts would actually look like.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+                I tried many things before stumbling into executive coaching, where I saw the potential to create something unique to my voice and craft. I went to medical school at Emory and accumulated thousands of hours coaching high performers.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>
+                The goal was never just to help people get unstuck. It was to synthesize the best of medicine and coaching, to fully unleash what each person is already capable of.
+              </p>
+            </div>
+
+            {/* Credentials */}
+            <div style={{
+              background:'linear-gradient(140deg, rgba(245,158,11,0.07) 0%, rgba(234,108,30,0.04) 100%)',
+              border:'1px solid var(--border-2)',
+              borderRadius:'20px',
+              padding:'32px 28px',
+            }}>
+              <div style={{
+                width:'48px', height:'48px', borderRadius:'12px',
+                background:'linear-gradient(135deg,#f59e0b,#ea6c1e)',
+                display:'flex', alignItems:'center', justifyContent:'center',
+                fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
+                fontSize:'18px', color:'#fff',
+                marginBottom:'28px',
+                boxShadow:'0 0 24px rgba(245,158,11,0.28)',
+              }}>FR</div>
+
+              {credentials.map(({ label, value }, i) => (
+                <div key={label} style={{
+                  paddingBottom: i < credentials.length - 1 ? '18px' : 0,
+                  marginBottom:  i < credentials.length - 1 ? '18px' : 0,
+                  borderBottom:  i < credentials.length - 1 ? '1px solid var(--border)' : 'none',
+                }}>
+                  <span style={{
+                    display:'block', fontSize:'10px', fontWeight:700,
+                    letterSpacing:'0.16em', textTransform:'uppercase',
+                    color:'var(--amber)', marginBottom:'5px',
+                  }}>{label}</span>
+                  <span style={{ fontSize:'14px', color:'var(--text)', lineHeight:'1.5' }}>{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TEDx image ── */}
+      <section style={{ padding:'0 32px 100px' }}>
+        <div className="container" style={{ padding:0 }}>
+          <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden' }}>
+            <img
+              src="/images/fayz-ted.jpg"
+              alt="Fayzan speaking at TEDxEmory"
+              style={{ width:'100%', height:'420px', objectFit:'cover', objectPosition:'center 30%' }}
+            />
+            {/* Warm gradient overlay */}
+            <div style={{
+              position:'absolute', inset:0,
+              background:'linear-gradient(135deg, rgba(245,158,11,0.18) 0%, rgba(120,53,15,0.45) 100%)',
+              mixBlendMode:'multiply',
+            }} />
+            <div style={{
+              position:'absolute', inset:0,
+              background:'linear-gradient(to top, rgba(10,7,0,0.72) 0%, transparent 55%)',
+            }} />
+            <div style={{ position:'absolute', bottom:'28px', left:'32px' }}>
+              <span style={{
+                display:'inline-block', padding:'6px 16px',
+                borderRadius:'100px', border:'1px solid rgba(245,158,11,0.30)',
+                background:'rgba(10,7,0,0.40)', backdropFilter:'blur(10px)',
+                fontSize:'10.5px', fontWeight:700, letterSpacing:'0.16em',
+                textTransform:'uppercase', color:'rgba(255,255,255,0.65)',
+              }}>TEDxEmory Speaker</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── THREE LENSES ── */}
+      <section style={{ padding:'0 0 100px' }}>
+        <div className="container">
+          <span className="label" style={{ display:'block', textAlign:'center' }}>Three Lenses</span>
+          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'48px' }}>
+            What informs the work
+          </h2>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'16px' }} className="three-col">
+            {lenses.map(({ roman, title, desc, bg }) => (
+              <div key={title} style={{
+                background:bg, borderRadius:'18px', padding:'32px 26px',
+                position:'relative', overflow:'hidden',
+                border:'1px solid rgba(245,158,11,0.12)',
+                transition:'transform 0.25s ease, box-shadow 0.25s ease',
+              }}
+              onMouseEnter={e=>{ e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 24px 56px rgba(245,158,11,0.14)'; }}
+              onMouseLeave={e=>{ e.currentTarget.style.transform='none'; e.currentTarget.style.boxShadow='none'; }}
+              >
+                <h3 style={{
+                  fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
+                  fontSize:'20px', fontWeight:500,
+                  color:'#fff', marginBottom:'12px',
+                }}>{title}</h3>
+                <p style={{ fontSize:'14px', lineHeight:'1.78', color:'rgba(255,255,255,0.58)' }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LOGO STRIP ── */}
+      <div className="logo-strip">
+        <div className="container">
+          <div className="logo-strip-inner">
+            {['MD, Emory University','PCC Certified (ICF)','Google','TEDx Speaker'].map(item => (
+              <span key={item} className="logo-strip-item">{item}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── CTA ── */}
+      <section style={{ padding:'80px 0 100px' }}>
+        <div className="container" style={{ textAlign:'center' }}>
+          <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'12px' }}>
+            Ready to explore working together?
+          </h2>
+          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'15px' }}>
+            Reach out to schedule an introductory conversation.
+          </p>
+          <Link to="/contact" className="btn btn-primary">Get in touch →</Link>
+        </div>
+      </section>
+
+    </div>
+  );
+}

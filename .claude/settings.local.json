@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:187ac80e-b04f-4111-bbd5-674c986d5e85-00-3pz786v1ib8ff.picard.replit.dev)",
+      "Bash(npm install:*)",
+      "Bash(curl -s http://localhost:3000)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs kill:*)",
+      "Bash(find ~/Desktop -maxdepth 2 \\\\\\(-name *fay* -o -name *ted* -o -name *rab* -o -name *coach* \\\\\\) -iname *.jpg -o -iname *.jpeg -o -iname *.png)",
+      "Bash(cp \"/Users/veronicaerick/Desktop/fayzan ted.jpg\" /Users/veronicaerick/Desktop/my-app/public/images/fayzan-ted.jpg)",
+      "Bash(cp \"/Users/veronicaerick/Desktop/fayz.jpg\" /Users/veronicaerick/Desktop/my-app/public/images/fayz.jpg)",
+      "Bash(cp \"/Users/veronicaerick/Desktop/fayzan close up.jpeg\" /Users/veronicaerick/Desktop/my-app/public/images/fayzan-closeup.jpeg)",
+      "Bash(cp \"/Users/veronicaerick/Desktop/fayz ted.jpg\" /Users/veronicaerick/Desktop/my-app/public/images/fayz-ted.jpg)",
+      "Bash(cp \"/Users/veronicaerick/Desktop/fayzan head.jpeg\" /Users/veronicaerick/Desktop/my-app/public/images/fayzan-head.jpeg)",
+      "WebFetch(domain:www.mindbloom.com)",
+      "WebFetch(domain:cdn.prod.website-files.com)",
+      "WebSearch"
+    ]
+  }
+}
