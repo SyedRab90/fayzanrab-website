@@ -34,24 +34,17 @@ export default function Navbar() {
       transition: 'all 0.3s ease',
     }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-        {/* Monogram mark */}
-        <div style={{
-          width: '34px', height: '34px',
-          borderRadius: '9px',
-          background: 'linear-gradient(135deg, #f59e0b, #ea6c1e)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          flexShrink: 0,
-          boxShadow: '0 0 16px rgba(245,158,11,0.35)',
-        }}>
-          <span style={{
-            fontFamily: "'Instrument Serif', serif",
-            fontStyle: 'italic',
-            fontSize: '15px',
-            fontWeight: 600,
-            color: '#fff',
-            lineHeight: 1,
-          }}>FR</span>
-        </div>
+        {/* Logo mark */}
+        <img
+          src="/images/fr-logo.png"
+          alt="FR"
+          style={{
+            width: '34px', height: '34px',
+            borderRadius: '9px',
+            flexShrink: 0,
+            objectFit: 'cover',
+          }}
+        />
         {/* Wordmark */}
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
           <span style={{
