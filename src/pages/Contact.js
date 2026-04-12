@@ -31,7 +31,8 @@ export default function Contact() {
     setStatus('sending');
     const data = new FormData(e.target);
     try {
-      const res = await fetch('https://formspree.io/f/mojpzzra', {
+      data.append('access_key', '259e130e-54f7-44e8-b606-8ad132f8d832');
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
