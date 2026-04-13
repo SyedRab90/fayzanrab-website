@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 const testimonials = [
   {
     id:1, colorClass:'t1',
-    text:'Fayzan meets you where you are with incredible empathy and lack of judgement. Working with him allowed me to <strong>rapidly step into the best version of myself in a way that feels genuine and lasting.</strong>',
-    name:'Aatash Parikh', role:'Founder at Inkwire',
+    text:'Working with Fayzan allowed me to rapidly step into <strong>the best version of myself in a way that feels genuine and lasting.</strong>',
+    name:'Aatash Parikh', role:'Founder, Inkwire',
     avatar:'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
     id:2, colorClass:'t2',
     text:"Fayzan's mix of sharp questions, frameworks, and calm nature helped me turn a half-formed idea into a business. I went <strong>from employee to founder with an owner's mindset.</strong>",
-    name:'Tayyab Rizvi', role:'Founder & CEO',
+    name:'Tayyab Rizvi', role:'Founder, Scalemates',
     avatar:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
     id:3, colorClass:'t3',
-    text:'Fayzan brings a rare combination of <strong>intellectual rigor and genuine compassion.</strong> His medical background gives him a uniquely grounded perspective on leadership transformation.',
-    name:'Dr. Joe Tabar', role:'Chief Medical Officer',
+    text:'Fayzan really helped me shift my trajectory with both a practical and emotional/energetic approach. I am very grateful for the experience, grateful for his <strong>kindness, honesty and intuition.</strong>',
+    name:'Dr. Joe Tafur', role:'Founder, Modern Spirit',
     avatar:'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
     id:4, colorClass:'t4',
     text:'I came to Fayzan feeling like there were so many things wrong with me. After the first month, <strong>it was life-changing.</strong> He helped me realize I should be coming from a place of love, not doubt.',
-    name:'Simon', role:'Doctor & Director',
+    name:'Somon', role:'Finance at Databricks',
     avatar:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
@@ -34,26 +34,26 @@ const testimonials = [
   },
   {
     id:6, colorClass:'t6',
-    text:'Working with Fayzan changed the way I navigate ambiguity. He asks questions no one else thinks to ask, then <strong>stays in the discomfort with you until something real emerges.</strong>',
-    name:'J.P. Hutchins', role:'General Partner at Metaversal',
+    text:"Fayzan was the right coach for me because I saw his strength as an organizer — inspiring leadership as well as leading. <strong>I knew I wanted to work with someone who is walking his own talk.</strong>",
+    name:'J.P. Hutchins', role:'Senior Engineer at Intercreate',
     avatar:'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
     id:7, colorClass:'t1',
-    text:'Fayzan helped me find clarity at a moment when everything felt noisy. He <strong>listened with a depth that most people don\'t,</strong> and what he reflected back changed how I thought about leadership.',
-    name:'Malena Lopez-Sotelo', role:'VP of Operations',
+    text:'This has been more like <strong>leadership coaching</strong> than life and career coaching. <strong>Grown more here than I have at any other point in my life.</strong> Fayzan is a true companion in this journey.',
+    name:'Derek Evanson', role:'Director at Netflix',
     avatar:'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
     id:8, colorClass:'t2',
-    text:"Fayzan doesn't give you confidence. <strong>He helps you find it yourself.</strong> That's a much more durable outcome. I've worked with coaches before, but nothing like this.",
-    name:'Derek Evansen', role:'Executive Director',
+    text:"Coaching has felt like <strong>a jet pack for my life.</strong> It's been more useful than almost anything else I could have invested in this past year. It's hard to find people who can balance empathy, humor, and no-bullshit directness.",
+    name:'Deepan Mehta', role:'Co-Founder Bramble (YC-24), Former Senior PM at LinkedIn',
     avatar:'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face&auto=format',
   },
   {
     id:9, colorClass:'t3',
-    text:"Fayzan's unique value is at the intersection of the worlds he's been in: <strong>business, entrepreneurship, medical, psychiatric, spiritual and holistic.</strong>",
-    name:'Andrew Barkal', role:'Founder & Chairman',
+    text:"Fayzan's unique value is at the intersection of the worlds he has been in — business, entrepreneurship, medical, psychiatric, and the psychedelic medicine work. <strong>All of that is wrapped in a spirituality and vulnerability that is rare.</strong>",
+    name:'Andrew Barkat', role:'AI Health PM, Google',
     avatar:'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face&auto=format',
   },
 ];
@@ -70,7 +70,7 @@ export default function Coaching() {
         <div className="container" style={{ position:'relative', zIndex:1, textAlign:'center', maxWidth:'780px', margin:'0 auto' }}>
           <span className="label">Coaching</span>
           <h1 style={{ fontSize:'clamp(34px,5vw,66px)', fontWeight:500, marginBottom:'22px' }}>
-            For founders at{' '}
+            For founders and senior operators at{' '}
             <span style={{
               background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
@@ -166,14 +166,13 @@ export default function Coaching() {
             <p style={{ color:'rgba(255,255,255,0.62)', marginBottom:'28px', position:'relative', fontSize:'15px' }}>
               Reach out to schedule an introductory conversation.
             </p>
-            <a href="mailto:fayzanrabcoaching@gmail.com" style={{
-              display:'inline-block', padding:'13px 28px', borderRadius:'100px',
-              background:'rgba(255,255,255,0.13)',
-              border:'1.5px solid rgba(255,255,255,0.25)',
-              backdropFilter:'blur(10px)',
+            <Link to="/contact" style={{
+              display:'inline-block', padding:'13px 32px', borderRadius:'100px',
+              background:'linear-gradient(135deg, #f59e0b, #ea6c1e)',
               color:'#fff', fontSize:'14px', fontWeight:600,
               textDecoration:'none', position:'relative',
-            }}>fayzanrabcoaching@gmail.com</a>
+              boxShadow:'0 0 28px rgba(245,158,11,0.40)',
+            }}>Start a conversation →</Link>
           </div>
         </div>
       </section>

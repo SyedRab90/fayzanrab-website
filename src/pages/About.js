@@ -173,33 +173,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── TEDx image ── */}
+      {/* ── TEDx Video ── */}
       <section style={{ padding:'0 32px 100px' }}>
         <div className="container" style={{ padding:0 }}>
-          <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden' }}>
-            <img
-              src="/images/fayz-ted.jpg"
-              alt="Fayzan speaking at TEDxEmory"
-              style={{ width:'100%', height:'420px', objectFit:'cover', objectPosition:'center 30%' }}
-            />
-            {/* Warm gradient overlay */}
+          <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden', background:'#000' }}>
+            {/* 16:9 aspect ratio wrapper */}
+            <div style={{ position:'relative', paddingBottom:'56.25%', height:0 }}>
+              <iframe
+                src="https://www.youtube.com/embed/V4lxlZBYHjY"
+                title="Faith, Psychedelics, and Mental Health — Fayzan Rab at TEDxEmory"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position:'absolute', top:0, left:0,
+                  width:'100%', height:'100%',
+                  border:'none',
+                }}
+              />
+            </div>
+            {/* Label beneath */}
             <div style={{
-              position:'absolute', inset:0,
-              background:'linear-gradient(135deg, rgba(245,158,11,0.18) 0%, rgba(120,53,15,0.45) 100%)',
-              mixBlendMode:'multiply',
-            }} />
-            <div style={{
-              position:'absolute', inset:0,
-              background:'linear-gradient(to top, rgba(10,7,0,0.72) 0%, transparent 55%)',
-            }} />
-            <div style={{ position:'absolute', bottom:'28px', left:'32px' }}>
+              padding:'16px 24px',
+              background:'rgba(10,7,0,0.80)',
+              backdropFilter:'blur(10px)',
+              display:'flex', alignItems:'center', justifyContent:'space-between',
+              flexWrap:'wrap', gap:'8px',
+            }}>
               <span style={{
-                display:'inline-block', padding:'6px 16px',
+                fontSize:'13px', color:'rgba(255,255,255,0.65)', fontWeight:500,
+              }}>Faith, Psychedelics, and Mental Health</span>
+              <span style={{
+                display:'inline-block', padding:'4px 14px',
                 borderRadius:'100px', border:'1px solid rgba(245,158,11,0.30)',
-                background:'rgba(10,7,0,0.40)', backdropFilter:'blur(10px)',
-                fontSize:'10.5px', fontWeight:700, letterSpacing:'0.16em',
-                textTransform:'uppercase', color:'rgba(255,255,255,0.65)',
-              }}>TEDxEmory Speaker</span>
+                background:'rgba(245,158,11,0.08)',
+                fontSize:'10px', fontWeight:700, letterSpacing:'0.16em',
+                textTransform:'uppercase', color:'rgba(245,158,11,0.80)',
+              }}>TEDxEmory · February 2024</span>
             </div>
           </div>
         </div>
