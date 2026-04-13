@@ -44,63 +44,6 @@ const publications = [
   },
 ];
 
-const media = [
-  {
-    outlet: 'NPR',
-    outlet_full: 'National Public Radio',
-    show: 'All Things Considered',
-    date: 'January 3, 2025',
-    title: 'Muslims navigate the tension between psychedelics for mental health and Koran teachings.',
-    url: 'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings',
-    type: 'Radio',
-  },
-  {
-    outlet: 'Newsweek',
-    outlet_full: 'Newsweek',
-    show: null,
-    date: 'September 13, 2024',
-    title: 'Millions of Americans with depression could benefit from magic mushrooms: Study.',
-    url: 'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328',
-    type: 'Press',
-  },
-  {
-    outlet: 'U.S. News',
-    outlet_full: 'U.S. News & World Report',
-    show: null,
-    date: 'September 13, 2024',
-    title: 'Over 5 million Americans could benefit if psilocybin approved for depression: Study.',
-    url: 'https://www.usnews.com/news/health-news/articles/2024-09-13/over-5-million-americans-could-benefit-if-psilocybin-approved-for-depression-study',
-    type: 'Press',
-  },
-  {
-    outlet: 'Forbes',
-    outlet_full: 'Forbes',
-    show: null,
-    date: 'December 5, 2024',
-    title: '4 leadership lessons from America\'s psychiatrist.',
-    url: 'https://www.forbes.com/sites/tarungalagali/2024/12/05/4-leadership-lessons-from-americas-psychiatrist',
-    type: 'Press',
-  },
-  {
-    outlet: 'GPB',
-    outlet_full: 'Georgia Public Broadcasting',
-    show: null,
-    date: 'November 7, 2024',
-    title: 'Emory study estimates millions with depression could benefit from psychedelic mushrooms.',
-    url: 'https://www.gpb.org/news/2024/11/07/emory-study-estimates-millions-depression-could-benefit-psychedelic-mushrooms',
-    type: 'Radio / Press',
-  },
-  {
-    outlet: 'Emory News',
-    outlet_full: 'Emory News Center',
-    show: null,
-    date: 'November 1, 2024',
-    title: 'Emory researchers estimate millions with depression could benefit from psilocybin-assisted therapy.',
-    url: 'https://news.emory.edu/stories/2024/11/hs_psychedelic_eligibility_01-11-2024/story.html',
-    type: 'Press',
-  },
-];
-
 const podcasts = [
   {
     show: 'Psychedelics Today',
