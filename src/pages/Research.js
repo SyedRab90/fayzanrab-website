@@ -178,7 +178,7 @@ const talks = [
     location: 'Atlanta, GA',
     date: 'February 17, 2024',
     title: 'Faith, psychedelics, and mental health.',
-    note: 'TEDx Talk · Assigned as required reading in Harvard Law School's "Psychedelics, Law, and Religion" (Spring 2025)',
+    note: "TEDx Talk · Assigned as required reading in Harvard Law School's \"Psychedelics, Law, and Religion\" (Spring 2025)",
   },
   {
     venue: 'Georgetown University',
