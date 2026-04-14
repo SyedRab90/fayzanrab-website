@@ -189,7 +189,7 @@ export default function Home() {
                 <img
                   src="/images/fayzan-rita.jpeg"
                   alt="Fayzan Rab"
-                  style={{ width:'100%', height:'460px', objectFit:'cover', objectPosition:'center 20%' }}
+                  style={{ width:'100%', height:'460px', objectFit:'cover', objectPosition:'center top' }}
                 />
                 {/* Warm amber tint */}
                 <div style={{
@@ -288,10 +288,10 @@ export default function Home() {
               fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
               fontWeight:400, lineHeight:'1.42', color:'var(--text)', marginBottom:'20px',
             }}>
-              "One of the most transformative investments I made in my adult life."
+              "Coaching has felt like a jet pack for my life. More useful than almost anything else I could have invested in this past year."
             </p>
             <p style={{ fontSize:'11px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
-              Neil Sethi, Senior PM at Spotify
+              Deepan Mehta, Co-Founder, Struct AI (YC S24)
             </p>
           </div>
 

@@ -79,9 +79,6 @@ export default function About() {
                   alt="Fayzan Rab"
                   style={{
                     width:'100%',
-                    height:'440px',
-                    objectFit:'cover',
-                    objectPosition:'center 15%',
                     display:'block',
                   }}
                 />

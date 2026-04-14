@@ -121,6 +121,10 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(140deg, #fbbf24 0%, #f59e0b 40%, #b45309 100%);
   border: 1px solid rgba(255,255,255,0.12);
 }
+.service-card-3 {
+  background: linear-gradient(140deg, #ea6c1e 0%, #c2410c 45%, #7c2d12 100%);
+  border: 1px solid rgba(255,255,255,0.12);
+}
 /* Inner light bloom */
 .service-card::before {
   content: '';
