@@ -8,7 +8,7 @@ const publications = [
     title: 'Attitudes of U.S. Muslims toward psychedelics.',
     journal: 'Psychedelic Medicine',
     url: 'https://doi.org/10.1089/psymed.2024.0044',
-    tag: 'Qualitative Research',
+    tag: 'Quantitative Research',
   },
   {
     authors: 'Rab, S.F. & Mangal, J.P.',
@@ -17,6 +17,14 @@ const publications = [
     journal: 'Psychiatric Times',
     url: 'https://www.psychiatrictimes.com/view/agree-to-disagree-a-collaborative-perspective-from-a-treatment-team-and-disagreeing-patient',
     tag: 'Clinical Ethics',
+  },
+  {
+    authors: 'Rab, S.F.',
+    year: '2024',
+    title: 'What are the economic and public health implications of psychedelic therapies?',
+    journal: 'Journal of Psychedelic and Psychoactive Drug Research',
+    url: 'https://doi.org/10.61373/pp024k.0046',
+    tag: 'Health Policy',
   },
   {
     authors: 'Rab, S.F., Raison, C.L., & Marseille, E.',
@@ -34,13 +42,28 @@ const publications = [
     url: 'https://doi.org/10.1371/journal.pone.0296071',
     tag: 'PLOS ONE',
   },
+];
+
+const activeStudies = [
   {
-    authors: 'Rab, S.F.',
-    year: '2024',
-    title: 'What are the economic and public health implications of psychedelic therapies?',
-    journal: 'Journal of Psychedelic and Psychoactive Drug Research',
-    url: 'https://doi.org/10.61373/pp024k.0046',
-    tag: 'Health Policy',
+    title: 'Muslim Lived Experiences with Psychedelics: A Mixed Methods Study of Understanding and Integration',
+    status: 'Manuscript in Progress',
+    statusColor: 'rgba(251,191,36,0.70)',
+  },
+  {
+    title: 'An Estimate of the Number of People with PTSD in the United States Eligible for MDMA-Assisted Therapy',
+    status: 'Manuscript in Progress',
+    statusColor: 'rgba(251,191,36,0.70)',
+  },
+  {
+    title: 'Psychedelics and Leadership: An Ecological Investigation in Attitudes, Perceptions, and Motivations Amongst Executives, Entrepreneurs, and Institutional Investors',
+    status: 'Recruitment Open',
+    statusColor: 'rgba(52,211,153,0.75)',
+  },
+  {
+    title: 'Outcomes and Measures in Psychedelic-Assisted Therapy Trials for Patients with Serious Illness: A Systematic Review to Inform Core Outcome Measures',
+    status: 'Manuscript Submitted',
+    statusColor: 'rgba(147,197,253,0.75)',
   },
 ];
 
@@ -50,8 +73,9 @@ const podcasts = [
     episode: 'PT 562',
     host: 'Joe Moore',
     date: 'April 1, 2025',
-    title: 'Fayzan Rab — Emory University, psychedelics, and cultural inclusion in mental health.',
+    title: 'Spirituality, public health, and burnout.',
     url: 'https://psychedelicstoday.com/2025/04/01/fayzan-rab-emory-university',
+    icon: '🎙',
   },
   {
     show: "Emory's Health is Everything",
@@ -60,30 +84,43 @@ const podcasts = [
     date: 'February 7, 2025',
     title: 'Psychedelics and the future of mental health.',
     url: 'https://healthiseverything.buzzsprout.com/',
-  },
-  {
-    show: 'Exploring Health',
-    episode: null,
-    host: 'Dr. Charles Raison',
-    date: 'February 10, 2025',
-    title: 'Psychedelics and the Future of Mental Health: Science, Faith, Hype and Healthcare Innovation.',
-    url: 'https://exploringhealth.org/2025/02/10/psychedelics-and-the-future-of-mental-health-science-faith-hype-and-healthcare-innovation-with-fayzan-rob/',
+    icon: '🎙',
   },
   {
     show: 'The Transformational Leader',
     episode: 'Mid-week Ep 82',
-    host: 'Adam Quiney',
+    host: 'Adam Quiney JD MCC',
     date: null,
     title: 'On medicine, ontology, and the work of a leader.',
     url: 'https://adamquiney.com/mid-week-ep-82-fayzan-rab/',
+    icon: '🎙',
   },
   {
     show: 'The Mandala Podcast',
     episode: null,
+    host: 'Tarun Galagali and Dr. Tom Insel',
+    date: 'December 5, 2024',
+    title: 'Leadership lessons from America\'s psychiatrist.',
+    url: 'https://redcircle.com/shows/mandala-podcast',
+    icon: '🎙',
+  },
+  {
+    show: 'Harvard Law School — Psymposia',
+    episode: null,
+    host: null,
+    date: 'March 2025',
+    title: 'Sacramental practice and legal recognition.',
+    url: 'https://youtu.be/23iquPxz0NU?t=1260',
+    icon: '▶',
+  },
+  {
+    show: 'The Portfolio Path',
+    episode: null,
     host: null,
     date: null,
-    title: 'On managing fear, social support, and the power of reinvention.',
-    url: 'https://redcircle.com/shows/mandala-podcast',
+    title: 'From Googler to psychedelics researcher and executive coach.',
+    url: 'https://www.theportfoliopath.com/newsletter/googler-mdma-researcher-executive-coach-fayzan-rab',
+    icon: '📰',
   },
 ];
 
@@ -160,7 +197,7 @@ export default function Research() {
         <div className="orb" style={{ width:400, height:400, bottom:'-10%', left:'-6%', background:'radial-gradient(circle,rgba(234,108,30,0.10) 0%,transparent 70%)' }} />
 
         <div className="container" style={{ position:'relative', zIndex:1, textAlign:'center', maxWidth:'760px', margin:'0 auto' }}>
-          <span className="label">Research & Recognition</span>
+          <span className="label">Research & Media</span>
           <h1 style={{ fontSize:'clamp(34px,5vw,62px)', fontWeight:500, marginBottom:'22px' }}>
             Peer-reviewed science and{' '}
             <span style={{
@@ -186,13 +223,13 @@ export default function Research() {
             gap:'12px 24px',
           }}>
             {[
-              { name:'NPR', sub:'All Things Considered', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
-              { name:'Newsweek', sub:null, url:'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328' },
-              { name:'Forbes', sub:null, url:'https://www.forbes.com/sites/tarungalagali/2024/12/05/4-leadership-lessons-from-americas-psychiatrist' },
-              { name:'U.S. News', sub:'& World Report', url:'https://www.usnews.com/news/health-news/articles/2024-09-13/over-5-million-americans-could-benefit-if-psilocybin-approved-for-depression-study' },
-              { name:'GPB', sub:'Georgia Public Broadcasting', url:'https://www.gpb.org/news/2024/11/07/emory-study-estimates-millions-depression-could-benefit-psychedelic-mushrooms' },
-              { name:'Emory News', sub:'Emory University', url:'https://news.emory.edu/stories/2024/11/hs_psychedelic_eligibility_01-11-2024/story.html' },
-            ].map(({ name, sub, url }) => (
+              { name:'NPR', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
+              { name:'Newsweek', url:'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328' },
+              { name:'Forbes', url:'https://www.forbes.com/sites/tarungalagali/2024/12/05/4-leadership-lessons-from-americas-psychiatrist' },
+              { name:'U.S. News', url:'https://www.usnews.com/news/health-news/articles/2024-09-13/over-5-million-americans-could-benefit-if-psilocybin-approved-for-depression-study' },
+              { name:'GPB', url:'https://www.gpb.org/news/2024/11/07/emory-study-estimates-millions-depression-could-benefit-psychedelic-mushrooms' },
+              { name:'Emory News', url:'https://news.emory.edu/stories/2024/11/hs_psychedelic_eligibility_01-11-2024/story.html' },
+            ].map(({ name, url }) => (
               <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{
                 display:'flex', flexDirection:'column', alignItems:'center',
                 padding:'18px 28px',
@@ -212,7 +249,6 @@ export default function Research() {
                   color:'rgba(253,248,237,0.72)',
                   lineHeight:1.1,
                 }}>{name}</span>
-                {sub && <span style={{ fontSize:'9px', color:'var(--text-3)', marginTop:'4px', letterSpacing:'0.06em', textAlign:'center' }}>{sub}</span>}
               </a>
             ))}
           </div>
@@ -226,19 +262,49 @@ export default function Research() {
         position:'relative', overflow:'hidden',
       }}>
         <div className="orb" style={{ width:400, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
-        <div className="container" style={{ position:'relative', zIndex:1, maxWidth:'680px', margin:'0 auto', textAlign:'center' }}>
+        <div className="container" style={{ position:'relative', zIndex:1, maxWidth:'700px', margin:'0 auto', textAlign:'center' }}>
           <span className="label">Institutional Affiliation</span>
           <h2 style={{ fontSize:'clamp(22px,2.6vw,32px)', fontWeight:500, marginBottom:'14px' }}>
             Emory Center for Psychedelics and Spirituality
           </h2>
           <p style={{ color:'var(--text-2)', lineHeight:'1.80', fontSize:'15px' }}>
-            Researcher under Drs. Dunlop and Zarrabi at Emory's interdisciplinary psychedelics research center, with studies spanning Muslim attitudes toward psychedelic-assisted therapy, economic eligibility modeling for psilocybin, chaplains in psychedelic sessions, and measurement tools for adverse events.
+            Researcher under Drs. Dunlop and Zarrabi. Active studies include Muslim attitudes and lived experiences with psychedelics, MDMA-assisted therapy eligibility for PTSD, and a landmark study on psychedelics and leadership amongst executives and founders. Also co-investigated four psychedelic clinical trials at the Aquilino Cancer Institute, and sub-investigator on a systematic review of outcome measures in psychedelic-assisted therapy for serious illness.
           </p>
         </div>
       </section>
 
-      {/* ── PUBLICATIONS ── */}
+      {/* ── ACTIVE STUDIES ── */}
       <section className="section">
+        <div className="container">
+          <span className="label">Current Work</span>
+          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Active Studies</h2>
+          <div style={{ display:'flex', flexDirection:'column', gap:'12px' }}>
+            {activeStudies.map((s, i) => (
+              <div key={i} style={{
+                display:'flex', alignItems:'flex-start', justifyContent:'space-between',
+                gap:'20px', flexWrap:'wrap',
+                padding:'22px 28px',
+                background:'rgba(20,12,2,0.45)',
+                border:'1px solid rgba(245,158,11,0.10)',
+                borderRadius:'14px',
+              }}>
+                <p style={{ fontSize:'14.5px', color:'var(--text)', lineHeight:'1.55', flex:1, minWidth:'240px', margin:0 }}>{s.title}</p>
+                <span style={{
+                  fontSize:'10px', fontWeight:700, letterSpacing:'0.12em',
+                  textTransform:'uppercase', color:s.statusColor,
+                  background:'rgba(255,255,255,0.04)',
+                  border:`1px solid ${s.statusColor}`,
+                  padding:'4px 12px', borderRadius:'100px',
+                  whiteSpace:'nowrap', flexShrink:0,
+                }}>{s.status}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PUBLICATIONS ── */}
+      <section style={{ padding:'0 0 100px' }}>
         <div className="container">
           <span className="label">Peer-Reviewed Work</span>
           <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Publications</h2>
@@ -283,11 +349,11 @@ export default function Research() {
         </div>
       </section>
 
-      {/* ── PODCASTS ── */}
+      {/* ── PODCASTS & MEDIA ── */}
       <section style={{ padding:'0 0 100px' }}>
         <div className="container">
           <span className="label">Conversations</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Podcast Appearances</h2>
+          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Podcasts & Media</h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(300px,1fr))', gap:'16px' }}>
             {podcasts.map((p, i) => (
               <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{
@@ -307,8 +373,8 @@ export default function Research() {
                     background:'linear-gradient(135deg,rgba(245,158,11,0.22),rgba(234,108,30,0.18))',
                     border:'1px solid rgba(245,158,11,0.20)',
                     display:'flex', alignItems:'center', justifyContent:'center',
-                    fontSize:'16px', flexShrink:0,
-                  }}>🎙</div>
+                    fontSize:'15px', flexShrink:0,
+                  }}>{p.icon}</div>
                   <div>
                     <div style={{ fontSize:'13px', fontWeight:600, color:'var(--text)' }}>{p.show}</div>
                     {p.episode && <div style={{ fontSize:'11px', color:'var(--text-3)' }}>{p.episode}</div>}
@@ -340,11 +406,9 @@ export default function Research() {
                 padding:'24px 0',
                 borderBottom: i < talks.length - 1 ? '1px solid rgba(245,158,11,0.08)' : 'none',
               }}>
-                {/* Date column */}
                 <div style={{ minWidth:'100px', flexShrink:0 }}>
                   <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{t.date || ''}</span>
                 </div>
-                {/* Content */}
                 <div style={{ flex:1 }}>
                   <p style={{ fontSize:'15px', color:'var(--text)', fontWeight:500, marginBottom:'4px', lineHeight:'1.45' }}>{t.title}</p>
                   <div style={{ display:'flex', gap:'8px', flexWrap:'wrap', alignItems:'center' }}>

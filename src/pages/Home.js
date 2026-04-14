@@ -140,7 +140,7 @@ export default function Home() {
             <Link to="/about" className="btn btn-outline">Learn more</Link>
           </div>
           <div className="stats-badge">
-            <span className="stats-number">1,000+</span>
+            <span className="stats-number">2,000+</span>
             <span className="stats-label">coaching hours with high performers</span>
           </div>
         </div>
@@ -150,45 +150,29 @@ export default function Home() {
       <div className="logo-strip">
         <div className="container">
           <div className="logo-strip-inner">
-            {['MD, Emory University','PCC Certified (ICF)','TEDx Speaker','1,000+ Coaching Hours'].map(item => (
+            {['MD, Emory University','PCC Certified (ICF)','TEDx Speaker','2,000+ Coaching Hours'].map(item => (
               <span key={item} className="logo-strip-item">{item}</span>
             ))}
           </div>
         </div>
       </div>
 
-      {/* ── MEDIA STRIP ── */}
+      {/* ── CLIENT COMPANIES STRIP ── */}
       <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(245,158,11,0.07)' }}>
         <div className="container">
           <p style={{ textAlign:'center', fontSize:'9.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'20px' }}>
-            As Featured In
+            Clients come from
           </p>
-          <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'8px 20px', flexWrap:'wrap' }}>
-            {[
-              { name:'NPR', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
-              { name:'Newsweek', url:'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328' },
-              { name:'Forbes', url:'https://www.forbes.com/sites/tarungalagali/2024/12/05/4-leadership-lessons-from-americas-psychiatrist' },
-              { name:'U.S. News & World Report', url:'https://www.usnews.com/news/health-news/articles/2024-09-13/over-5-million-americans-could-benefit-if-psilocybin-approved-for-depression-study' },
-              { name:'Georgia Public Broadcasting', url:'https://www.gpb.org/news/2024/11/07/emory-study-estimates-millions-depression-could-benefit-psychedelic-mushrooms' },
-            ].map(({ name, url }) => (
-              <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{
+          <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'8px 24px', flexWrap:'wrap' }}>
+            {['Google','Anthropic','Netflix','Microsoft','Databricks','LinkedIn','Spotify'].map(name => (
+              <span key={name} style={{
                 fontFamily:"'Instrument Serif',serif",
                 fontStyle:'italic',
                 fontSize:'15px',
                 color:'rgba(253,248,237,0.38)',
-                textDecoration:'none',
-                transition:'color 0.2s ease',
                 whiteSpace:'nowrap',
-              }}
-              onMouseEnter={e=>{ e.currentTarget.style.color='rgba(245,158,11,0.75)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.color='rgba(253,248,237,0.38)'; }}
-              >{name}</a>
+              }}>{name}</span>
             ))}
-            <Link to="/research" style={{
-              fontSize:'9.5px', fontWeight:700, letterSpacing:'0.12em',
-              textTransform:'uppercase', color:'var(--amber)',
-              textDecoration:'none', marginLeft:'4px',
-            }}>More →</Link>
           </div>
         </div>
       </div>
@@ -203,9 +187,9 @@ export default function Home() {
               <div className="orb" style={{ width:340, height:340, top:'-40px', left:'-40px', background:'radial-gradient(circle,rgba(245,158,11,0.14) 0%,transparent 70%)', zIndex:0 }} />
               <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden', zIndex:1 }}>
                 <img
-                  src="/images/fayz.jpg"
+                  src="/images/fayzan-rita.jpeg"
                   alt="Fayzan Rab"
-                  style={{ width:'100%', height:'460px', objectFit:'cover', objectPosition:'top center' }}
+                  style={{ width:'100%', height:'460px', objectFit:'cover', objectPosition:'center 20%' }}
                 />
                 {/* Warm amber tint */}
                 <div style={{
@@ -317,19 +301,19 @@ export default function Home() {
               {
                 quote: 'Working with Fayzan allowed me to rapidly step into the best version of myself in a way that feels genuine and lasting.',
                 name: 'Aatash Parikh', role: 'Founder, Inkwire',
-                avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face&auto=format',
+                avatar: '/images/headshots/aatash-parikh.webp',
                 bar: 'linear-gradient(90deg,#f59e0b,#ea6c1e)',
               },
               {
                 quote: "Fayzan's mix of sharp questions, frameworks, and calm nature helped me turn a half-formed idea into a business. I went from employee to founder with an owner's mindset.",
                 name: 'Tayyab Rizvi', role: 'Founder, Scalemates',
-                avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face&auto=format',
+                avatar: '/images/headshots/tayyab-rizvi.jpeg',
                 bar: 'linear-gradient(90deg,#fbbf24,#f59e0b)',
               },
               {
                 quote: "Fayzan's unique value is at the intersection of the worlds he has been in — business, entrepreneurship, medical, psychiatric, and the psychedelic medicine work. All of that is wrapped in a spirituality and vulnerability that is rare.",
-                name: 'Andrew Barkat', role: 'AI Health PM, Google',
-                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face&auto=format',
+                name: 'Andrew Barakat', role: 'AI Health PM, Google',
+                avatar: '/images/headshots/andrew-barakat.jpeg',
                 bar: 'linear-gradient(90deg,#ea6c1e,#fbbf24)',
               },
             ].map((t, i) => (

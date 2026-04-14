@@ -18,7 +18,7 @@ export default function Navbar() {
     { to: '/', label: 'Home' },
     { to: '/coaching', label: 'Coaching' },
     { to: '/about', label: 'About' },
-    { to: '/research', label: 'Research' },
+    { to: '/research', label: 'Research & Media' },
     { to: '/contact', label: 'Contact' },
   ];
 

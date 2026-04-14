@@ -6,55 +6,67 @@ const testimonials = [
     id:1, colorClass:'t1',
     text:'Working with Fayzan allowed me to rapidly step into <strong>the best version of myself in a way that feels genuine and lasting.</strong>',
     name:'Aatash Parikh', role:'Founder, Inkwire',
-    avatar:'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face&auto=format',
+    avatar:'/images/headshots/aatash-parikh.webp',
   },
   {
     id:2, colorClass:'t2',
     text:"Fayzan's mix of sharp questions, frameworks, and calm nature helped me turn a half-formed idea into a business. I went <strong>from employee to founder with an owner's mindset.</strong>",
     name:'Tayyab Rizvi', role:'Founder, Scalemates',
-    avatar:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face&auto=format',
+    avatar:'/images/headshots/tayyab-rizvi.jpeg',
   },
   {
     id:3, colorClass:'t3',
     text:'Fayzan really helped me shift my trajectory with both a practical and emotional/energetic approach. I am very grateful for the experience, grateful for his <strong>kindness, honesty and intuition.</strong>',
     name:'Dr. Joe Tafur', role:'Founder, Modern Spirit',
-    avatar:'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face&auto=format',
+    avatar:'/images/headshots/joe-tafur.webp',
   },
   {
     id:4, colorClass:'t4',
     text:'I came to Fayzan feeling like there were so many things wrong with me. After the first month, <strong>it was life-changing.</strong> He helped me realize I should be coming from a place of love, not doubt.',
-    name:'Somon', role:'Finance at Databricks',
-    avatar:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face&auto=format',
+    name:'Somon Nader', role:'Finance at Databricks',
+    avatar:'/images/headshots/somon-nader.jpeg',
   },
   {
     id:5, colorClass:'t5',
     text:'One of the <strong>most transformative investments I made in my adult life.</strong>',
     name:'Neil Sethi', role:'Senior PM at Spotify',
-    avatar:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face&auto=format',
+    avatar:'/images/headshots/neil-sethi.jpeg',
   },
   {
     id:6, colorClass:'t6',
     text:"Fayzan was the right coach for me because I saw his strength as an organizer — inspiring leadership as well as leading. <strong>I knew I wanted to work with someone who is walking his own talk.</strong>",
     name:'J.P. Hutchins', role:'Senior Engineer at Intercreate',
-    avatar:'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=80&h=80&fit=crop&crop=face&auto=format',
+    avatar:'/images/headshots/jp-hutchins.jpg',
   },
   {
     id:7, colorClass:'t1',
     text:'This has been more like <strong>leadership coaching</strong> than life and career coaching. <strong>Grown more here than I have at any other point in my life.</strong> Fayzan is a true companion in this journey.',
     name:'Derek Evanson', role:'Director at Netflix',
-    avatar:'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face&auto=format',
+    avatar:'/images/headshots/derek-evanson.jpeg',
   },
   {
     id:8, colorClass:'t2',
     text:"Coaching has felt like <strong>a jet pack for my life.</strong> It's been more useful than almost anything else I could have invested in this past year. It's hard to find people who can balance empathy, humor, and no-bullshit directness.",
-    name:'Deepan Mehta', role:'Co-Founder Bramble (YC-24), Former Senior PM at LinkedIn',
-    avatar:'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face&auto=format',
+    name:'Deepan Mehta', role:'Co-Founder Struct AI (YC-24), Former Senior PM at LinkedIn',
+    avatar:'/images/headshots/deepan-mehta.jpeg',
   },
   {
     id:9, colorClass:'t3',
     text:"Fayzan's unique value is at the intersection of the worlds he has been in — business, entrepreneurship, medical, psychiatric, and the psychedelic medicine work. <strong>All of that is wrapped in a spirituality and vulnerability that is rare.</strong>",
-    name:'Andrew Barkat', role:'AI Health PM, Google',
-    avatar:'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face&auto=format',
+    name:'Andrew Barakat', role:'AI Health PM, Google',
+    avatar:'/images/headshots/andrew-barakat.jpeg',
+  },
+  {
+    id:10, colorClass:'t4',
+    text:"I have known Fayzan for the better part of a decade and had him work with me as a coach for the last year. My sessions with him really tap into my power as a founder. I go in expecting to talk tactics and walk away with what's really blocking me from solving those problems already. <strong>I can't count the number of breakthroughs I have had.</strong> It's a truly great investment for myself and my company.",
+    name:'Kartik Shastri', role:'Co-Founder & CEO, Menda Health',
+    avatar:'/images/headshots/kartik-shastri.jpeg',
+  },
+  {
+    id:11, colorClass:'t5',
+    text:"Fayzan created the safe space to explore and practice putting my development first — an area that I often put on the backburner as the eldest daughter of immigrants. I can easily say that my life and how I feel have completely taken a 180 (which is WILD). <strong>I remember saying my soul was tired in one of our first conversations, and I no longer feel that way.</strong>",
+    name:'Malena Lopez-Sotelo', role:'Lead AI PMM at Microsoft',
+    avatar:'/images/headshots/malena-lopez.jpg',
   },
 ];
 
@@ -76,8 +88,8 @@ export default function Coaching() {
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
             }}>inflection points.</span>
           </h1>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.75', maxWidth:'540px', margin:'0 auto 36px' }}>
-            I work with tech founders navigating strategic pivots, cofounder tension, or identity shifts clouding their clarity in a rapidly evolving ecosystem.
+          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.75', maxWidth:'560px', margin:'0 auto 36px' }}>
+            I work with tech founders, senior operators, and high performers navigating strategic pivots, leadership transitions, co-founder tension, or the identity questions that come after a major win — or loss.
           </p>
           <Link to="/contact" className="btn btn-primary">Schedule a conversation →</Link>
         </div>
@@ -111,7 +123,7 @@ export default function Coaching() {
         <div className="container">
           <span className="label" style={{ display:'block', textAlign:'center' }}>What's Offered</span>
           <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>Services</h2>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'18px' }} className="two-col">
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
             <div className="service-card service-card-1">
               <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>1:1 Coaching</span>
               <h3>1:1 Coaching</h3>
@@ -121,7 +133,13 @@ export default function Coaching() {
             <div className="service-card service-card-2">
               <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>Co-Founder Mediation</span>
               <h3>Co-Founder Mediation</h3>
-              <p>A structured process for founding teams in conflict. Individual and joint sessions, designed to restore trust and find a clear path forward. For teams navigating real tension.</p>
+              <p>A structured process for founding teams in conflict. Individual and joint sessions designed to restore trust and find a clear path forward. For teams navigating real tension.</p>
+              <Link to="/contact" className="learn-more">Get started →</Link>
+            </div>
+            <div className="service-card service-card-3">
+              <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>After the Exit</span>
+              <h3>After the Exit</h3>
+              <p>You built it. It sold. And now, for the first time in years, there's no product to ship and no obvious north star. The disorientation after a major exit is real — and almost no one prepares you for it.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
           </div>

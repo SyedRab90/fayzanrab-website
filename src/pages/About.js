@@ -25,8 +25,9 @@ const lenses = [
 const credentials = [
   { label: 'Education',      value: 'MD, Emory University School of Medicine' },
   { label: 'Certification',  value: 'PCC, International Coaching Federation' },
+  { label: 'Training',       value: 'IFS Level 1 (BIPOC) · Accomplishment Coaching LDP' },
   { label: 'Experience',     value: 'Product Leader at Google · Series C Biotech' },
-  { label: 'Practice',       value: '1,000+ coaching hours with high performers' },
+  { label: 'Practice',       value: '2,000+ coaching hours with high performers' },
 ];
 
 export default function About() {
@@ -105,7 +106,7 @@ export default function About() {
                   padding:'8px 18px',
                   display:'flex', alignItems:'center', gap:'10px',
                 }}>
-                  <span style={{ fontFamily:"'Instrument Serif',serif", fontSize:'18px', color:'var(--amber-lt)', fontStyle:'italic' }}>1,000+</span>
+                  <span style={{ fontFamily:"'Instrument Serif',serif", fontSize:'18px', color:'var(--amber-lt)', fontStyle:'italic' }}>2,000+</span>
                   <span style={{ fontSize:'11px', color:'var(--text-2)' }}>coaching hours</span>
                 </div>
               </div>
@@ -248,7 +249,7 @@ export default function About() {
       <div className="logo-strip">
         <div className="container">
           <div className="logo-strip-inner">
-            {['MD, Emory University','PCC Certified (ICF)','Google','TEDx Speaker'].map(item => (
+            {['MD, Emory University','PCC Certified (ICF)','Google','TEDx Speaker','2,000+ Coaching Hours'].map(item => (
               <span key={item} className="logo-strip-item">{item}</span>
             ))}
           </div>
