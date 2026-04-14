@@ -25,8 +25,9 @@ const lenses = [
 const credentials = [
   { label: 'Education',      value: 'MD, Emory University School of Medicine' },
   { label: 'Certification',  value: 'PCC, International Coaching Federation' },
-  { label: 'Training',       value: 'IFS Level 1 (BIPOC) · Accomplishment Coaching LDP' },
-  { label: 'Experience',     value: 'Product Leader at Google · Series C Biotech' },
+  { label: 'Training',       value: 'IFS Level 1 (BIPOC) · Accomplishment Coaching Leadership Development Program' },
+  { label: 'Experience',     value: 'Product Leader at Google · 1st Product Hire at Mindstrong Health (Series C)' },
+  { label: 'Clinical Research', value: 'Sub-Investigator · Aquilino Cancer Institute (Psychedelic Clinical Trials)' },
   { label: 'Practice',       value: '2,000+ coaching hours with high performers' },
 ];
 

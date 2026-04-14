@@ -46,24 +46,28 @@ const publications = [
 
 const activeStudies = [
   {
+    title: 'An Investigation of the Motivations, Perceptions, and Attitudes Toward Psychedelics Among Entrepreneurs, Executives, and Investors',
+    authors: 'Rab, S.F., Zelner, B., Gaglani, S., Alonso, N., & Palitsky, R.',
+    status: 'Recruitment Open',
+    statusColor: 'rgba(52,211,153,0.75)',
+  },
+  {
     title: 'Muslim Lived Experiences with Psychedelics: A Mixed Methods Study of Understanding and Integration',
+    authors: 'Rab, S.F., Choksi, J., Dhaaban, L., Kak, A., Salako, Z., Ahmad, S.S., & Palitsky, R.',
     status: 'Manuscript in Progress',
     statusColor: 'rgba(251,191,36,0.70)',
   },
   {
     title: 'An Estimate of the Number of People with PTSD in the United States Eligible for MDMA-Assisted Therapy',
+    authors: 'Rab, S.F. & Marseille, E.',
     status: 'Manuscript in Progress',
     statusColor: 'rgba(251,191,36,0.70)',
   },
   {
-    title: 'Psychedelics and Leadership: An Ecological Investigation in Attitudes, Perceptions, and Motivations Amongst Executives, Entrepreneurs, and Institutional Investors',
-    status: 'Recruitment Open',
-    statusColor: 'rgba(52,211,153,0.75)',
-  },
-  {
     title: 'Outcomes and Measures in Psychedelic-Assisted Therapy Trials for Patients with Serious Illness: A Systematic Review to Inform Core Outcome Measures',
-    status: 'Manuscript Submitted',
-    statusColor: 'rgba(147,197,253,0.75)',
+    authors: 'Zarrabi, A.J., Oyerinde, E., Kavalieratos, D., Rab, S.F., Barokas, G., Garcia, A.C., Beaussant, Y., Maia, L.O., & Dunlop, B.W.',
+    status: 'Manuscript in Progress',
+    statusColor: 'rgba(251,191,36,0.70)',
   },
 ];
 
@@ -268,13 +272,13 @@ export default function Research() {
             Emory Center for Psychedelics and Spirituality
           </h2>
           <p style={{ color:'var(--text-2)', lineHeight:'1.80', fontSize:'15px' }}>
-            Researcher under Drs. Dunlop and Zarrabi. Active studies include Muslim attitudes and lived experiences with psychedelics, MDMA-assisted therapy eligibility for PTSD, and a landmark study on psychedelics and leadership amongst executives and founders. Also co-investigated four psychedelic clinical trials at the Aquilino Cancer Institute, and sub-investigator on a systematic review of outcome measures in psychedelic-assisted therapy for serious illness.
+            Researcher under Drs. Dunlop and Zarrabi. Current work includes a landmark investigation of psychedelic use among executives, entrepreneurs, and investors — alongside studies on Muslim attitudes and lived experiences with psychedelics, and MDMA-assisted therapy eligibility for PTSD. Also co-investigated psychedelic clinical trials at the Aquilino Cancer Institute, and sub-investigator on a systematic review of outcome measures in psychedelic-assisted therapy for serious illness.
           </p>
         </div>
       </section>
 
       {/* ── ACTIVE STUDIES ── */}
-      <section className="section">
+      <section style={{ padding:'100px 0 100px' }}>
         <div className="container">
           <span className="label">Current Work</span>
           <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Active Studies</h2>
@@ -288,7 +292,10 @@ export default function Research() {
                 border:'1px solid rgba(245,158,11,0.10)',
                 borderRadius:'14px',
               }}>
-                <p style={{ fontSize:'14.5px', color:'var(--text)', lineHeight:'1.55', flex:1, minWidth:'240px', margin:0 }}>{s.title}</p>
+                <div style={{ flex:1, minWidth:'240px' }}>
+                  <p style={{ fontSize:'14.5px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
+                  {s.authors && <p style={{ fontSize:'12px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
+                </div>
                 <span style={{
                   fontSize:'10px', fontWeight:700, letterSpacing:'0.12em',
                   textTransform:'uppercase', color:s.statusColor,

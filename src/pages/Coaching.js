@@ -126,20 +126,20 @@ export default function Coaching() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
             <div className="service-card service-card-1">
               <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>1:1 Coaching</span>
-              <h3>1:1 Coaching</h3>
-              <p>Ongoing, high-touch engagement. The relationship deepens over time, and so does the work. Individual sessions designed to surface what's actually happening and find a clear path forward.</p>
+              <h3>You're high-performing. And quietly unfulfilled.</h3>
+              <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture, holds you to what matters, and stays with you through the complexity. This is that.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-2">
               <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>Co-Founder Mediation</span>
-              <h3>Co-Founder Mediation</h3>
-              <p>A structured process for founding teams in conflict. Individual and joint sessions designed to restore trust and find a clear path forward. For teams navigating real tension.</p>
+              <h3>The relationship with your co-founder is fraying.</h3>
+              <p>Decisions are slower. Conversations are tenser. You're not sure if the problem is the business or each other. A structured process — individual and joint sessions — designed to surface what's actually happening, restore trust, and find a clear path forward before the relationship becomes the company's biggest liability.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-3">
               <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>After the Exit</span>
-              <h3>After the Exit</h3>
-              <p>You built it. It sold. And now, for the first time in years, there's no product to ship and no obvious north star. The disorientation after a major exit is real — and almost no one prepares you for it.</p>
+              <h3>You sold. Now what?</h3>
+              <p>For the first time in years, there's no product to ship and no obvious north star. The disorientation after a major exit is real — and almost no one prepares you for it. What you need isn't another advisor with a framework. It's someone who can help you figure out what you actually want from here.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
           </div>
