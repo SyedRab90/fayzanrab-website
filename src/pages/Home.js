@@ -160,7 +160,7 @@ export default function Home() {
       {/* ── CLIENT COMPANIES STRIP ── */}
       <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(245,158,11,0.07)' }}>
         <div className="container">
-          <p style={{ textAlign:'center', fontSize:'9.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'20px' }}>
+          <p style={{ textAlign:'center', fontSize:'11px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'20px' }}>
             Clients come from
           </p>
           <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'8px 24px', flexWrap:'wrap' }}>
@@ -169,7 +169,7 @@ export default function Home() {
                 fontFamily:"'Instrument Serif',serif",
                 fontStyle:'italic',
                 fontSize:'15px',
-                color:'rgba(253,248,237,0.38)',
+                color:'rgba(253,248,237,0.62)',
                 whiteSpace:'nowrap',
               }}>{name}</span>
             ))}
@@ -189,6 +189,8 @@ export default function Home() {
                 <img
                   src="/images/fayzan-rita.jpeg"
                   alt="Fayzan Rab"
+                  loading="lazy"
+                  decoding="async"
                   style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'50% 20%' }}
                 />
                 {/* Warm amber tint */}
@@ -255,13 +257,13 @@ export default function Home() {
           </h2>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'18px' }} className="two-col">
             <div className="service-card service-card-1">
-              <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>1:1 Coaching</span>
+              <span style={{ display:'inline-block', fontSize:'11px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>1:1 Coaching</span>
               <h3>You're high-performing. And quietly unfulfilled.</h3>
               <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
             </div>
             <div className="service-card service-card-2">
-              <span style={{ display:'inline-block', fontSize:'10px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.55)', marginBottom:'14px' }}>Co-Founder Mediation</span>
+              <span style={{ display:'inline-block', fontSize:'11px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Mediation</span>
               <h3>The relationship with your co-founder is fraying.</h3>
               <p>Decisions are slower. Conversations are tenser. A structured process — individual and joint sessions — designed to surface what's actually happening and find a clear path forward.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
@@ -347,7 +349,7 @@ export default function Home() {
                 }}>{t.quote}</p>
                 {/* Person */}
                 <div style={{ display:'flex', alignItems:'center', gap:'11px' }}>
-                  <img src={t.avatar} alt={t.name} style={{
+                  <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" style={{
                     width:'38px', height:'38px', borderRadius:'50%',
                     objectFit:'cover', border:'1.5px solid rgba(245,158,11,0.22)',
                     flexShrink:0,
@@ -382,7 +384,7 @@ export default function Home() {
           }}>
             <div className="orb" style={{ width:300, height:300, top:'-80px', right:'-60px', background:'radial-gradient(circle,rgba(255,255,255,0.07) 0%,transparent 70%)' }} />
             <div className="orb" style={{ width:240, height:240, bottom:'-60px', left:'5%', background:'radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%)' }} />
-            <span className="label" style={{ color:'rgba(255,255,255,0.50)' }}>Start here</span>
+            <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
             <h2 style={{ fontSize:'clamp(24px,3.5vw,40px)', color:'#fff', marginBottom:'10px', position:'relative', fontWeight:500 }}>
               Ready to begin?
             </h2>

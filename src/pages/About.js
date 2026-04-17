@@ -78,6 +78,8 @@ export default function About() {
                 <img
                   src="/images/fayzan-cafe.jpg"
                   alt="Fayzan Rab"
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width:'100%',
                     display:'block',
@@ -236,7 +238,7 @@ export default function About() {
                   fontSize:'20px', fontWeight:500,
                   color:'#fff', marginBottom:'12px',
                 }}>{title}</h3>
-                <p style={{ fontSize:'14px', lineHeight:'1.78', color:'rgba(255,255,255,0.58)' }}>{desc}</p>
+                <p style={{ fontSize:'14px', lineHeight:'1.78', color:'rgba(255,255,255,0.82)' }}>{desc}</p>
               </div>
             ))}
           </div>

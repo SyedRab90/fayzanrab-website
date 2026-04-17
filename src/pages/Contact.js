@@ -6,7 +6,7 @@ const labelStyle = {
   fontWeight: 700,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: 'rgba(253,248,237,0.45)',
+  color: 'rgba(253,248,237,0.65)',
   marginBottom: '8px',
 };
 
@@ -19,7 +19,7 @@ const inputStyle = {
   fontFamily: 'inherit',
   fontSize: '15px',
   padding: '14px 16px',
-  outline: 'none',
+  outline: 'none', /* :focus-visible override in index.css */
   transition: 'border-color 0.2s',
 };
 

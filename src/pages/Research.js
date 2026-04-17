@@ -50,6 +50,7 @@ const activeStudies = [
     authors: 'Rab, S.F., Zelner, B., Gaglani, S., Alonso, N., & Palitsky, R.',
     status: 'Recruitment Open',
     statusColor: 'rgba(52,211,153,0.75)',
+    url: 'https://survey.qualtrics.emory.edu/jfe/form/SV_0liig6iQs6hn4sC',
   },
   {
     title: 'Muslim Lived Experiences with Psychedelics: A Mixed Methods Study of Understanding and Integration',
@@ -135,6 +136,8 @@ const talks = [
     date: 'June 18, 2025',
     title: 'MOSAIC: New research on Muslim, Jewish, and Christian Psychedelic America.',
     note: null,
+    url: 'https://virtualtrip.maps.org/video/mosaic-new-research-on-muslim-jewish-christian-psychedelic-america/',
+    urlNote: 'Talk begins at 11:00',
   },
   {
     venue: 'Harvard Law School',
@@ -221,11 +224,7 @@ export default function Research() {
           <p style={{ textAlign:'center', fontSize:'10.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'36px' }}>
             As Featured In
           </p>
-          <div style={{
-            display:'flex', flexWrap:'wrap',
-            justifyContent:'center', alignItems:'center',
-            gap:'12px 24px',
-          }}>
+          <div className="featured-in-grid">
             {[
               { name:'NPR', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
               { name:'Newsweek', url:'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328' },
@@ -241,7 +240,6 @@ export default function Research() {
                 border:'1px solid rgba(245,158,11,0.10)',
                 borderRadius:'14px',
                 textDecoration:'none',
-                minWidth:'120px',
                 transition:'all 0.22s ease',
               }}
               onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.28)'; e.currentTarget.style.background='rgba(245,158,11,0.05)'; }}
@@ -295,9 +293,18 @@ export default function Research() {
                 <div style={{ flex:1, minWidth:'240px' }}>
                   <p style={{ fontSize:'14.5px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
                   {s.authors && <p style={{ fontSize:'12px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
+                  {s.url && (
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
+                      display:'inline-flex', alignItems:'center', gap:'4px',
+                      marginTop:'8px',
+                      fontSize:'12px', fontWeight:700, letterSpacing:'0.08em',
+                      textTransform:'uppercase', color:'var(--amber)',
+                      textDecoration:'none',
+                    }}>Enroll in study →</a>
+                  )}
                 </div>
                 <span style={{
-                  fontSize:'10px', fontWeight:700, letterSpacing:'0.12em',
+                  fontSize:'11px', fontWeight:700, letterSpacing:'0.12em',
                   textTransform:'uppercase', color:s.statusColor,
                   background:'rgba(255,255,255,0.04)',
                   border:`1px solid ${s.statusColor}`,
@@ -340,9 +347,9 @@ export default function Research() {
                       <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.year}</span>
                       {p.tag && (
                         <span style={{
-                          fontSize:'10px', fontWeight:700, letterSpacing:'0.10em',
-                          textTransform:'uppercase', color:'rgba(245,158,11,0.65)',
-                          background:'rgba(245,158,11,0.08)',
+                          fontSize:'11px', fontWeight:700, letterSpacing:'0.10em',
+                          textTransform:'uppercase', color:'var(--amber)',
+                          background:'rgba(245,158,11,0.10)',
                           padding:'2px 8px', borderRadius:'100px',
                         }}>{p.tag}</span>
                       )}
@@ -418,6 +425,16 @@ export default function Research() {
                 </div>
                 <div style={{ flex:1 }}>
                   <p style={{ fontSize:'15px', color:'var(--text)', fontWeight:500, marginBottom:'4px', lineHeight:'1.45' }}>{t.title}</p>
+                  {t.url && (
+                    <div style={{ display:'flex', alignItems:'center', gap:'8px', marginBottom:'4px' }}>
+                      <a href={t.url} target="_blank" rel="noopener noreferrer" style={{
+                        fontSize:'11.5px', fontWeight:700, letterSpacing:'0.08em',
+                        textTransform:'uppercase', color:'var(--amber)',
+                        textDecoration:'none',
+                      }}>Watch →</a>
+                      {t.urlNote && <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{t.urlNote}</span>}
+                    </div>
+                  )}
                   <div style={{ display:'flex', gap:'8px', flexWrap:'wrap', alignItems:'center' }}>
                     <span style={{
                       fontSize:'11px', fontWeight:700, letterSpacing:'0.10em',
@@ -426,8 +443,8 @@ export default function Research() {
                     <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{t.location}</span>
                     {t.note && (
                       <span style={{
-                        fontSize:'10px', color:'rgba(245,158,11,0.60)',
-                        background:'rgba(245,158,11,0.07)',
+                        fontSize:'11px', color:'var(--amber)',
+                        background:'rgba(245,158,11,0.08)',
                         padding:'2px 8px', borderRadius:'100px',
                       }}>{t.note}</span>
                     )}
