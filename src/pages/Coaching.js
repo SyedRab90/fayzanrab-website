@@ -96,8 +96,7 @@ export default function Coaching() {
       </section>
 
       {/* ── IRREPLACEABLE ── */}
-      <section style={{
-        padding:'100px 0',
+      <section className="section" style={{
         background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
         position:'relative', overflow:'hidden',
       }}>
@@ -156,7 +155,7 @@ export default function Coaching() {
               <div key={t.id} className={`testimonial-card ${t.colorClass}`}>
                 <p className="testimonial-text" dangerouslySetInnerHTML={{ __html: t.text }} />
                 <div style={{ display:'flex', alignItems:'center', gap:'10px' }}>
-                  <img src={t.avatar} alt={t.name} className="testimonial-avatar" loading="lazy" decoding="async" />
+                  <img src={t.avatar} alt={t.name} className="testimonial-avatar" loading="lazy" decoding="async" width="38" height="38" />
                   <div>
                     <div className="testimonial-name">{t.name}</div>
                     <div className="testimonial-role">{t.role}</div>

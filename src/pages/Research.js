@@ -143,8 +143,8 @@ const talks = [
     venue: 'Harvard Law School',
     location: 'Cambridge, MA',
     date: 'March 5, 2025',
-    title: 'Psychedelics and Monotheistic Traditions Symposium.',
-    note: 'Psychedelics and Monotheistic Traditions Symposium',
+    title: 'Psychedelics and Monotheistic Traditions',
+    note: null,
     url: 'https://youtu.be/23iquPxz0NU?t=1260',
     urlNote: 'Talk begins at 21:00',
   },
@@ -168,6 +168,7 @@ const talks = [
     date: 'February 17, 2024',
     title: 'Faith, psychedelics, and mental health.',
     note: "TEDx Talk · Assigned as required reading in Harvard Law School's \"Psychedelics, Law, and Religion\" (Spring 2025)",
+    url: 'https://youtu.be/V4lxlZBYHjY',
   },
   {
     venue: 'Georgetown University',
@@ -223,9 +224,7 @@ export default function Research() {
       {/* ── AS FEATURED IN ── */}
       <section style={{ padding:'0 0 80px' }}>
         <div className="container">
-          <p style={{ textAlign:'center', fontSize:'10.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'36px' }}>
-            As Featured In
-          </p>
+          <span className="label" style={{ display:'block', textAlign:'center', marginBottom:'36px' }}>As Featured In</span>
           <div className="featured-in-grid">
             {[
               { name:'NPR', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
@@ -278,7 +277,7 @@ export default function Research() {
       </section>
 
       {/* ── ACTIVE STUDIES ── */}
-      <section style={{ padding:'100px 0 100px' }}>
+      <section className="section" style={{ paddingBottom:'100px' }}>
         <div className="container">
           <span className="label">Current Work</span>
           <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Active Studies</h2>

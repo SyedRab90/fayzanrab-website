@@ -183,6 +183,7 @@ export default function About() {
               <iframe
                 src="https://www.youtube.com/embed/V4lxlZBYHjY"
                 title="Faith, Psychedelics, and Mental Health — Fayzan Rab at TEDxEmory"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 style={{

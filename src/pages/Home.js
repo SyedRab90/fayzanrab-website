@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* ── IRREPLACEABLE ── */}
-      <section style={{ position:'relative', overflow:'hidden', padding:'100px 0' }}>
+      <section className="section" style={{ position:'relative', overflow:'hidden' }}>
         <div className="orb" style={{ width:600, height:400, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.08) 0%,transparent 70%)' }} />
         <div className="container" style={{ position:'relative', zIndex:1, textAlign:'center', maxWidth:'700px', margin:'0 auto' }}>
           <span className="label">The Irreplaceable Part</span>
@@ -273,9 +273,8 @@ export default function Home() {
       </section>
 
       {/* ── TESTIMONIALS TEASER ── */}
-      <section style={{
+      <section className="section" style={{
         position:'relative', overflow:'hidden',
-        padding:'100px 0',
         background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
       }}>
         <div className="orb" style={{ width:500, height:400, top:'-60px', right:'-80px', background:'radial-gradient(ellipse,rgba(245,158,11,0.10) 0%,transparent 70%)' }} />
@@ -349,7 +348,7 @@ export default function Home() {
                 }}>{t.quote}</p>
                 {/* Person */}
                 <div style={{ display:'flex', alignItems:'center', gap:'11px' }}>
-                  <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" style={{
+                  <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" width="38" height="38" style={{
                     width:'38px', height:'38px', borderRadius:'50%',
                     objectFit:'cover', border:'1.5px solid rgba(245,158,11,0.22)',
                     flexShrink:0,
