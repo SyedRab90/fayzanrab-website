@@ -58,11 +58,11 @@ export default function Navbar() {
             lineHeight: 1,
           }}>Fayzan Rab</span>
           <span style={{
-            fontSize: '9.5px',
+            fontSize: '11px',
             fontWeight: 700,
-            letterSpacing: '0.14em',
+            letterSpacing: '0.13em',
             textTransform: 'uppercase',
-            color: 'rgba(245,158,11,0.65)',
+            color: 'rgba(245,158,11,0.80)',
             lineHeight: 1,
           }}>MD · PCC</span>
         </div>

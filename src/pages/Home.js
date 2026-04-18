@@ -168,7 +168,7 @@ export default function Home() {
               <span key={name} style={{
                 fontFamily:"'Instrument Serif',serif",
                 fontStyle:'italic',
-                fontSize:'15px',
+                fontSize:'18px',
                 color:'rgba(253,248,237,0.62)',
                 whiteSpace:'nowrap',
               }}>{name}</span>
@@ -388,7 +388,7 @@ export default function Home() {
             <h2 style={{ fontSize:'clamp(24px,3.5vw,40px)', color:'#fff', marginBottom:'10px', position:'relative', fontWeight:500 }}>
               Ready to begin?
             </h2>
-            <p style={{ color:'rgba(255,255,255,0.65)', marginBottom:'30px', position:'relative', fontSize:'15px' }}>
+            <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'15px' }}>
               Reach out to start a conversation.
             </p>
             <Link to="/contact" style={{

@@ -186,7 +186,7 @@ img { max-width: 100%; display: block; }
 .logo-strip { padding: 24px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .logo-strip-inner { display: flex; justify-content: center; gap: 52px; flex-wrap: wrap; }
 .logo-strip-item {
-  font-size: 11px; font-weight: 700;
+  font-size: 12px; font-weight: 700;
   letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3);
 }
 

@@ -143,8 +143,10 @@ const talks = [
     venue: 'Harvard Law School',
     location: 'Cambridge, MA',
     date: 'March 5, 2025',
-    title: 'Islam and psychedelic practice.',
+    title: 'Psychedelics and Monotheistic Traditions Symposium.',
     note: 'Psychedelics and Monotheistic Traditions Symposium',
+    url: 'https://youtu.be/23iquPxz0NU?t=1260',
+    urlNote: 'Talk begins at 21:00',
   },
   {
     venue: 'American Academy of Religion Annual Meeting',

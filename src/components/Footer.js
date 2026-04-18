@@ -21,7 +21,7 @@ export default function Footer() {
             <div style={{ display:'flex', alignItems:'baseline', gap:'6px', marginBottom:'5px' }}>
               <span style={{ fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontSize:'17px', color:'var(--text)' }}>Fayzan Rab</span>
               <span style={{
-                fontSize:'10px', fontWeight:700, letterSpacing:'0.1em',
+                fontSize:'11px', fontWeight:700, letterSpacing:'0.1em',
                 background:'linear-gradient(135deg,#f59e0b,#ea6c1e)',
                 WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
               }}>MD PCC</span>
@@ -40,14 +40,6 @@ export default function Footer() {
               onMouseLeave={e=>{ e.currentTarget.style.color='var(--text-3)'; }}
               >{label}</Link>
             ))}
-            <a href="mailto:fayzanrabcoaching@gmail.com" style={{
-              padding:'6px 14px', borderRadius:'100px',
-              fontSize:'13px', color:'var(--text-3)',
-              textDecoration:'none', transition:'color 0.2s',
-            }}
-            onMouseEnter={e=>{ e.currentTarget.style.color='var(--amber)'; }}
-            onMouseLeave={e=>{ e.currentTarget.style.color='var(--text-3)'; }}
-            >Email</a>
           </nav>
         </div>
       </div>

@@ -157,12 +157,6 @@ export default function Contact() {
             </form>
           )}
 
-          <p style={{ marginTop: '28px', fontSize: '13px', color: 'var(--text-3)', textAlign: 'center' }}>
-            Or email directly:{' '}
-            <a href="mailto:fayzanrabcoaching@gmail.com" style={{ color: 'var(--amber)' }}>
-              fayzanrabcoaching@gmail.com
-            </a>
-          </p>
         </div>
       </section>
 
