@@ -126,14 +126,14 @@ export default function Home() {
             lineHeight:1.10, maxWidth:'680px',
             marginBottom:'24px',
           }}>
-            For leadership that transcends{' '}
+            Leadership that transcends{' '}
             <span style={{
               background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
             }}>optimization.</span>
           </h1>
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'460px', marginBottom:'36px' }}>
-            I'm Fayzan Rab — executive coach, physician, and psychedelic researcher. I work with a small number of founders and executives ready to lead from their own intelligence.
+            I'm Fayzan Rab — executive coach, physician, and psychedelic researcher. I work with a small number of founders and executives ready to lead from their inner wisdom.
           </p>
           <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
             <Link to="/contact" className="btn btn-primary">Work with me →</Link>
