@@ -418,7 +418,7 @@ export default function Research() {
             {talks.map((t, i) => (
               <div key={i} style={{
                 display:'flex', gap:'28px', alignItems:'flex-start',
-                padding:'24px 0',
+                padding:'16px 0',
                 borderBottom: i < talks.length - 1 ? '1px solid rgba(245,158,11,0.08)' : 'none',
               }}>
                 <div style={{ minWidth:'100px', flexShrink:0 }}>
