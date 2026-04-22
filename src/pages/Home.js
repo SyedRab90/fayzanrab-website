@@ -120,20 +120,20 @@ export default function Home() {
         <div className="container" style={{ position:'relative', zIndex:2, paddingTop:'130px', paddingBottom:'100px' }}>
           <span className="label">Executive Coach · Physician · TEDx Speaker</span>
           <h1 style={{
-            fontSize:'clamp(40px,5.5vw,76px)',
+            fontSize:'clamp(28px,4vw,52px)',
             fontFamily:"'Instrument Serif', Georgia, serif",
             fontWeight:400, fontStyle:'normal',
-            lineHeight:1.08, maxWidth:'680px',
+            lineHeight:1.18, maxWidth:'680px',
             marginBottom:'24px',
           }}>
-            Executive Coach and Physician focused on{' '}
+            Grounded in thousands of hours of coaching, medicine, and research. Built to tackle the hardest question of all:{' '}
             <span style={{
               background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
-            }}>unlocking human potential</span>
+            }}>who are you when the frameworks stop working?</span>
           </h1>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'460px', marginBottom:'36px' }}>
-            A physician and executive coach synthesizing medicine, technology, and behavioral science to help high performers lead at their ceiling.
+          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'500px', marginBottom:'36px' }}>
+            I'm Fayzan Rab — executive coach, medical doctor, and psychedelic researcher at the frontier of consciousness and human performance. I work with a limited number of founders, executives, and senior operators ready to move past what's blocking them and lead from their own intelligence.
           </p>
           <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
             <Link to="/contact" className="btn btn-primary">Work with me →</Link>
