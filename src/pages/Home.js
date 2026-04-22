@@ -120,20 +120,20 @@ export default function Home() {
         <div className="container" style={{ position:'relative', zIndex:2, paddingTop:'130px', paddingBottom:'100px' }}>
           <span className="label">Executive Coach · Physician · TEDx Speaker</span>
           <h1 style={{
-            fontSize:'clamp(28px,4vw,52px)',
+            fontSize:'clamp(36px,5vw,68px)',
             fontFamily:"'Instrument Serif', Georgia, serif",
             fontWeight:400, fontStyle:'normal',
-            lineHeight:1.18, maxWidth:'680px',
+            lineHeight:1.10, maxWidth:'680px',
             marginBottom:'24px',
           }}>
-            Grounded in thousands of hours of coaching, medicine, and research. Built to tackle the hardest question of all:{' '}
+            For leadership that transcends{' '}
             <span style={{
               background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
-            }}>who are you when the frameworks stop working?</span>
+            }}>optimization.</span>
           </h1>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'500px', marginBottom:'36px' }}>
-            I'm Fayzan Rab — executive coach, medical doctor, and psychedelic researcher at the frontier of consciousness and human performance. I work with a limited number of founders, executives, and senior operators ready to move past what's blocking them and lead from their own intelligence.
+          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'460px', marginBottom:'36px' }}>
+            I'm Fayzan Rab — executive coach, physician, and psychedelic researcher. I work with a small number of founders and executives ready to lead from their own intelligence.
           </p>
           <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
             <Link to="/contact" className="btn btn-primary">Work with me →</Link>
