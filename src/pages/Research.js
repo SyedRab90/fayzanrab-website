@@ -286,26 +286,26 @@ export default function Research() {
               <div key={i} style={{
                 display:'flex', alignItems:'flex-start', justifyContent:'space-between',
                 gap:'20px', flexWrap:'wrap',
-                padding:'22px 28px',
-                background:'rgba(20,12,2,0.45)',
-                border:'1px solid rgba(245,158,11,0.10)',
-                borderRadius:'14px',
+                padding:'28px 32px',
+                background:'linear-gradient(140deg, rgba(245,158,11,0.07) 0%, rgba(234,108,30,0.04) 100%)',
+                border:'1px solid rgba(245,158,11,0.22)',
+                borderRadius:'20px',
               }}>
                 <div style={{ flex:1, minWidth:'240px' }}>
-                  <p style={{ fontSize:'14.5px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
-                  {s.authors && <p style={{ fontSize:'12px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
+                  <p style={{ fontSize:'16px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
+                  {s.authors && <p style={{ fontSize:'14px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
                   {s.url && (
                     <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
                       display:'inline-flex', alignItems:'center', gap:'4px',
                       marginTop:'8px',
-                      fontSize:'12px', fontWeight:700, letterSpacing:'0.08em',
+                      fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
                       textTransform:'uppercase', color:'var(--amber)',
                       textDecoration:'none',
                     }}>Enroll in study →</a>
                   )}
                 </div>
                 <span style={{
-                  fontSize:'11px', fontWeight:700, letterSpacing:'0.12em',
+                  fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
                   textTransform:'uppercase', color:s.statusColor,
                   background:'rgba(255,255,255,0.04)',
                   border:`1px solid ${s.statusColor}`,
@@ -341,14 +341,14 @@ export default function Research() {
                 <div style={{ position:'absolute', top:0, left:0, width:'3px', height:'100%', background:'linear-gradient(180deg,#f59e0b,#ea6c1e)', borderRadius:'16px 0 0 16px' }} />
                 <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'16px', flexWrap:'wrap' }}>
                   <div style={{ flex:1, minWidth:'240px' }}>
-                    <p style={{ fontSize:'15px', fontWeight:500, color:'var(--text)', lineHeight:'1.55', marginBottom:'8px' }}>{p.title}</p>
-                    <p style={{ fontSize:'13px', color:'var(--text-3)', marginBottom:'6px' }}>{p.authors}</p>
+                    <p style={{ fontSize:'16px', fontWeight:500, color:'var(--text)', lineHeight:'1.55', marginBottom:'8px' }}>{p.title}</p>
+                    <p style={{ fontSize:'14px', color:'var(--text-3)', marginBottom:'6px' }}>{p.authors}</p>
                     <div style={{ display:'flex', alignItems:'center', gap:'12px', flexWrap:'wrap' }}>
-                      <span style={{ fontSize:'12px', color:'var(--amber)', fontWeight:600 }}>{p.journal}</span>
-                      <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.year}</span>
+                      <span style={{ fontSize:'14px', color:'var(--amber)', fontWeight:600 }}>{p.journal}</span>
+                      <span style={{ fontSize:'14px', color:'var(--text-3)' }}>{p.year}</span>
                       {p.tag && (
                         <span style={{
-                          fontSize:'11px', fontWeight:700, letterSpacing:'0.10em',
+                          fontSize:'12px', fontWeight:700, letterSpacing:'0.10em',
                           textTransform:'uppercase', color:'var(--amber)',
                           background:'rgba(245,158,11,0.10)',
                           padding:'2px 8px', borderRadius:'100px',
@@ -356,7 +356,7 @@ export default function Research() {
                       )}
                     </div>
                   </div>
-                  <span style={{ fontSize:'12px', color:'var(--amber)', whiteSpace:'nowrap', paddingTop:'2px' }}>Read →</span>
+                  <span style={{ fontSize:'14px', color:'var(--amber)', whiteSpace:'nowrap', paddingTop:'2px' }}>Read →</span>
                 </div>
               </a>
             ))}
@@ -388,17 +388,17 @@ export default function Research() {
                     background:'linear-gradient(135deg,rgba(245,158,11,0.22),rgba(234,108,30,0.18))',
                     border:'1px solid rgba(245,158,11,0.20)',
                     display:'flex', alignItems:'center', justifyContent:'center',
-                    fontSize:'15px', flexShrink:0,
+                    fontSize:'16px', flexShrink:0,
                   }}>{p.icon}</div>
                   <div>
-                    <div style={{ fontSize:'13px', fontWeight:600, color:'var(--text)' }}>{p.show}</div>
-                    {p.episode && <div style={{ fontSize:'11px', color:'var(--text-3)' }}>{p.episode}</div>}
+                    <div style={{ fontSize:'14px', fontWeight:600, color:'var(--text)' }}>{p.show}</div>
+                    {p.episode && <div style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.episode}</div>}
                   </div>
                 </div>
-                <p style={{ fontSize:'13.5px', lineHeight:'1.60', color:'rgba(253,248,237,0.68)', marginBottom:'12px' }}>{p.title}</p>
+                <p style={{ fontSize:'14px', lineHeight:'1.60', color:'rgba(253,248,237,0.68)', marginBottom:'12px' }}>{p.title}</p>
                 <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-                  {p.host && <span style={{ fontSize:'11px', color:'var(--text-3)' }}>with {p.host}</span>}
-                  {p.date && <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{p.date}</span>}
+                  {p.host && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>with {p.host}</span>}
+                  {p.date && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.date}</span>}
                 </div>
               </a>
             ))}
@@ -422,29 +422,29 @@ export default function Research() {
                 borderBottom: i < talks.length - 1 ? '1px solid rgba(245,158,11,0.08)' : 'none',
               }}>
                 <div style={{ minWidth:'100px', flexShrink:0 }}>
-                  <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{t.date || ''}</span>
+                  <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.date || ''}</span>
                 </div>
                 <div style={{ flex:1 }}>
-                  <p style={{ fontSize:'15px', color:'var(--text)', fontWeight:500, marginBottom:'4px', lineHeight:'1.45' }}>{t.title}</p>
+                  <p style={{ fontSize:'16px', color:'var(--text)', fontWeight:500, marginBottom:'4px', lineHeight:'1.45' }}>{t.title}</p>
                   {t.url && (
                     <div style={{ display:'flex', alignItems:'center', gap:'8px', marginBottom:'4px' }}>
                       <a href={t.url} target="_blank" rel="noopener noreferrer" style={{
-                        fontSize:'11.5px', fontWeight:700, letterSpacing:'0.08em',
+                        fontSize:'12px', fontWeight:700, letterSpacing:'0.08em',
                         textTransform:'uppercase', color:'var(--amber)',
                         textDecoration:'none',
                       }}>Watch →</a>
-                      {t.urlNote && <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{t.urlNote}</span>}
+                      {t.urlNote && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.urlNote}</span>}
                     </div>
                   )}
                   <div style={{ display:'flex', gap:'8px', flexWrap:'wrap', alignItems:'center' }}>
                     <span style={{
-                      fontSize:'11px', fontWeight:700, letterSpacing:'0.10em',
+                      fontSize:'12px', fontWeight:700, letterSpacing:'0.10em',
                       textTransform:'uppercase', color:'var(--amber)',
                     }}>{t.venue}</span>
-                    <span style={{ fontSize:'11px', color:'var(--text-3)' }}>{t.location}</span>
+                    <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.location}</span>
                     {t.note && (
                       <span style={{
-                        fontSize:'11px', color:'var(--amber)',
+                        fontSize:'12px', color:'var(--amber)',
                         background:'rgba(245,158,11,0.08)',
                         padding:'2px 8px', borderRadius:'100px',
                       }}>{t.note}</span>
@@ -464,7 +464,7 @@ export default function Research() {
           <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'12px' }}>
             Interested in the intersection of all this?
           </h2>
-          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'15px', maxWidth:'480px', margin:'0 auto 28px' }}>
+          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'16px', maxWidth:'480px', margin:'0 auto 28px' }}>
             The research and the coaching aren't separate. They feed each other. If you're a founder or operator navigating high-stakes decisions, that matters.
           </p>
           <Link to="/contact" className="btn btn-primary">Start a conversation →</Link>

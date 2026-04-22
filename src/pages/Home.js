@@ -160,18 +160,28 @@ export default function Home() {
       {/* ── CLIENT COMPANIES STRIP ── */}
       <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(245,158,11,0.07)' }}>
         <div className="container">
-          <p style={{ textAlign:'center', fontSize:'11px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'20px' }}>
+          <p style={{ textAlign:'center', fontSize:'12px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'20px' }}>
             Clients come from
           </p>
-          <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'8px 24px', flexWrap:'wrap' }}>
-            {['Google','Anthropic','Y Combinator','Netflix','Microsoft','Databricks','LinkedIn','Spotify'].map(name => (
-              <span key={name} style={{
-                fontFamily:"'Instrument Serif',serif",
-                fontStyle:'italic',
-                fontSize:'18px',
-                color:'rgba(253,248,237,0.62)',
-                whiteSpace:'nowrap',
-              }}>{name}</span>
+          <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'16px 36px', flexWrap:'wrap' }}>
+            {[
+              { name:'Google',       slug:'google' },
+              { name:'Anthropic',    slug:'anthropic' },
+              { name:'Y Combinator', slug:'ycombinator' },
+              { name:'Netflix',      slug:'netflix' },
+              { name:'Microsoft',    slug:'microsoft' },
+              { name:'Databricks',   slug:'databricks' },
+              { name:'LinkedIn',     slug:'linkedin' },
+              { name:'Spotify',      slug:'spotify' },
+            ].map(({ name, slug }) => (
+              <img
+                key={name}
+                src={`https://cdn.simpleicons.org/${slug}/fdf8ed`}
+                alt={name}
+                title={name}
+                height="22"
+                style={{ height:'22px', opacity:0.60 }}
+              />
             ))}
           </div>
         </div>
@@ -213,15 +223,15 @@ export default function Home() {
               <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, marginBottom:'20px' }}>
                 I was doing everything right. And it wasn't enough.
               </h2>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
                 Product leader at Google. Series C biotech startup. Successful by every external measure, but unclear on what the highest utilization of my gifts would actually look like.
               </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'30px', fontSize:'15px' }}>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'30px', fontSize:'16px' }}>
                 I tried many things before stumbling into executive coaching. Then went to medical school and accumulated thousands of hours working with high performers. The synthesis is the work.
               </p>
               <Link to="/about" style={{
                 display:'inline-flex', alignItems:'center', gap:'6px',
-                fontSize:'11.5px', fontWeight:700, letterSpacing:'0.12em',
+                fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
                 textTransform:'uppercase', color:'var(--amber)',
               }}>Read the full story →</Link>
             </div>
@@ -242,7 +252,7 @@ export default function Home() {
           }}>
             "You're already surrounded by tools that optimize, analyze, and advise. What's harder to find is someone who actually knows you: someone who remembers what you said six months ago, notices when something's off, and stays with you through the messy middle."
           </p>
-          <p style={{ fontSize:'13px', color:'var(--text-3)' }}>
+          <p style={{ fontSize:'14px', color:'var(--text-3)' }}>
             Fayzan works with a small number of clients at a time, by design. The relationship is the work.
           </p>
         </div>
@@ -257,13 +267,13 @@ export default function Home() {
           </h2>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'18px' }} className="two-col">
             <div className="service-card service-card-1">
-              <span style={{ display:'inline-block', fontSize:'11px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>1:1 Coaching</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>1:1 Coaching</span>
               <h3>You're high-performing. And quietly unfulfilled.</h3>
               <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
             </div>
             <div className="service-card service-card-2">
-              <span style={{ display:'inline-block', fontSize:'11px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Mediation</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Mediation</span>
               <h3>The relationship with your co-founder is fraying.</h3>
               <p>Decisions are slower. Conversations are tenser. A structured process — individual and joint sessions — designed to surface what's actually happening and find a clear path forward.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
@@ -291,7 +301,7 @@ export default function Home() {
             }}>
               "Coaching has felt like a jet pack for my life. More useful than almost anything else I could have invested in this past year."
             </p>
-            <p style={{ fontSize:'11px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
+            <p style={{ fontSize:'12px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
               Deepan Mehta, Co-Founder, Struct AI (YC S24)
             </p>
           </div>
@@ -354,8 +364,8 @@ export default function Home() {
                     flexShrink:0,
                   }} />
                   <div>
-                    <div style={{ fontSize:'13px', fontWeight:600, color:'var(--text)' }}>{t.name}</div>
-                    <div style={{ fontSize:'11px', color:'var(--text-3)', marginTop:'2px' }}>{t.role}</div>
+                    <div style={{ fontSize:'14px', fontWeight:600, color:'var(--text)' }}>{t.name}</div>
+                    <div style={{ fontSize:'12px', color:'var(--text-3)', marginTop:'2px' }}>{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -365,7 +375,7 @@ export default function Home() {
           {/* Link to coaching page */}
           <div style={{ textAlign:'center' }}>
             <Link to="/coaching" style={{
-              fontSize:'11.5px', fontWeight:700, letterSpacing:'0.12em',
+              fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
               textTransform:'uppercase', color:'var(--amber)',
               textDecoration:'none',
             }}>Read more client stories →</Link>
@@ -387,7 +397,7 @@ export default function Home() {
             <h2 style={{ fontSize:'clamp(24px,3.5vw,40px)', color:'#fff', marginBottom:'10px', position:'relative', fontWeight:500 }}>
               Ready to begin?
             </h2>
-            <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'15px' }}>
+            <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'16px' }}>
               Reach out to start a conversation.
             </p>
             <Link to="/contact" style={{

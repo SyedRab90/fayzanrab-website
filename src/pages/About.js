@@ -54,10 +54,10 @@ export default function About() {
               <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'16px' }}>
                 Fayzan Rab
               </h1>
-              <p style={{ fontSize:'15px', color:'var(--text-3)', letterSpacing:'0.03em', marginBottom:'32px' }}>
+              <p style={{ fontSize:'16px', color:'var(--text-3)', letterSpacing:'0.03em', marginBottom:'32px' }}>
                 MD, Emory University · PCC Certified · Former Google
               </p>
-              <p style={{ fontSize:'15px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
+              <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
                 I built a career at Google and in biotech. Successful by every measure, but quietly unfulfilled. That gap led me to medicine, then coaching, then the synthesis of both. The work is helping high performers find the same clarity.
               </p>
               <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
@@ -107,7 +107,7 @@ export default function About() {
                   display:'flex', alignItems:'center', gap:'10px',
                 }}>
                   <span style={{ fontFamily:"'Instrument Serif',serif", fontSize:'18px', color:'var(--amber-lt)', fontStyle:'italic' }}>2,000+</span>
-                  <span style={{ fontSize:'11px', color:'var(--text-2)' }}>coaching hours</span>
+                  <span style={{ fontSize:'12px', color:'var(--text-2)' }}>coaching hours</span>
                 </div>
               </div>
             </div>
@@ -127,13 +127,13 @@ export default function About() {
               <h2 style={{ fontSize:'clamp(26px,3vw,38px)', fontWeight:500, marginBottom:'24px' }}>
                 I was doing everything right. And it wasn't enough.
               </h2>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
                 I worked in Silicon Valley as a product leader at Google and a Series C biotech startup. Successful by most measures. But unfulfilled and unclear on what the highest utilization of my gifts would actually look like.
               </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
                 I tried many things before stumbling into executive coaching, where I saw the potential to create something unique to my voice and craft. I went to medical school at Emory and accumulated thousands of hours coaching high performers.
               </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px' }}>
                 The goal was never just to help people get unstuck. It was to synthesize the best of medicine and coaching, to fully unleash what each person is already capable of.
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function About() {
                   borderBottom:  i < credentials.length - 1 ? '1px solid var(--border)' : 'none',
                 }}>
                   <span style={{
-                    display:'block', fontSize:'10px', fontWeight:700,
+                    display:'block', fontSize:'12px', fontWeight:700,
                     letterSpacing:'0.16em', textTransform:'uppercase',
                     color:'var(--amber)', marginBottom:'5px',
                   }}>{label}</span>
@@ -202,7 +202,7 @@ export default function About() {
               flexWrap:'wrap', gap:'8px',
             }}>
               <span style={{
-                fontSize:'13px', color:'rgba(255,255,255,0.65)', fontWeight:500,
+                fontSize:'14px', color:'rgba(255,255,255,0.65)', fontWeight:500,
               }}>Faith, Psychedelics, and Mental Health</span>
               <span style={{
                 display:'inline-block', padding:'4px 14px',
@@ -263,7 +263,7 @@ export default function About() {
           <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'12px' }}>
             Ready to explore working together?
           </h2>
-          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'15px' }}>
+          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'16px' }}>
             Reach out to schedule an introductory conversation.
           </p>
           <Link to="/contact" className="btn btn-primary">Get in touch →</Link>

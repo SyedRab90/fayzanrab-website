@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const labelStyle = {
   display: 'block',
-  fontSize: '11px',
+  fontSize: '12px',
   fontWeight: 700,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
@@ -17,7 +17,7 @@ const inputStyle = {
   borderRadius: '10px',
   color: 'var(--text)',
   fontFamily: 'inherit',
-  fontSize: '15px',
+  fontSize: '16px',
   padding: '14px 16px',
   outline: 'none', /* :focus-visible override in index.css */
   transition: 'border-color 0.2s',
@@ -83,7 +83,7 @@ export default function Contact() {
 
       {/* ── FORM ── */}
       <section style={{ paddingBottom: '120px', position: 'relative' }}>
-        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '640px' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '700px' }}>
 
           {status === 'success' ? (
             <div style={{
@@ -94,7 +94,7 @@ export default function Contact() {
               textAlign: 'center',
             }}>
               <p style={{ fontSize: '22px', fontWeight: 500, marginBottom: '12px' }}>Message sent.</p>
-              <p style={{ color: 'var(--text-2)', fontSize: '15px' }}>I'll be in touch within a couple of days.</p>
+              <p style={{ color: 'var(--text-2)', fontSize: '16px' }}>I'll be in touch within a couple of days.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -177,7 +177,7 @@ export default function Contact() {
           }}>
             "Working with Fayzan allowed me to rapidly step into the best version of myself in a way that feels genuine and lasting."
           </p>
-          <p style={{ fontSize:'11px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
+          <p style={{ fontSize:'12px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
             — Aatash Parikh, Founder at Inkwire
           </p>
         </div>
