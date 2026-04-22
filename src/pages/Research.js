@@ -95,7 +95,7 @@ const podcasts = [
     show: 'The Transformational Leader',
     episode: 'Mid-week Ep 82',
     host: 'Adam Quiney JD MCC',
-    date: null,
+    date: 'December 2022',
     title: 'On medicine, ontology, and the work of a leader.',
     url: 'https://adamquiney.com/mid-week-ep-82-fayzan-rab/',
     icon: '🎙',
@@ -121,8 +121,8 @@ const podcasts = [
   {
     show: 'The Portfolio Path',
     episode: null,
-    host: null,
-    date: null,
+    host: 'Dexter Zhuang',
+    date: 'July 28, 2024',
     title: 'From Googler to psychedelics researcher and executive coach.',
     url: 'https://www.theportfoliopath.com/newsletter/googler-mdma-researcher-executive-coach-fayzan-rab',
     icon: '📰',
@@ -372,7 +372,8 @@ export default function Research() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(300px,1fr))', gap:'16px' }}>
             {podcasts.map((p, i) => (
               <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{
-                display:'block', padding:'24px 26px',
+                display:'flex', flexDirection:'column',
+                padding:'24px 26px',
                 background:'rgba(20,12,2,0.50)',
                 border:'1px solid rgba(245,158,11,0.12)',
                 borderRadius:'16px',
@@ -395,8 +396,8 @@ export default function Research() {
                     {p.episode && <div style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.episode}</div>}
                   </div>
                 </div>
-                <p style={{ fontSize:'14px', lineHeight:'1.60', color:'rgba(253,248,237,0.68)', marginBottom:'12px' }}>{p.title}</p>
-                <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+                <p style={{ fontSize:'14px', lineHeight:'1.60', color:'rgba(253,248,237,0.68)', flex:1, marginBottom:'16px' }}>{p.title}</p>
+                <div style={{ display:'flex', flexDirection:'column', gap:'3px' }}>
                   {p.host && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>with {p.host}</span>}
                   {p.date && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.date}</span>}
                 </div>
