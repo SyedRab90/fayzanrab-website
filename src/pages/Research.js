@@ -421,7 +421,7 @@ export default function Research() {
                 padding:'16px 0',
                 borderBottom: i < talks.length - 1 ? '1px solid rgba(245,158,11,0.08)' : 'none',
               }}>
-                <div style={{ minWidth:'100px', flexShrink:0 }}>
+                <div style={{ width:'140px', flexShrink:0 }}>
                   <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.date || ''}</span>
                 </div>
                 <div style={{ flex:1 }}>
