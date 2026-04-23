@@ -194,77 +194,20 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── JOURNEY ── */}
+      {/* ── THE PROBLEM ── */}
       <section className="section">
-        <div className="container">
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'center' }} className="two-col">
-
-            {/* Photo */}
-            <div style={{ position:'relative', order:0 }}>
-              <div className="orb" style={{ width:340, height:340, top:'-40px', left:'-40px', background:'radial-gradient(circle,rgba(245,158,11,0.14) 0%,transparent 70%)', zIndex:0 }} />
-              <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden', zIndex:1, aspectRatio:'3/4' }}>
-                <img
-                  src="/images/fayzan-rita.jpeg"
-                  alt="Fayzan Rab"
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'50% 20%' }}
-                />
-                {/* Warm amber tint */}
-                <div style={{
-                  position:'absolute', inset:0,
-                  background:'linear-gradient(160deg,rgba(245,158,11,0.16) 0%,rgba(120,53,15,0.30) 100%)',
-                  mixBlendMode:'multiply',
-                }} />
-                <div style={{
-                  position:'absolute', inset:0,
-                  border:'1px solid rgba(245,158,11,0.14)',
-                  borderRadius:'20px',
-                }} />
-              </div>
-            </div>
-
-            {/* Text */}
-            <div>
-              <span className="label">The Journey</span>
-              <h2 style={{ fontSize:'clamp(22px,2.4vw,32px)', fontWeight:500, marginBottom:'20px', fontFamily:"'Instrument Serif',serif", fontStyle:'italic' }}>
-                I hired a coach in 2019 because I couldn't hear my own voice.
-              </h2>
-              {[
-                "I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
-                "I turned to mentors, therapy, meditation, self-help. I could hear everyone else's voice except my own.",
-                "My coach refused to give me answers. He continuously pointed to every way I outsourced my wisdom and declined to participate in my optimization game to find the right perspective. In that space, I discovered my own inner wisdom.",
-                "That clarity led me to executive coaching, medical school, and psychedelic research — three paths that are, at their core, the same commitment: helping people reclaim their own consciousness.",
-                "In 2026, it's the same problem but different form. AI can give advice anytime, optimize any problem, and generate insight on demand. The information is richer but the signal is harder to hear. The hunger for external answers has found a new home.",
-                "My job is the same: create space for you to hear your own voice, don't placate your self-doubt, and hold you to what you actually know you're capable of.",
-              ].map((text, i) => (
-                <p key={i} style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>{text}</p>
-              ))}
-              <Link to="/contact" style={{
-                display:'inline-flex', alignItems:'center', gap:'6px',
-                fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
-                textTransform:'uppercase', color:'var(--amber)',
-              }}>If that's you, let's chat →</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── IRREPLACEABLE ── */}
-      <section className="section" style={{ position:'relative', overflow:'hidden' }}>
-        <div className="orb" style={{ width:600, height:400, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.08) 0%,transparent 70%)' }} />
-        <div className="container" style={{ position:'relative', zIndex:1, textAlign:'center', maxWidth:'700px', margin:'0 auto' }}>
-          <span className="label">The Irreplaceable Part</span>
-          <p style={{
-            fontSize:'clamp(18px,2.3vw,27px)',
-            fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
-            fontWeight:400, lineHeight:'1.62',
-            color:'var(--text)', marginBottom:'18px',
-          }}>
-            "You're already surrounded by tools that optimize, analyze, and advise. What's harder to find is someone who actually knows you: someone who remembers what you said six months ago, notices when something's off, and stays with you through the messy middle."
+        <div className="container" style={{ maxWidth:'700px', margin:'0 auto' }}>
+          <h2 style={{ fontSize:'clamp(28px,3.5vw,46px)', fontWeight:500, marginBottom:'28px', lineHeight:1.15 }}>
+            The clarity you are seeking won't come from more information.
+          </h2>
+          <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
+            You've raised the round. Built the team. You have advisors, AI, and more inputs than any leader before you. And the signal is harder to hear than ever.
           </p>
-          <p style={{ fontSize:'14px', color:'var(--text-3)' }}>
-            Fayzan works with a small number of clients at a time, by design. The relationship is the work.
+          <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
+            The hardest questions — what to build next, who to become, whether you're moving in the right direction — don't get answered by more information. Argument doesn't reach that place. What reaches it is felt experience — the direct, embodied knowing of your own wisdom.
+          </p>
+          <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px' }}>
+            That's the work.
           </p>
         </div>
       </section>
@@ -276,17 +219,23 @@ export default function Home() {
           <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>
             How Fayzan works
           </h2>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'18px' }} className="two-col">
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
             <div className="service-card service-card-1">
               <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>1:1 Coaching</span>
-              <h3>You're high-performing. And quietly unfulfilled.</h3>
-              <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture.</p>
+              <h3>You're high-performing. And something is off.</h3>
+              <p>You need someone who knows your full picture, holds you to what matters, and stays with you through the complexity.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
             </div>
             <div className="service-card service-card-2">
               <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Mediation</span>
               <h3>The relationship with your co-founder is fraying.</h3>
-              <p>Decisions are slower. Conversations are tenser. A structured process — individual and joint sessions — designed to surface what's actually happening and find a clear path forward.</p>
+              <p>A structured process to surface what's actually happening and find a path forward before it becomes the company's biggest liability.</p>
+              <Link to="/coaching" className="learn-more">Learn More →</Link>
+            </div>
+            <div className="service-card service-card-3">
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>After the Exit</span>
+              <h3>You sold. Now what?</h3>
+              <p>For the first time in years there's no obvious north star. Figure out what you actually want from here.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
             </div>
           </div>
@@ -391,6 +340,20 @@ export default function Home() {
               textDecoration:'none',
             }}>Read more client stories →</Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── FAYZAN INTRO ── */}
+      <section className="section" style={{ paddingTop:0 }}>
+        <div className="container" style={{ maxWidth:'580px', margin:'0 auto', textAlign:'center' }}>
+          <span className="label">My biggest qualification is I am doing the work</span>
+          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.85', marginBottom:'24px' }}>
+            I hired a coach in 2019 because I couldn't hear my own voice. That experience led me to coaching, medicine, and psychedelic research. Now I do for others what that coach did for me.
+          </p>
+          <Link to="/about" style={{
+            fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
+            textTransform:'uppercase', color:'var(--amber)', textDecoration:'none',
+          }}>Read my story →</Link>
         </div>
       </section>
 
