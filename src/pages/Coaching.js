@@ -64,6 +64,12 @@ const testimonials = [
   },
   {
     id:11, colorClass:'t5',
+    text:"You pick up the phone and he arrives. One hour later, you feel that familiar feeling again — <strong>the sensation of being connected to your purpose.</strong> From that place, it's easy to take the necessary actions to make your life better.",
+    name:'Arun Nijhawan', role:'Co-Founder, Menda Health',
+    avatar:'/images/headshots/arun-nijhawan.jpeg',
+  },
+  {
+    id:12, colorClass:'t6',
     text:"Fayzan created the safe space to explore and practice putting my development first — an area that I often put on the backburner as the eldest daughter of immigrants. I can easily say that my life and how I feel have completely taken a 180 (which is WILD). <strong>I remember saying my soul was tired in one of our first conversations, and I no longer feel that way.</strong>",
     name:'Malena Lopez-Sotelo', role:'Lead AI PMM at Microsoft',
     avatar:'/images/headshots/malena-lopez.jpg',
@@ -96,6 +102,7 @@ export default function Coaching() {
       </section>
 
       {/* ── IRREPLACEABLE ── */}
+      {/* REVERT TEXT: "AI can optimize your output, answer your questions, and mirror you back with precision. What it can't do is catch the blindspot keeping you from asking the right question, feel the emotional shifts pointing to the thing that is hard to name, or sit with you through the resistance standing between you and what's next." */}
       <section className="section" style={{
         background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
         position:'relative', overflow:'hidden',
@@ -103,13 +110,14 @@ export default function Coaching() {
         <div className="orb" style={{ width:500, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
         <div className="container" style={{ textAlign:'center', maxWidth:'720px', margin:'0 auto', position:'relative', zIndex:1 }}>
           <span className="label">The Irreplaceable Part</span>
-          <p style={{
-            fontSize:'clamp(17px,2.2vw,24px)',
-            fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
-            fontWeight:400, lineHeight:'1.65',
-            color:'var(--text)', marginBottom:'18px',
-          }}>
-            "AI can optimize your output, answer your questions, and mirror you back with precision. What it can't do is catch the blindspot keeping you from asking the right question, feel the emotional shifts pointing to the thing that is hard to name, or sit with you through the resistance standing between you and what's next."
+          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'14px' }}>
+            I work at the frontier of AI through my research and my clients. I believe in it. And the more time I spend there, the clearer something becomes: AI has no skin in the game.
+          </p>
+          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'14px' }}>
+            It can reflect you back with precision. It can't feel the shift in the room when you're about to make a decision you'll regret. It can't sense the fear underneath the confident pitch. It can't sit with you in the discomfort long enough for something real to shift.
+          </p>
+          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'18px' }}>
+            What's required is something embodied: a direct, felt experience from which real knowing emerges.
           </p>
           <p style={{ fontSize:'14px', color:'var(--text-3)' }}>
             Fayzan works with a small number of clients at a time, by design.
