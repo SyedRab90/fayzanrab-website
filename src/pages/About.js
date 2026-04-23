@@ -125,12 +125,12 @@ export default function About() {
                 I hired a coach because I couldn't hear my own voice.
               </h2>
               {[
-                "I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
+                "In 2019, I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
                 "I turned to mentors, therapy, meditation, self-help. I could hear everyone else's voice except my own.",
-                `My coach refused to give me answers. He continuously pointed to every way I outsourced my wisdom and declined to participate in my optimization game to find the <em>right perspective</em>. In that space, I discovered my own inner wisdom.`,
+                `My coach refused to give me answers. He continuously pointed to every way I outsourced my discernment and declined to participate in my optimization game to find the <em>right perspective</em>. In that space, I discovered my own inner wisdom.`,
                 "That clarity led me to executive coaching, medical school, and psychedelic research — three paths that are, at their core, the same commitment: helping people reclaim their own consciousness.",
                 "In 2026, it's the same problem but different form. AI can give advice anytime, optimize any problem, and generate insight on demand. The information is richer but the signal is harder to hear. The hunger for external answers has found a new home.",
-                "My job is the same: create space for you to hear your own wisdom, don't buy into your self-doubt, and call you forward to what you know you are truly capable of.",
+                "My job is the same: create space for you to hear your own wisdom, don't buy into your self-doubt or quick fixes, and call you forward to what you know you are truly capable of.",
               ].map((text, i) => (
                 <p key={i} style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }} dangerouslySetInnerHTML={{ __html: text }} />
               ))}
