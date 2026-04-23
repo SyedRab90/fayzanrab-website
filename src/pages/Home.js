@@ -146,16 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── LOGO STRIP ── */}
-      <div className="logo-strip">
-        <div className="container">
-          <div className="logo-strip-inner">
-            {['MD, Emory University','PCC Certified (ICF)','TEDx Speaker','2,000+ Coaching Hours'].map(item => (
-              <span key={item} className="logo-strip-item">{item}</span>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* ── CLIENT COMPANIES STRIP ── */}
       <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(245,158,11,0.07)' }}>
