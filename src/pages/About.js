@@ -122,7 +122,7 @@ export default function About() {
             <div>
               <span className="label">The Story</span>
               <h2 style={{ fontSize:'clamp(22px,2.4vw,32px)', fontWeight:500, marginBottom:'24px', fontFamily:"'Instrument Serif',serif", fontStyle:'italic' }}>
-                I hired a coach in 2019 because I couldn't hear my own voice.
+                I hired a coach because I couldn't hear my own voice.
               </h2>
               {[
                 "I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
