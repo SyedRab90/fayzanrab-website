@@ -58,7 +58,7 @@ export default function About() {
                 MD, Emory University · PCC Certified · Former Google
               </p>
               <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
-                I built a career at Google and in biotech. Successful by every measure, but quietly unfulfilled. That gap led me to medicine, then coaching, then the synthesis of both. The work is helping high performers find the same clarity.
+                I started my big bet 7 years ago when I became a coach. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives looking to bet big on themselves.
               </p>
               <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
                 <Link to="/contact" className="btn btn-primary">Work with me →</Link>
@@ -124,18 +124,20 @@ export default function About() {
             {/* Story */}
             <div>
               <span className="label">The Story</span>
-              <h2 style={{ fontSize:'clamp(26px,3vw,38px)', fontWeight:500, marginBottom:'24px' }}>
-                I was doing everything right. And it wasn't enough.
+              <h2 style={{ fontSize:'clamp(22px,2.4vw,32px)', fontWeight:500, marginBottom:'24px', fontFamily:"'Instrument Serif',serif", fontStyle:'italic' }}>
+                I hired a coach in 2019 because I couldn't hear my own voice.
               </h2>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
-                I worked in Silicon Valley as a product leader at Google and a Series C biotech startup. Successful by most measures. But unfulfilled and unclear on what the highest utilization of my gifts would actually look like.
-              </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
-                I tried many things before stumbling into executive coaching, where I saw the potential to create something unique to my voice and craft. I went to medical school at Emory and accumulated thousands of hours coaching high performers.
-              </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px' }}>
-                The goal was never just to help people get unstuck. It was to synthesize the best of medicine and coaching, to fully unleash what each person is already capable of.
-              </p>
+              {[
+                "I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
+                "I turned to mentors, therapy, meditation, self-help. I could hear everyone else's voice except my own.",
+                "My coach refused to give me answers. He continuously pointed to every way I outsourced my wisdom and declined to participate in my optimization game to find the right perspective. In that space, I discovered my own inner wisdom.",
+                "That clarity led me to executive coaching, medical school, and psychedelic research — three paths that are, at their core, the same commitment: helping people reclaim their own consciousness.",
+                "In 2026, it's the same problem but different form. AI can give advice anytime, optimize any problem, and generate insight on demand. The information is richer but the signal is harder to hear. The hunger for external answers has found a new home.",
+                "My job is the same: create space for you to hear your own voice, don't placate your self-doubt, and hold you to what you actually know you're capable of.",
+              ].map((text, i) => (
+                <p key={i} style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>{text}</p>
+              ))}
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>If that's you, let's chat.</p>
             </div>
 
             {/* Credentials */}
@@ -260,13 +262,10 @@ export default function About() {
       {/* ── CTA ── */}
       <section style={{ padding:'80px 0 100px' }}>
         <div className="container" style={{ textAlign:'center' }}>
-          <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'12px' }}>
-            Ready to explore working together?
+          <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'28px' }}>
+            Ready to bet big on yourself?
           </h2>
-          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'16px' }}>
-            Reach out to schedule an introductory conversation.
-          </p>
-          <Link to="/contact" className="btn btn-primary">Get in touch →</Link>
+          <Link to="/contact" className="btn btn-primary">Let's talk →</Link>
         </div>
       </section>
 

@@ -126,7 +126,7 @@ export default function Home() {
             lineHeight:1.10, maxWidth:'680px',
             marginBottom:'16px',
           }}>
-            Leadership is not about more information. It's about{' '}
+            Leadership is not about more optimization. It's about{' '}
             <span style={{
               background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
@@ -371,11 +371,11 @@ export default function Home() {
       </section>
 
       {/* ── FAYZAN INTRO ── */}
-      <section className="section" style={{ paddingTop:0 }}>
+      <section className="section">
         <div className="container" style={{ maxWidth:'580px', margin:'0 auto', textAlign:'center' }}>
           <span className="label">My biggest qualification is I am doing the work</span>
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.85', marginBottom:'24px' }}>
-            I hired a coach in 2019 because I couldn't hear my own voice. That experience led me to coaching, medicine, and psychedelic research. Now I do for others what that coach did for me.
+            7 years ago, I hired a coach because I wanted to hear my own voice and take a big bet on it. That led me to synthesize the best of executive coaching, western medicine, and psychedelic research. Now I work with others looking to bet big on themselves.
           </p>
           <Link to="/about" style={{
             fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
