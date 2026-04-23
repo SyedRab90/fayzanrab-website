@@ -196,19 +196,46 @@ export default function Home() {
 
       {/* ── THE PROBLEM ── */}
       <section className="section">
-        <div className="container" style={{ maxWidth:'700px', margin:'0 auto' }}>
-          <h2 style={{ fontSize:'clamp(28px,3.5vw,46px)', fontWeight:500, marginBottom:'28px', lineHeight:1.15 }}>
-            The clarity you are seeking won't come from more information.
-          </h2>
-          <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
-            You've raised the round. Built the team. You have advisors, AI, and more inputs than any leader before you. And the signal is harder to hear than ever.
-          </p>
-          <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
-            The hardest questions — what to build next, who to become, whether you're moving in the right direction — don't get answered by more information. Argument doesn't reach that place. What reaches it is felt experience — the direct, embodied knowing of your own wisdom.
-          </p>
-          <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px' }}>
-            That's the work.
-          </p>
+        <div className="container">
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'center' }} className="two-col">
+
+            {/* Photo */}
+            <div style={{ position:'relative' }}>
+              <div className="orb" style={{ width:340, height:340, top:'-40px', left:'-40px', background:'radial-gradient(circle,rgba(245,158,11,0.14) 0%,transparent 70%)', zIndex:0 }} />
+              <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden', zIndex:1, aspectRatio:'3/4' }}>
+                <img
+                  src="/images/fayzan-rita.jpeg"
+                  alt="Fayzan Rab"
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'50% 20%' }}
+                />
+                <div style={{
+                  position:'absolute', inset:0,
+                  background:'linear-gradient(160deg,rgba(245,158,11,0.16) 0%,rgba(120,53,15,0.30) 100%)',
+                  mixBlendMode:'multiply',
+                }} />
+                <div style={{ position:'absolute', inset:0, border:'1px solid rgba(245,158,11,0.14)', borderRadius:'20px' }} />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div>
+              <h2 style={{ fontSize:'clamp(26px,3vw,42px)', fontWeight:500, marginBottom:'28px', lineHeight:1.15 }}>
+                The clarity you are seeking won't come from more information.
+              </h2>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
+                You've raised the round. Built the team. You have advisors, AI, and more inputs than any leader before you. And the signal is harder to hear than ever.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
+                The hardest questions — what to build next, who to become, whether you're moving in the right direction — don't get answered by more information. Argument doesn't reach that place. What reaches it is felt experience — the direct, embodied knowing of your own wisdom.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px' }}>
+                That's the work.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
