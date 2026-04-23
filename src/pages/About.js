@@ -113,6 +113,25 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── THROUGH LINE ── */}
+      <section className="section" style={{
+        background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
+        position:'relative', overflow:'hidden',
+      }}>
+        <div className="orb" style={{ width:500, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
+        <div className="container" style={{ textAlign:'center', maxWidth:'720px', margin:'0 auto', position:'relative', zIndex:1 }}>
+          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
+            I believe the most important frontier isn't artificial intelligence. It's human consciousness — the inner capacity to see clearly, choose wisely, and lead from who you actually are.
+          </p>
+          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
+            Every path I've taken — coaching, medicine, psychedelic research — has been an expression of that commitment. What I've learned across all three is the same: the obstacle is almost never information or strategy. It's always the same gap: between who you are and who you know you're capable of being.
+          </p>
+          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)' }}>
+            That's what I bring into the coaching relationship.
+          </p>
+        </div>
+      </section>
+
       {/* ── STORY + CREDENTIALS ── */}
       <section className="section">
         <div className="container">
