@@ -109,7 +109,7 @@ export default function Coaching() {
             fontWeight:400, lineHeight:'1.65',
             color:'var(--text)', marginBottom:'18px',
           }}>
-            "Your peers are using AI for everything. So are you. But there's a category of problem that doesn't get solved by another tool, framework, or podcast: the ones that require someone who knows your history, holds your contradictions without judgment, and shows up the same way every session."
+            "AI can optimize your output, answer your questions, and mirror you back with precision. What it can't do is catch the blindspot keeping you from asking the right question, feel the emotional shifts pointing to the thing that is hard to name, or sit with you through the resistance standing between you and what's next."
           </p>
           <p style={{ fontSize:'14px', color:'var(--text-3)' }}>
             Fayzan works with a small number of clients at a time, by design.
