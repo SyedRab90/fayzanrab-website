@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 const lenses = [
   {
     roman: 'I',
-    title: 'Western Medicine',
-    desc: 'An MD from Emory and years of clinical training give Fayzan a rigorous, biology-grounded lens on how physiology shapes cognition, behavior, and decision-making under pressure.',
+    title: 'Rigorous & Evidence-Based',
+    desc: 'Most coaches come from the world of HR. Fayzan brings the precision of a physician — an MD from Emory and years of clinical training that cut past the obvious to what\'s actually driving the problem.',
     bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
   },
   {
     roman: 'II',
     title: 'Executive Coaching',
-    desc: 'Thousands of hours mapping behavioral patterns, navigating organizational dynamics, and unlocking leadership capacity in high-stakes environments. PCC certified through the ICF.',
+    desc: 'Thousands of hours working with high performing individuals and teams to unlock deeper performance, fulfillment, and leadership capacity. PCC certified through the ICF.',
     bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
   },
   {
     roman: 'III',
-    title: 'Technology & Business',
-    desc: 'As a former Google product leader and biotech operator, Fayzan understands the pressures of high-growth environments firsthand and brings that lived experience directly into the coaching relationship.',
+    title: 'Silicon Valley Operator',
+    desc: 'As a former Google product leader and first product hire in a Series A→C startup, Fayzan understands the pressures of high-growth environments firsthand and brings that lived experience directly into the coaching relationship. You don\'t need to explain the context. He already understands it.',
     bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
   },
 ];
