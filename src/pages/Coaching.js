@@ -114,7 +114,7 @@ export default function Coaching() {
             I work at the frontier of AI through my research and my clients. I believe in it. And the more time I spend there, the clearer something becomes: AI has no skin in the game.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'14px' }}>
-            It can reflect you back with precision. It can't feel the shift in the room when you're about to make a decision you'll regret. It can't sense the fear underneath the confident pitch. It can't sit with you in the discomfort long enough for something real to shift.
+            It can reflect you back with precision. But it can't feel the shift in the room when you're about to make a decision you'll regret. It can't sense the fear underneath the confident pitch. It can't sit with you in the discomfort long enough for something real to shift.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'18px' }}>
             What's required is something embodied: a direct, felt experience from which real knowing emerges.
