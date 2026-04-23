@@ -10,14 +10,14 @@ const lenses = [
   },
   {
     roman: 'II',
-    title: 'Executive Coaching',
+    title: 'Mastery',
     desc: 'Thousands of hours working with high performing individuals and teams to unlock deeper performance, fulfillment, and leadership capacity. PCC certified through the ICF.',
     bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
   },
   {
     roman: 'III',
     title: 'Silicon Valley Operator',
-    desc: 'As a former Google product leader and first product hire in a Series A→C startup, Fayzan understands the pressures of high-growth environments firsthand and brings that lived experience directly into the coaching relationship. You don\'t need to explain the context. He already understands it.',
+    desc: 'Product Leader at Google. First product hire at a Series A→C startup. Fayzan has been in the rooms you\'re in — the fundraising pressure, the team decisions, the gap between what you\'re building and how you feel about it. You don\'t need to explain the context. He already understands it.',
     bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
   },
 ];
@@ -51,12 +51,9 @@ export default function About() {
             {/* Left - text */}
             <div>
               <span className="label">About</span>
-              <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'16px' }}>
+              <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'24px' }}>
                 Fayzan Rab
               </h1>
-              <p style={{ fontSize:'16px', color:'var(--text-3)', letterSpacing:'0.03em', marginBottom:'32px' }}>
-                MD, Emory University · PCC Certified · Former Google
-              </p>
               <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
                 I started my big bet 7 years ago when I became a coach. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives looking to bet big on themselves.
               </p>
@@ -176,45 +173,45 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── TEDx Video ── */}
-      <section style={{ padding:'0 32px 100px' }}>
-        <div className="container" style={{ padding:0 }}>
-          <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden', background:'#000' }}>
-            {/* 16:9 aspect ratio wrapper */}
-            <div style={{ position:'relative', paddingBottom:'56.25%', height:0 }}>
-              <iframe
-                src="https://www.youtube.com/embed/V4lxlZBYHjY"
-                title="Faith, Psychedelics, and Mental Health — Fayzan Rab at TEDxEmory"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{
-                  position:'absolute', top:0, left:0,
-                  width:'100%', height:'100%',
-                  border:'none',
-                }}
-              />
-            </div>
-            {/* Label beneath */}
+      {/* ── TEDx Link ── */}
+      <section style={{ padding:'0 0 100px' }}>
+        <div className="container">
+          <a
+            href="https://www.youtube.com/watch?v=V4lxlZBYHjY"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration:'none', display:'block' }}
+          >
             <div style={{
-              padding:'16px 24px',
-              background:'rgba(10,7,0,0.80)',
-              backdropFilter:'blur(10px)',
+              borderRadius:'16px', padding:'24px 28px',
+              background:'linear-gradient(135deg,rgba(245,158,11,0.06) 0%,rgba(234,108,30,0.04) 100%)',
+              border:'1px solid rgba(245,158,11,0.15)',
               display:'flex', alignItems:'center', justifyContent:'space-between',
-              flexWrap:'wrap', gap:'8px',
-            }}>
+              flexWrap:'wrap', gap:'16px',
+              transition:'border-color 0.2s ease, background 0.2s ease',
+            }}
+            onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.35)'; e.currentTarget.style.background='linear-gradient(135deg,rgba(245,158,11,0.10) 0%,rgba(234,108,30,0.07) 100%)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.15)'; e.currentTarget.style.background='linear-gradient(135deg,rgba(245,158,11,0.06) 0%,rgba(234,108,30,0.04) 100%)'; }}
+            >
+              <div style={{ display:'flex', alignItems:'center', gap:'16px' }}>
+                <div style={{
+                  width:'44px', height:'44px', borderRadius:'50%', flexShrink:0,
+                  background:'linear-gradient(135deg,#f59e0b,#ea6c1e)',
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <div>
+                  <div style={{ fontSize:'15px', fontWeight:500, color:'var(--text)', marginBottom:'3px' }}>Faith, Psychedelics, and Mental Health</div>
+                  <div style={{ fontSize:'13px', color:'var(--text-3)' }}>TEDxEmory · February 2024</div>
+                </div>
+              </div>
               <span style={{
-                fontSize:'14px', color:'rgba(255,255,255,0.65)', fontWeight:500,
-              }}>Faith, Psychedelics, and Mental Health</span>
-              <span style={{
-                display:'inline-block', padding:'4px 14px',
-                borderRadius:'100px', border:'1px solid rgba(245,158,11,0.30)',
-                background:'rgba(245,158,11,0.08)',
-                fontSize:'10px', fontWeight:700, letterSpacing:'0.16em',
-                textTransform:'uppercase', color:'rgba(245,158,11,0.80)',
-              }}>TEDxEmory · February 2024</span>
+                fontSize:'13px', fontWeight:600, color:'var(--amber)',
+                letterSpacing:'0.04em',
+              }}>Watch →</span>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 

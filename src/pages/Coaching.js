@@ -4,57 +4,57 @@ import { Link } from 'react-router-dom';
 const testimonials = [
   {
     id:1, colorClass:'t1',
+    text:"Fayzan's unique value is at the intersection of the worlds he has been in — business, entrepreneurship, medical, psychiatric, and the psychedelic medicine work. <strong>All of that is wrapped in a spirituality and vulnerability that is rare.</strong>",
+    name:'Andrew Barakat', role:'AI Health PM, Google',
+    avatar:'/images/headshots/andrew-barakat.jpeg',
+  },
+  {
+    id:2, colorClass:'t2',
     text:'Working with Fayzan allowed me to rapidly step into <strong>the best version of myself in a way that feels genuine and lasting.</strong>',
     name:'Aatash Parikh', role:'Founder, Inkwire',
     avatar:'/images/headshots/aatash-parikh.webp',
   },
   {
-    id:2, colorClass:'t2',
+    id:3, colorClass:'t3',
     text:"Fayzan's mix of sharp questions, frameworks, and calm nature helped me turn a half-formed idea into a business. I went <strong>from employee to founder with an owner's mindset.</strong>",
     name:'Tayyab Rizvi', role:'Founder, Scalemates',
     avatar:'/images/headshots/tayyab-rizvi.jpeg',
   },
   {
-    id:3, colorClass:'t3',
+    id:4, colorClass:'t4',
     text:'Fayzan really helped me shift my trajectory with both a practical and emotional/energetic approach. I am very grateful for the experience, grateful for his <strong>kindness, honesty and intuition.</strong>',
     name:'Dr. Joe Tafur', role:'Founder, Modern Spirit',
     avatar:'/images/headshots/joe-tafur.webp',
   },
   {
-    id:4, colorClass:'t4',
+    id:5, colorClass:'t5',
     text:'I came to Fayzan feeling like there were so many things wrong with me. After the first month, <strong>it was life-changing.</strong> He helped me realize I should be coming from a place of love, not doubt.',
     name:'Somon Nader', role:'Finance at Databricks',
     avatar:'/images/headshots/somon-nader.jpeg',
   },
   {
-    id:5, colorClass:'t5',
+    id:6, colorClass:'t6',
     text:'One of the <strong>most transformative investments I made in my adult life.</strong>',
     name:'Neil Sethi', role:'Senior PM at Spotify',
     avatar:'/images/headshots/neil-sethi.jpeg',
   },
   {
-    id:6, colorClass:'t6',
+    id:7, colorClass:'t1',
     text:"Fayzan was the right coach for me because I saw his strength as an organizer — inspiring leadership as well as leading. <strong>I knew I wanted to work with someone who is walking his own talk.</strong>",
     name:'J.P. Hutchins', role:'Senior Engineer at Intercreate',
     avatar:'/images/headshots/jp-hutchins.jpg',
   },
   {
-    id:7, colorClass:'t1',
+    id:8, colorClass:'t2',
     text:'This has been more like <strong>leadership coaching</strong> than life and career coaching. <strong>Grown more here than I have at any other point in my life.</strong> Fayzan is a true companion in this journey.',
     name:'Derek Evanson', role:'Director at Netflix',
     avatar:'/images/headshots/derek-evanson.jpeg',
   },
   {
-    id:8, colorClass:'t2',
+    id:9, colorClass:'t3',
     text:"Coaching has felt like <strong>a jet pack for my life.</strong> It's been more useful than almost anything else I could have invested in this past year. It's hard to find people who can balance empathy, humor, and no-bullshit directness.",
     name:'Deepan Mehta', role:'Co-Founder Struct AI (YC-24), Former Senior PM at LinkedIn',
     avatar:'/images/headshots/deepan-mehta.jpeg',
-  },
-  {
-    id:9, colorClass:'t3',
-    text:"Fayzan's unique value is at the intersection of the worlds he has been in — business, entrepreneurship, medical, psychiatric, and the psychedelic medicine work. <strong>All of that is wrapped in a spirituality and vulnerability that is rare.</strong>",
-    name:'Andrew Barakat', role:'AI Health PM, Google',
-    avatar:'/images/headshots/andrew-barakat.jpeg',
   },
   {
     id:10, colorClass:'t4',
@@ -134,7 +134,7 @@ export default function Coaching() {
             <div className="service-card service-card-1">
               <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Founders & Senior Operators</span>
               <h3>You're high-performing. And quietly unfulfilled.</h3>
-              <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture, holds you to what matters, and stays with you through the complexity. This is that.</p>
+              <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture, holds you to what matters, and stays with you through the complexity.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-2">
