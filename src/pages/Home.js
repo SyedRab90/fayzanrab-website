@@ -242,25 +242,25 @@ export default function Home() {
       {/* ── SERVICES ── */}
       <section className="section" style={{ paddingTop:0 }}>
         <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>What's Offered</span>
+          <span className="label" style={{ display:'block', textAlign:'center' }}>Who I Work With</span>
           <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>
-            How Fayzan works
+            The situations
           </h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
             <div className="service-card service-card-1">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>1:1 Coaching</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Founders & Senior Operators</span>
               <h3>You're high-performing. And something is off.</h3>
               <p>You need someone who knows your full picture, holds you to what matters, and stays with you through the complexity.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
             </div>
             <div className="service-card service-card-2">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Mediation</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Tension</span>
               <h3>The relationship with your co-founder is fraying.</h3>
               <p>A structured process to surface what's actually happening and find a path forward before it becomes the company's biggest liability.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>
             </div>
             <div className="service-card service-card-3">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>After the Exit</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Post-Exit</span>
               <h3>You sold. Now what?</h3>
               <p>For the first time in years there's no obvious north star. Figure out what you actually want from here.</p>
               <Link to="/coaching" className="learn-more">Learn More →</Link>

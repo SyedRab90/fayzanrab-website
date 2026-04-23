@@ -128,23 +128,23 @@ export default function Coaching() {
       {/* ── SERVICES ── */}
       <section className="section">
         <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>What's Offered</span>
-          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>Services</h2>
+          <span className="label" style={{ display:'block', textAlign:'center' }}>Who I Work With</span>
+          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>The situations</h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
             <div className="service-card service-card-1">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>1:1 Coaching</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Founders & Senior Operators</span>
               <h3>You're high-performing. And quietly unfulfilled.</h3>
               <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you feel about it. You have access to smart people, but not to someone who knows your full picture, holds you to what matters, and stays with you through the complexity. This is that.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-2">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Mediation</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Tension</span>
               <h3>The relationship with your co-founder is fraying.</h3>
               <p>Decisions are slower. Conversations are tenser. You're not sure if the problem is the business or each other. A structured process — individual and joint sessions — designed to surface what's actually happening, restore trust, and find a clear path forward before the relationship becomes the company's biggest liability.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-3">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>After the Exit</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Post-Exit</span>
               <h3>You sold. Now what?</h3>
               <p>For the first time in years, there's no product to ship and no obvious north star. The disorientation after a major exit is real — and almost no one prepares you for it. What you need isn't another advisor with a framework. It's someone who can help you figure out what you actually want from here.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
