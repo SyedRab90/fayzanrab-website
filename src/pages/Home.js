@@ -133,7 +133,7 @@ export default function Home() {
             }}>discernment.</span>
           </h1>
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'480px', marginBottom:'36px' }}>
-            I'm Fayzan Rab — executive coach, physician, and psychedelic researcher. I work with a small number of founders and executives to lead from their inner wisdom and perform beyond what optimization alone can reach.
+            I'm Fayzan Rab. The most important frontier isn't AI — it's human consciousness. I've spent seven years exploring that through executive coaching, western medicine, and psychedelic research. I bring all of it to a small number of founders and executives ready to bet big on themselves.
           </p>
           <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
             <Link to="/contact" className="btn btn-primary">Work with me →</Link>

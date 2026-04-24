@@ -271,7 +271,7 @@ export default function Research() {
             Emory Center for Psychedelics and Spirituality
           </h2>
           <p style={{ color:'var(--text-2)', lineHeight:'1.80', fontSize:'15px' }}>
-            Researcher under Drs. Dunlop and Zarrabi. Current work includes a landmark investigation of psychedelic use among executives, entrepreneurs, and investors — alongside studies on Muslim attitudes and lived experiences with psychedelics, and MDMA-assisted therapy eligibility for PTSD. Also co-investigated psychedelic clinical trials at the Aquilino Cancer Institute, and sub-investigator on a systematic review of outcome measures in psychedelic-assisted therapy for serious illness.
+            Researcher under Drs. Dunlop and Zarrabi. Current work includes a landmark investigation of psychedelic use among executives, entrepreneurs, and investors — alongside studies on Muslim attitudes and lived experiences with psychedelics, and MDMA-assisted therapy eligibility for PTSD. Previous co-investigator in psychedelic clinical trials at the Aquilino Cancer Institute involving MDMA, psilocybin, and 5-MeO-DMT.
           </p>
         </div>
       </section>
