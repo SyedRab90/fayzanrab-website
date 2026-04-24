@@ -122,13 +122,13 @@ export default function About() {
         <div className="container" style={{ textAlign:'center', maxWidth:'720px', margin:'0 auto', position:'relative', zIndex:1 }}>
           <span className="label">The Through Line</span>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            I have made three major career bets — Silicon Valley, medical school, psychedelic research. Every single one was the same bet: that the most important frontier is human consciousness.
+            I am an AI power user. I use it in every faculty of my life (including building this website). And yet the most important frontier is human consciousness. Every path I've taken — coaching, medicine, psychedelic research — has been an expression of that commitment to cultivate and transform human consciousness.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            The obstacle is almost never information or strategy. Those are useful accelerants. The gap is always the same: between who you are now and who you know you're capable of becoming.
+            What I have consistently seen is that the obstacle is almost never information or strategy. Those are useful accelerants. The core gap has been closing the space between who you are now and who you know you are capable of becoming.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)' }}>
-            Closing that gap — that's the work.
+            That's the core of what I bring into the coaching relationship.
           </p>
         </div>
       </section>
