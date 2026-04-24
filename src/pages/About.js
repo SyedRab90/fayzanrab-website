@@ -154,7 +154,7 @@ export default function About() {
               ].map((text, i) => (
                 <p key={i} style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }} dangerouslySetInnerHTML={{ __html: text }} />
               ))}
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>If that's you, let's chat.</p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>If that stirred something in you, let's chat.</p>
             </div>
 
             {/* Credentials */}

@@ -360,19 +360,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FAYZAN INTRO ── */}
-      <section className="section">
-        <div className="container" style={{ maxWidth:'580px', margin:'0 auto', textAlign:'center' }}>
-          <span className="label">My biggest qualification is I am doing the work</span>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.85', marginBottom:'24px' }}>
-            7 years ago, I hired a coach because I wanted to hear my own voice and take a big bet on it. That led me to synthesize the best of executive coaching, western medicine, and psychedelic research. Now I work with others looking to bet big on themselves.
-          </p>
-          <Link to="/about" style={{
-            fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
-            textTransform:'uppercase', color:'var(--amber)', textDecoration:'none',
-          }}>Read my story →</Link>
-        </div>
-      </section>
 
       {/* ── CTA ── */}
       <section style={{ padding:'60px 0 100px' }}>
