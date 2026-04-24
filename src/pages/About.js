@@ -17,7 +17,7 @@ const lenses = [
   {
     roman: 'III',
     title: 'Silicon Valley Operator',
-    desc: 'Product Leader at Google. First product hire at a Series A→C startup. Fayzan has been in the rooms you\'re in — the fundraising pressure, the team decisions, the gap between what you\'re building and how you feel about it. You don\'t need to explain the context. He already understands it.',
+    desc: 'You don\'t need to spend the first 20 minutes setting context. The fundraising pressure, the co-founder tension, the gap between what you\'re building and how you feel about it — he\'s been in those rooms. Product lead at Google. First product hire at a Series A→C startup. He already understands.',
     bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
   },
 ];
@@ -55,7 +55,7 @@ export default function About() {
                 Fayzan Rab
               </h1>
               <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
-                Hiring my first coach was day 0 of betting big on myself. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives looking to bet big on themselves.
+                Hiring my first coach was day 0 of betting big on myself. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives who are done getting smarter and ready to get clearer.
               </p>
               <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
                 <Link to="/contact" className="btn btn-primary">Work with me →</Link>
@@ -125,10 +125,10 @@ export default function About() {
             I have made three major career bets — Silicon Valley, medical school, psychedelic research. Every single one was the same bet: that the most important frontier is human consciousness.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            What I have consistently seen is that the obstacle is almost never information or strategy. Those are useful accelerants. The core gap has been closing the space between who you are now and who you know you are capable of becoming.
+            The obstacle is almost never information or strategy. Those are useful accelerants. The gap is always the same: between who you are now and who you know you're capable of becoming.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)' }}>
-            That's the core of what I bring into the coaching relationship.
+            Closing that gap — that's the work.
           </p>
         </div>
       </section>

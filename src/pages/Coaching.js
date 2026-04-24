@@ -117,7 +117,7 @@ export default function Coaching() {
             It can reflect you back with precision. But it can't feel the shift in the room when you're about to make a decision you'll regret. It can't sense the fear underneath the confident pitch. It can't sit with you in the discomfort long enough for something real to shift.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'18px' }}>
-            What's required is something embodied: a direct, felt experience from which real knowing emerges.
+            That takes a human being. One who can feel what's in the room, stay with the discomfort, and refuse to move on until something real has shifted.
           </p>
           <p style={{ fontSize:'14px', color:'var(--text-3)' }}>
             Fayzan works with a small number of clients at a time, by design.
@@ -186,7 +186,7 @@ export default function Coaching() {
             <div className="orb" style={{ width:280, height:280, top:'-70px', right:'-50px', background:'radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%)' }} />
             <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
             <h2 style={{ fontSize:'clamp(22px,3.5vw,38px)', color:'#fff', fontWeight:500, marginBottom:'10px', position:'relative' }}>
-              Ready to begin?
+              The first conversation is where it starts.
             </h2>
             <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'28px', position:'relative', fontSize:'16px' }}>
               I keep my client load small. Let's find out if this is the right fit.

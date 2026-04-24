@@ -463,7 +463,7 @@ export default function Research() {
         <div className="container" style={{ textAlign:'center' }}>
           <span className="label">Work Together</span>
           <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'12px' }}>
-            Interested in the intersection of all this?
+            The research and the coaching are the same question.
           </h2>
           <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'16px', maxWidth:'480px', margin:'0 auto 28px' }}>
             Every clinical insight sharpens what I notice in sessions. Every session sharpens what I think to study. The feedback loop is the point.

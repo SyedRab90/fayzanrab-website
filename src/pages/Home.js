@@ -133,7 +133,7 @@ export default function Home() {
             }}>discernment.</span>
           </h1>
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'480px', marginBottom:'36px' }}>
-            The most important frontier is human consciousness. I've spent seven years examining that through executive coaching, western medicine, and psychedelic research. I bring all of that to a small number of founders and executives ready to bet big on themselves.
+            The most important frontier is human consciousness. I've spent seven years at that intersection — executive coaching, clinical medicine, psychedelic research. I bring all of it to a small number of founders and executives who are done getting smarter and ready to get clearer.
           </p>
           <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
             <Link to="/contact" className="btn btn-primary">Work with me →</Link>
@@ -373,7 +373,7 @@ export default function Home() {
             <div className="orb" style={{ width:240, height:240, bottom:'-60px', left:'5%', background:'radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%)' }} />
             <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
             <h2 style={{ fontSize:'clamp(24px,3.5vw,40px)', color:'#fff', marginBottom:'10px', position:'relative', fontWeight:500 }}>
-              Ready to begin?
+              Not everyone is a fit. Let's find out.
             </h2>
             <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'16px' }}>
               I keep my client load small. Let's find out if this is the right fit.
