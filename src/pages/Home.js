@@ -376,7 +376,7 @@ export default function Home() {
               Ready to begin?
             </h2>
             <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'16px' }}>
-              Reach out to start a conversation.
+              I keep my client load small. Let's find out if this is the right fit.
             </p>
             <Link to="/contact" style={{
               display:'inline-block', padding:'13px 32px', borderRadius:'100px',

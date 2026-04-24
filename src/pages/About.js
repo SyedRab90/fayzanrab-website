@@ -11,7 +11,7 @@ const lenses = [
   {
     roman: 'II',
     title: 'Mastery',
-    desc: 'Thousands of hours working with high performing individuals and teams to unlock deeper performance, fulfillment, and leadership capacity. PCC certified through the ICF.',
+    desc: 'Six years, 2,000+ hours, and a practice built entirely on referrals. Not because the marketing was good — because the work was.',
     bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
   },
   {
@@ -122,7 +122,7 @@ export default function About() {
         <div className="container" style={{ textAlign:'center', maxWidth:'720px', margin:'0 auto', position:'relative', zIndex:1 }}>
           <span className="label">The Through Line</span>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            I am an AI power user. I use it in every faculty of my life (including building this website). And yet the most important frontier is human consciousness. Every path I've taken — coaching, medicine, psychedelic research — has been an expression of that commitment to cultivate and transform human consciousness.
+            I have made three major career bets — Silicon Valley, medical school, psychedelic research. Every single one was the same bet: that the most important frontier is human consciousness.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
             What I have consistently seen is that the obstacle is almost never information or strategy. Those are useful accelerants. The core gap has been closing the space between who you are now and who you know you are capable of becoming.

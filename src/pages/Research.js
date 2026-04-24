@@ -466,7 +466,7 @@ export default function Research() {
             Interested in the intersection of all this?
           </h2>
           <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'16px', maxWidth:'480px', margin:'0 auto 28px' }}>
-            Research and coaching are not separate entities. My experience in both feed and build on each other. If something here resonates, reach out.
+            Every clinical insight sharpens what I notice in sessions. Every session sharpens what I think to study. The feedback loop is the point.
           </p>
           <Link to="/contact" className="btn btn-primary">Start a conversation →</Link>
         </div>
