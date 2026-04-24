@@ -133,7 +133,7 @@ export default function Home() {
             }}>discernment.</span>
           </h1>
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'480px', marginBottom:'36px' }}>
-            The most important frontier isn't AI — it's human consciousness. I've spent seven years examining that through executive coaching, western medicine, and psychedelic research. I bring all of that to a small number of founders and executives ready to bet big on themselves.
+            The most important frontier is human consciousness. I've spent seven years examining that through executive coaching, western medicine, and psychedelic research. I bring all of that to a small number of founders and executives ready to bet big on themselves.
           </p>
           <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
             <Link to="/contact" className="btn btn-primary">Work with me →</Link>
@@ -146,22 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* ── THROUGH LINE ── */}
-      {/* REVERT: remove this section to go back to previous state */}
-      <section style={{
-        background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
-        padding:'72px 0', position:'relative', overflow:'hidden',
-        borderTop:'1px solid rgba(245,158,11,0.07)',
-      }}>
-        <div className="orb" style={{ width:500, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
-        <div className="container" style={{ textAlign:'center', maxWidth:'680px', margin:'0 auto', position:'relative', zIndex:1 }}>
-          <span className="label">The Through Line</span>
-          <p style={{ fontSize:'clamp(20px,2.6vw,28px)', fontFamily:"'Instrument Serif',serif", fontWeight:400, lineHeight:'1.60', color:'var(--text)' }}>
-            The most important frontier isn't artificial intelligence. It's human consciousness — and I've spent seven years examining that through executive coaching, western medicine, and psychedelic research.
-          </p>
-        </div>
-      </section>
 
       {/* ── CLIENT COMPANIES STRIP ── */}
       <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(245,158,11,0.07)' }}>
