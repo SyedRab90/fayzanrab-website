@@ -55,7 +55,7 @@ export default function About() {
                 Fayzan Rab
               </h1>
               <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
-                I took a big bet on myself when I became a coach. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives looking to bet big on themselves.
+                Hiring my first coach was day 0 of betting big on myself. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives looking to bet big on themselves.
               </p>
               <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
                 <Link to="/contact" className="btn btn-primary">Work with me →</Link>
@@ -120,14 +120,15 @@ export default function About() {
       }}>
         <div className="orb" style={{ width:500, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
         <div className="container" style={{ textAlign:'center', maxWidth:'720px', margin:'0 auto', position:'relative', zIndex:1 }}>
+          <span className="label">The Through Line</span>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            I believe the most important frontier isn't artificial intelligence. It's human consciousness — the inner capacity to see clearly, choose wisely, and lead from who you actually are.
+            I am an AI power user. I use it in every faculty of my life (including building this website). But I believe the most important frontier isn't AI, it's human consciousness. Every path I've taken — coaching, medicine, psychedelic research — has been an expression of that commitment to cultivate and transform human consciousness.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            Every path I've taken — coaching, medicine, psychedelic research — has been an expression of that commitment. What I've learned across all three is the same: the obstacle is almost never information or strategy. It's always the same gap: between who you are and who you know you're capable of being.
+            What I have consistently seen is that the obstacle is almost never information or strategy. Those are useful accelerants. The core gap has been closing the space between who you are now and who you know you are capable of becoming.
           </p>
           <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)' }}>
-            That's what I bring into the coaching relationship.
+            That's the core of what I bring into the coaching relationship.
           </p>
         </div>
       </section>
