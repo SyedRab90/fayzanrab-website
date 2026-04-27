@@ -112,7 +112,7 @@ export default function About() {
                 Every path I've taken — coaching, medicine, psychedelic research — has shown me one consistent truth about human development: transformation is about closing the gap between who you are now and who you know you are capable of becoming.
               </p>
               <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>
-                That requires a human who is willing to go be with you — in all of your context and story — and take a stand for your potential.
+                That requires a human who is willing to go be with you — in all of your context and story — and stand for your potential.
               </p>
             </div>
 
@@ -145,12 +145,29 @@ export default function About() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding:'80px 0 100px' }}>
-        <div className="container" style={{ textAlign:'center' }}>
-          <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'28px' }}>
-            Ready to bet big on yourself?
-          </h2>
-          <Link to="/contact" className="btn btn-primary">Let's talk →</Link>
+      <section style={{ padding:'60px 0 100px' }}>
+        <div className="container">
+          <div style={{
+            borderRadius:'22px', padding:'68px 52px', textAlign:'center',
+            background:'linear-gradient(135deg,#3b1007 0%,#7c2d12 45%,#92400e 100%)',
+            position:'relative', overflow:'hidden',
+          }}>
+            <div className="orb" style={{ width:280, height:280, top:'-70px', right:'-50px', background:'radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%)' }} />
+            <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
+            <h2 style={{ fontSize:'clamp(22px,3.5vw,38px)', color:'#fff', fontWeight:500, marginBottom:'10px', position:'relative' }}>
+              Ready to begin?
+            </h2>
+            <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'28px', position:'relative', fontSize:'16px' }}>
+              I keep my client load small. Let's find out if this is the right fit.
+            </p>
+            <Link to="/contact" style={{
+              display:'inline-block', padding:'13px 32px', borderRadius:'100px',
+              background:'linear-gradient(135deg, #f59e0b, #ea6c1e)',
+              color:'#fff', fontSize:'14px', fontWeight:600,
+              textDecoration:'none', position:'relative',
+              boxShadow:'0 0 28px rgba(245,158,11,0.40)',
+            }}>Let's talk →</Link>
+          </div>
         </div>
       </section>
 

@@ -244,12 +244,12 @@ export default function Home() {
             {[
               {
                 title: 'The Coaching Bet',
-                desc: 'Coaching has shown the power of integration. When I stopped believing I needed to choose sides of my identity — cerebral, entrepreneurial, interpersonal, spiritual — I gave myself permission to step into my power. Thousands of hours, mentorship from the best in the field, a craft built over years. I bring all of it to those willing to bet big on themselves. The highest honor you can pay your own consciousness is to bet big on it.',
+                desc: 'Being coached and coaching others has shown me the power of integration. When I stopped believing I needed to choose sides of my identity — cerebral, entrepreneurial, interpersonal, spiritual — I gave myself permission to step into my power. Thousands of hours, mentorship from the best in the field, a craft built over years. The highest honor you can pay your own consciousness is to bet big on it.',
                 bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
               },
               {
                 title: 'The Medicine Bet',
-                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor and expertise. I knew that if I were to commit to cultivating human consciousness, I needed to fully understand its foil: illness and suffering. Becoming a doctor brought an appreciation for the tools and research of western medicine — and the discipline to find the question underneath the question.',
+                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor, service, and expertise. I knew that if I were to commit to cultivating human potential, I needed to understand its foil: illness and suffering. Becoming a doctor brought an appreciation for the tools and research of western medicine — and the discipline to find the question underneath the question.',
                 bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
               },
               {
@@ -393,7 +393,7 @@ export default function Home() {
             <div className="orb" style={{ width:240, height:240, bottom:'-60px', left:'5%', background:'radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%)' }} />
             <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
             <h2 style={{ fontSize:'clamp(24px,3.5vw,40px)', color:'#fff', marginBottom:'10px', position:'relative', fontWeight:500 }}>
-              Ready to begin?
+              Ready to bet big on yourself?
             </h2>
             <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'16px' }}>
               I keep my client load small. Let's find out if this is the right fit.
