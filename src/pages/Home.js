@@ -247,17 +247,17 @@ export default function Home() {
             {[
               {
                 title: 'The Coaching Bet',
-                desc: 'Being coached and coaching others has shown me the power of integration. When I stopped believing I needed to choose sides of my identity — cerebral, entrepreneurial, interpersonal, spiritual — I gave myself permission to step into my power. Thousands of hours, mentorship from the best in the field, a craft built over years. The highest honor you can pay your own consciousness is to bet big on it.',
+                desc: 'Being coached — and coaching others — revealed the power of integration. When I stopped choosing between sides of my identity — cerebral, entrepreneurial, interpersonal, spiritual — I stepped into my power. The highest honor you can pay your own consciousness is to bet big on it.',
                 bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
               },
               {
                 title: 'The Medicine Bet',
-                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor, service, and expertise. I knew that if I were to commit to cultivating human potential, I needed to understand its foil: illness and suffering. Becoming a doctor brought an appreciation for the tools and research of western medicine — and the discipline to find the question underneath the question.',
+                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor, service, and expertise. To commit to cultivating human potential, I first needed to understand its foil: illness and suffering. Becoming a doctor taught me to find the question underneath the question.',
                 bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
               },
               {
                 title: 'The Psychedelic Bet',
-                desc: 'My research on psychedelics puts me at the frontier of consciousness: what happens when we loosen our grip on the conception of self we hold so tightly? Psychedelics reveal what both coaching and medicine have pointed to — the stories we tell about ourselves are constructed, and therefore malleable. By studying the ecstatic, I see in the ordinary the full depths of what human beings are capable of.',
+                desc: 'I study psychedelics because they surface what coaching and medicine have always pointed to: who we think we are is constructed and therefore malleable. By studying the ecstatic, I see in the ordinary what human beings are truly capable of.',
                 bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
               },
             ].map(({ title, desc, bg }) => (
