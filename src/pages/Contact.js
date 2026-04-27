@@ -76,7 +76,7 @@ export default function Contact() {
             fontSize: '16px', color: 'var(--text-2)',
             lineHeight: '1.78', maxWidth: '460px',
           }}>
-            Whether you have a specific goal or just a sense that something needs to change, reach out. I'll respond personally.
+            Whether you have a specific goal or just a sense that something needs to change, reach out. I'll respond in 1-2 business days.
           </p>
         </div>
       </section>

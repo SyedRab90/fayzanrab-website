@@ -11,13 +11,13 @@ const lenses = [
   {
     roman: 'II',
     title: 'Mastery',
-    desc: 'Six years, 2,000+ hours, and a practice built entirely on referrals. Not because the marketing was good — because the work was.',
+    desc: 'Seven years, 2,000+ hours, and a practice built entirely on referrals. Instead of marketing and tactics, Fayzan focuses on getting mentored by the best and brightest, refining his craft, and letting his work speak for himself.',
     bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
   },
   {
     roman: 'III',
     title: 'Silicon Valley Operator',
-    desc: 'You don\'t need to spend the first 20 minutes setting context. The fundraising pressure, the co-founder tension, the gap between what you\'re building and how you feel about it — he\'s been in those rooms. Product lead at Google. First product hire at a Series A→C startup. He already understands.',
+    desc: 'Product lead at Google. First product hire at a Series A→C startup. Claude Code power user. You can skip the context. He\'s been in the room.',
     bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
   },
 ];
@@ -54,9 +54,6 @@ export default function About() {
               <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'24px' }}>
                 Fayzan Rab
               </h1>
-              <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.82', marginBottom:'28px' }}>
-                Hiring my first coach was day 0 of betting big on myself. I transitioned from Silicon Valley to medical school, perfected my craft with thousands of hours of coaching and rigorous training, and became a leading psychedelic researcher. I work with a small number of founders and executives who are done getting smarter and ready to get clearer.
-              </p>
               <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
                 <Link to="/contact" className="btn btn-primary">Work with me →</Link>
                 <Link to="/coaching" className="btn btn-outline">See services</Link>
@@ -110,26 +107,6 @@ export default function About() {
             </div>
 
           </div>
-        </div>
-      </section>
-
-      {/* ── THROUGH LINE ── */}
-      <section className="section" style={{
-        background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
-        position:'relative', overflow:'hidden',
-      }}>
-        <div className="orb" style={{ width:500, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
-        <div className="container" style={{ textAlign:'center', maxWidth:'720px', margin:'0 auto', position:'relative', zIndex:1 }}>
-          <span className="label">The Through Line</span>
-          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            I am an AI power user. I use it in every faculty of my life (including building this website). And yet the most important frontier is human consciousness. Every path I've taken — coaching, medicine, psychedelic research — has been an expression of that commitment to cultivate and transform human consciousness.
-          </p>
-          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)', marginBottom:'16px' }}>
-            What I have consistently seen is that the obstacle is almost never information or strategy. Those are useful accelerants. The core gap has been closing the space between who you are now and who you know you are capable of becoming.
-          </p>
-          <p style={{ fontSize:'clamp(17px,2.2vw,24px)', fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontWeight:400, lineHeight:'1.65', color:'var(--text)' }}>
-            That's the core of what I bring into the coaching relationship.
-          </p>
         </div>
       </section>
 
