@@ -81,7 +81,7 @@ export default function Coaching() {
     <div>
 
       {/* ── HERO ── */}
-      <section style={{ display:'flex', alignItems:'flex-start', position:'relative', overflow:'hidden', paddingTop:'160px', paddingBottom:'120px' }}>
+      <section style={{ display:'flex', alignItems:'flex-start', position:'relative', overflow:'hidden', paddingTop:'160px', paddingBottom:'80px' }}>
         <div className="orb" style={{ width:580, height:580, top:'0%', right:'-8%', background:'radial-gradient(circle,rgba(245,158,11,0.14) 0%,transparent 68%)' }} />
         <div className="orb" style={{ width:400, height:400, bottom:'-10%', left:'-6%', background:'radial-gradient(circle,rgba(234,108,30,0.11) 0%,transparent 70%)' }} />
 
@@ -132,8 +132,8 @@ export default function Coaching() {
       {/* ── TESTIMONIALS ── */}
       <section style={{ padding:'0 0 100px' }}>
         <div className="container">
-          <span className="label">Client Experiences</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>What people say</h2>
+          <span className="label" style={{ display:'block', textAlign:'center' }}>Client Experiences</span>
+          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px', textAlign:'center' }}>What people say</h2>
           <div className="testimonials-masonry" style={{ columns:3, columnGap:'16px' }}>
             {testimonials.map(t => (
               <div key={t.id} className={`testimonial-card ${t.colorClass}`}>

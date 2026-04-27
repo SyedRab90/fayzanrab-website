@@ -220,41 +220,61 @@ export default function Home() {
               <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
                 The hardest questions — what to build next, who to become, whether you're moving in the right direction — don't get answered by more information. Argument doesn't reach that place. What reaches it is felt experience — the direct, embodied knowing of your own wisdom.
               </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px' }}>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px', marginBottom:'28px' }}>
                 That's the work.
               </p>
+              <Link to="/coaching" className="btn btn-outline">Learn more →</Link>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
+      {/* ── THREE BETS ── */}
       <section className="section" style={{ paddingTop:0 }}>
         <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>Who I Work With</span>
-          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>
-            The situations
+          <span className="label" style={{ display:'block', textAlign:'center' }}>The Three Bets</span>
+          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'16px' }}>
+            Different Paths. Same Commitment.
           </h2>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
-            <div className="service-card service-card-1">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Founders & Senior Operators</span>
-              <h3>You're high-performing. And something is off.</h3>
-              <p>You need someone who knows your full picture, holds you to what matters, and stays with you through the complexity.</p>
-              <Link to="/coaching" className="learn-more">Learn More →</Link>
-            </div>
-            <div className="service-card service-card-2">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Tension</span>
-              <h3>The relationship with your co-founder is fraying.</h3>
-              <p>A structured process to surface what's actually happening and find a path forward before it becomes the company's biggest liability.</p>
-              <Link to="/coaching" className="learn-more">Learn More →</Link>
-            </div>
-            <div className="service-card service-card-3">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Post-Exit</span>
-              <h3>You sold. Now what?</h3>
-              <p>For the first time in years there's no obvious north star. Figure out what you actually want from here.</p>
-              <Link to="/coaching" className="learn-more">Learn More →</Link>
-            </div>
+          <p style={{ textAlign:'center', color:'var(--text-2)', fontSize:'16px', maxWidth:'560px', margin:'0 auto 48px' }}>
+            After years as a product lead at Google and an early hire at a Series A→C startup, I made three bets that aimed to map the full spectrum of human consciousness.
+          </p>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'16px' }} className="three-col">
+            {[
+              {
+                title: 'The Coaching Bet',
+                desc: 'Coaching has shown the power of integration. When I stopped believing I needed to choose sides of my identity — cerebral, entrepreneurial, interpersonal, spiritual — I gave myself permission to step into my power. Thousands of hours, mentorship from the best in the field, a craft built over years. I bring all of it to those willing to bet big on themselves. The highest honor you can pay your own consciousness is to bet big on it.',
+                bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
+              },
+              {
+                title: 'The Medicine Bet',
+                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor and expertise. I knew that if I were to commit to cultivating human consciousness, I needed to fully understand its foil: illness and suffering. Becoming a doctor brought an appreciation for the tools and research of western medicine — and the discipline to find the question underneath the question.',
+                bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
+              },
+              {
+                title: 'The Psychedelic Bet',
+                desc: 'My research on psychedelics puts me at the frontier of consciousness: what happens when we loosen our grip on the conception of self we hold so tightly? Psychedelics reveal what both coaching and medicine have pointed to — the stories we tell about ourselves are constructed, and therefore malleable. By studying the ecstatic, I see the full depth of what human beings are capable of.',
+                bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
+              },
+            ].map(({ title, desc, bg }) => (
+              <div key={title} style={{
+                background:bg, borderRadius:'18px', padding:'32px 26px',
+                position:'relative', overflow:'hidden',
+                border:'1px solid rgba(245,158,11,0.12)',
+                transition:'transform 0.25s ease, box-shadow 0.25s ease',
+              }}
+              onMouseEnter={e=>{ e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 24px 56px rgba(245,158,11,0.14)'; }}
+              onMouseLeave={e=>{ e.currentTarget.style.transform='none'; e.currentTarget.style.boxShadow='none'; }}
+              >
+                <h3 style={{
+                  fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
+                  fontSize:'20px', fontWeight:500,
+                  color:'#fff', marginBottom:'12px',
+                }}>{title}</h3>
+                <p style={{ fontSize:'14px', lineHeight:'1.78', color:'rgba(255,255,255,0.82)' }}>{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

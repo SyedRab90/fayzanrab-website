@@ -1,68 +1,58 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const lenses = [
-  {
-    roman: 'I',
-    title: 'Rigorous & Evidence-Based',
-    desc: 'Most coaches come from the world of HR. Fayzan brings the precision of a physician — an MD from Emory, years of clinical training, and active research in psychedelic-assisted therapy. He cuts past the obvious to what\'s actually driving the problem.',
-    bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
-  },
-  {
-    roman: 'II',
-    title: 'Mastery',
-    desc: 'Seven years, 2,000+ hours, and a practice built entirely on referrals. Instead of marketing and tactics, Fayzan focuses on getting mentored by the best and brightest, refining his craft, and letting his work speak for himself.',
-    bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
-  },
-  {
-    roman: 'III',
-    title: 'Silicon Valley Operator',
-    desc: 'Product lead at Google. First product hire at a Series A→C startup. Claude Code power user. You can skip the context. He\'s been in the room.',
-    bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
-  },
-];
-
 const credentials = [
-  { label: 'Education',      value: 'MD, Emory University School of Medicine' },
-  { label: 'Certification',  value: 'PCC, International Coaching Federation' },
-  { label: 'Training',       value: 'IFS Level 1 (BIPOC) · Accomplishment Coaching Leadership Development Program' },
-  { label: 'Experience',     value: 'Product Leader at Google · 1st Product Hire at Mindstrong Health (Series C)' },
+  { label: 'Education',         value: 'MD, Emory University School of Medicine' },
+  { label: 'Certification',     value: 'PCC, International Coaching Federation' },
+  { label: 'Training',          value: 'IFS Level 1 (BIPOC) · Accomplishment Coaching Leadership Development Program' },
+  { label: 'Experience',        value: 'Product Leader at Google · 1st Product Hire at Mindstrong Health (Series C)' },
   { label: 'Clinical Research', value: 'Sub-Investigator · Aquilino Cancer Institute (Psychedelic Clinical Trials)' },
-  { label: 'Practice',       value: '2,000+ coaching hours with high performers' },
+  { label: 'Practice',          value: '2,000+ coaching hours with high performers' },
 ];
 
 export default function About() {
   return (
     <div>
 
-      {/* ── HERO ── */}
+      {/* ── HERO + STORY ── */}
       <section style={{
-        display: 'flex', alignItems: 'flex-start',
         position: 'relative', overflow: 'hidden',
-        paddingTop: '140px', paddingBottom: '100px',
+        paddingTop: '140px', paddingBottom: '40px',
       }}>
-        {/* Orbs */}
         <div className="orb" style={{ width:520, height:520, top:'5%', right:'-6%', background:'radial-gradient(circle,rgba(245,158,11,0.16) 0%,transparent 70%)' }} />
         <div className="orb" style={{ width:380, height:380, bottom:'10%', left:'-5%', background:'radial-gradient(circle,rgba(234,108,30,0.13) 0%,transparent 70%)' }} />
 
         <div className="container" style={{ position:'relative', zIndex:1, width:'100%' }}>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'flex-start' }} className="two-col">
 
-            {/* Left - text */}
+            {/* Left — story + name + buttons */}
             <div>
-              <span className="label">About</span>
-              <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'24px' }}>
+              <span className="label">The Story</span>
+              <h1 style={{ fontSize:'clamp(40px,5vw,64px)', fontWeight:500, marginBottom:'8px' }}>
                 Fayzan Rab
               </h1>
+              <p style={{ fontFamily:"'Instrument Serif',serif", fontStyle:'italic', fontSize:'clamp(18px,2vw,24px)', color:'var(--text-2)', lineHeight:'1.5', marginBottom:'28px' }}>
+                I hired a coach because I couldn't hear my own voice.
+              </p>
+              {[
+                "In 2019, I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
+                "I turned to mentors, therapy, meditation, self-help. I could hear everyone else's voice except my own.",
+                `My coach refused to give me answers. He continuously pointed to every way I outsourced my discernment and declined to participate in my optimization game to find the <em>right perspective</em>. In that space, I discovered my own inner wisdom.`,
+                "That clarity led me to executive coaching, medical school, and psychedelic research — three paths that are, at their core, the same commitment: helping people reclaim their own consciousness.",
+                "In 2026, it's the same problem but different form. AI can give advice anytime, optimize any problem, and generate insight on demand. The information is richer but the signal is harder to hear. The hunger for external answers has found a new home.",
+                "My job is the same: create space for you to hear your own wisdom, don't buy into your self-doubt or quick fixes, and call you forward to what you know you are truly capable of.",
+              ].map((text, i) => (
+                <p key={i} style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }} dangerouslySetInnerHTML={{ __html: text }} />
+              ))}
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px', marginBottom:'32px' }}>If that stirred something in you, let's chat.</p>
               <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
                 <Link to="/contact" className="btn btn-primary">Work with me →</Link>
                 <Link to="/coaching" className="btn btn-outline">See services</Link>
               </div>
             </div>
 
-            {/* Right - tinted image */}
-            <div style={{ position:'relative' }}>
-              {/* Ambient glow behind image */}
+            {/* Right — photo (sticky) */}
+            <div style={{ position:'sticky', top:'100px' }}>
               <div style={{
                 position:'absolute', inset:'-20px',
                 background:'radial-gradient(ellipse at center, rgba(245,158,11,0.20) 0%, transparent 70%)',
@@ -74,23 +64,17 @@ export default function About() {
                   alt="Fayzan Rab"
                   loading="lazy"
                   decoding="async"
-                  style={{
-                    width:'100%',
-                    display:'block',
-                  }}
+                  style={{ width:'100%', display:'block' }}
                 />
-                {/* Warm amber tint overlay */}
                 <div style={{
                   position:'absolute', inset:0,
                   background:'linear-gradient(160deg, rgba(245,158,11,0.22) 0%, rgba(234,108,30,0.18) 40%, rgba(120,53,15,0.35) 100%)',
                   mixBlendMode:'multiply',
                 }} />
-                {/* Bottom fade */}
                 <div style={{
                   position:'absolute', bottom:0, left:0, right:0, height:'45%',
                   background:'linear-gradient(to top, rgba(10,7,0,0.70) 0%, transparent 100%)',
                 }} />
-                {/* Badge */}
                 <div style={{
                   position:'absolute', bottom:'22px', left:'22px',
                   background:'rgba(10,7,0,0.55)',
@@ -110,32 +94,31 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── STORY + CREDENTIALS ── */}
-      <section className="section">
+      {/* ── THROUGHLINE + CREDENTIALS ── */}
+      <section style={{ padding:'40px 0 80px' }}>
         <div className="container">
           <div style={{ display:'grid', gridTemplateColumns:'1.3fr 1fr', gap:'64px', alignItems:'start' }} className="two-col">
 
-            {/* Story */}
+            {/* A Word on AI */}
             <div>
-              <span className="label">The Story</span>
-              <h2 style={{ fontSize:'clamp(22px,2.4vw,32px)', fontWeight:500, marginBottom:'24px', fontFamily:"'Instrument Serif',serif", fontStyle:'italic' }}>
-                I hired a coach because I couldn't hear my own voice.
-              </h2>
-              {[
-                "In 2019, I'd built what you're supposed to build — product lead at Google, first product hire at a Series A→C company, campaign organizer in a presidential race. Accomplished, unfulfilled, and honestly lost.",
-                "I turned to mentors, therapy, meditation, self-help. I could hear everyone else's voice except my own.",
-                `My coach refused to give me answers. He continuously pointed to every way I outsourced my discernment and declined to participate in my optimization game to find the <em>right perspective</em>. In that space, I discovered my own inner wisdom.`,
-                "That clarity led me to executive coaching, medical school, and psychedelic research — three paths that are, at their core, the same commitment: helping people reclaim their own consciousness.",
-                "In 2026, it's the same problem but different form. AI can give advice anytime, optimize any problem, and generate insight on demand. The information is richer but the signal is harder to hear. The hunger for external answers has found a new home.",
-                "My job is the same: create space for you to hear your own wisdom, don't buy into your self-doubt or quick fixes, and call you forward to what you know you are truly capable of.",
-              ].map((text, i) => (
-                <p key={i} style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }} dangerouslySetInnerHTML={{ __html: text }} />
-              ))}
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>If that stirred something in you, let's chat.</p>
+              <span className="label">A Word on AI</span>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+                I am an AI power user. I use it in every faculty of my life (including building this website). I believe in it and its awesome potential. And yet the more time I (and my clients) spend there, the clearer something becomes: AI has no skin in the game.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+                It can reflect your patterns back with precision. But it cannot answer the question that you are not even aware of. It cannot feel the shift in the room when you're about to make a decision you'll regret. It won't sit with you in the discomfort long enough for something deep to shift.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
+                Every path I've taken — coaching, medicine, psychedelic research — has shown me one consistent truth about human development: transformation is about closing the gap between who you are now and who you know you are capable of becoming.
+              </p>
+              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'15px' }}>
+                That requires a human who is willing to go be with you — in all of your context and story — and take a stand for your potential.
+              </p>
             </div>
 
             {/* Credentials */}
             <div style={{
+              position:'sticky', top:'100px',
               background:'linear-gradient(140deg, rgba(245,158,11,0.07) 0%, rgba(234,108,30,0.04) 100%)',
               border:'1px solid var(--border-2)',
               borderRadius:'20px',
@@ -156,41 +139,10 @@ export default function About() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </section>
-
-
-      {/* ── THREE LENSES ── */}
-      <section style={{ padding:'0 0 100px' }}>
-        <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>Three Lenses</span>
-          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'48px' }}>
-            What informs the work
-          </h2>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'16px' }} className="three-col">
-            {lenses.map(({ roman, title, desc, bg }) => (
-              <div key={title} style={{
-                background:bg, borderRadius:'18px', padding:'32px 26px',
-                position:'relative', overflow:'hidden',
-                border:'1px solid rgba(245,158,11,0.12)',
-                transition:'transform 0.25s ease, box-shadow 0.25s ease',
-              }}
-              onMouseEnter={e=>{ e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 24px 56px rgba(245,158,11,0.14)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.transform='none'; e.currentTarget.style.boxShadow='none'; }}
-              >
-                <h3 style={{
-                  fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
-                  fontSize:'20px', fontWeight:500,
-                  color:'#fff', marginBottom:'12px',
-                }}>{title}</h3>
-                <p style={{ fontSize:'14px', lineHeight:'1.78', color:'rgba(255,255,255,0.82)' }}>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
 
       {/* ── CTA ── */}
       <section style={{ padding:'80px 0 100px' }}>
