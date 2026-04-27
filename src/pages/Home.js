@@ -223,9 +223,6 @@ export default function Home() {
               <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px', marginBottom:'28px' }}>
                 What reaches it is a direct, felt, and trusting relationship with your own consciousness.
               </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px', marginBottom:'28px' }}>
-                That's the work.
-              </p>
               <Link to="/coaching" className="btn btn-outline">Who I work with →</Link>
             </div>
 
