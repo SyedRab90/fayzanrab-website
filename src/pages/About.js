@@ -5,7 +5,7 @@ const lenses = [
   {
     roman: 'I',
     title: 'Rigorous & Evidence-Based',
-    desc: 'Most coaches come from the world of HR. Fayzan brings the precision of a physician — an MD from Emory and years of clinical training that cut past the obvious to what\'s actually driving the problem.',
+    desc: 'Most coaches come from the world of HR. Fayzan brings the precision of a physician — an MD from Emory, years of clinical training, and active research in psychedelic-assisted therapy. He cuts past the obvious to what\'s actually driving the problem.',
     bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
   },
   {
@@ -46,7 +46,7 @@ export default function About() {
         <div className="orb" style={{ width:380, height:380, bottom:'10%', left:'-5%', background:'radial-gradient(circle,rgba(234,108,30,0.13) 0%,transparent 70%)' }} />
 
         <div className="container" style={{ position:'relative', zIndex:1, width:'100%' }}>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'center' }} className="two-col">
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'flex-start' }} className="two-col">
 
             {/* Left - text */}
             <div>
