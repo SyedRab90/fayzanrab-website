@@ -185,7 +185,7 @@ export default function Home() {
       </div>
 
       {/* ── THE PROBLEM ── */}
-      <section className="section">
+      <section className="section" style={{ paddingTop:'60px' }}>
         <div className="container">
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'center' }} className="two-col">
 
