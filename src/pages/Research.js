@@ -231,7 +231,7 @@ export default function Research() {
               { name:'Newsweek', url:'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328' },
               { name:'Forbes', url:'https://www.forbes.com/sites/tarungalagali/2024/12/05/4-leadership-lessons-from-americas-psychiatrist' },
               { name:'U.S. News', url:'https://www.usnews.com/news/health-news/articles/2024-09-13/over-5-million-americans-could-benefit-if-psilocybin-approved-for-depression-study' },
-              { name:'GPB', url:'https://www.gpb.org/news/2024/11/07/emory-study-estimates-millions-depression-could-benefit-psychedelic-mushrooms' },
+              { name:'CNN', url:'https://www.cnn.com/2026/04/22/health/ibogaine-psychedelics-what-to-know' },
               { name:'Emory News', url:'https://news.emory.edu/stories/2024/11/hs_psychedelic_eligibility_01-11-2024/story.html' },
             ].map(({ name, url }) => (
               <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{
