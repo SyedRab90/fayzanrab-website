@@ -51,6 +51,7 @@ const activeStudies = [
     status: 'Recruitment Open',
     statusColor: 'rgba(52,211,153,0.75)',
     url: 'https://survey.qualtrics.emory.edu/jfe/form/SV_0liig6iQs6hn4sC',
+    siteUrl: 'https://psychedelicleadershipstudy.com',
   },
   {
     title: 'Muslim Lived Experiences with Psychedelics: A Mixed Methods Study of Understanding and Integration',
@@ -294,15 +295,24 @@ export default function Research() {
                 <div style={{ flex:1, minWidth:'240px' }}>
                   <p style={{ fontSize:'16px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
                   {s.authors && <p style={{ fontSize:'14px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
-                  {s.url && (
-                    <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
-                      display:'inline-flex', alignItems:'center', gap:'4px',
-                      marginTop:'8px',
-                      fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
-                      textTransform:'uppercase', color:'var(--amber)',
-                      textDecoration:'none',
-                    }}>Enroll in study →</a>
-                  )}
+                  <div style={{ display:'flex', gap:'20px', flexWrap:'wrap', marginTop:'8px' }}>
+                    {s.siteUrl && (
+                      <a href={s.siteUrl} target="_blank" rel="noopener noreferrer" style={{
+                        display:'inline-flex', alignItems:'center', gap:'4px',
+                        fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
+                        textTransform:'uppercase', color:'var(--amber)',
+                        textDecoration:'none',
+                      }}>View study →</a>
+                    )}
+                    {s.url && (
+                      <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
+                        display:'inline-flex', alignItems:'center', gap:'4px',
+                        fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
+                        textTransform:'uppercase', color:'rgba(245,158,11,0.55)',
+                        textDecoration:'none',
+                      }}>Enroll →</a>
+                    )}
+                  </div>
                 </div>
                 <span style={{
                   fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
