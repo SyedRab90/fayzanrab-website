@@ -308,7 +308,7 @@ export default function Research() {
                       <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
                         display:'inline-flex', alignItems:'center', gap:'4px',
                         fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
-                        textTransform:'uppercase', color:'rgba(245,158,11,0.55)',
+                        textTransform:'uppercase', color:'var(--amber)',
                         textDecoration:'none',
                       }}>Enroll →</a>
                     )}
