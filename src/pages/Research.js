@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 
 const publications = [
   {
+    authors: 'Rab, S.F. & Zelner, B.',
+    year: '2026',
+    title: 'The Psychedelics & Leadership Study: What happens when executives take psychedelics?',
+    journal: 'MAPS Bulletin',
+    url: 'https://maps.org/news/bulletin/psychedelic-leadership-study',
+    tag: 'Research Essay · Vol. 36',
+  },
+  {
     authors: 'Rab, S.F., Ahmad, S.S., Palitsky, R., & Zarrabi, A.J.',
     year: '2025',
     title: 'Attitudes of U.S. Muslims toward psychedelics.',
@@ -225,13 +233,13 @@ export default function Research() {
       {/* ── AS FEATURED IN ── */}
       <section style={{ padding:'0 0 80px' }}>
         <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center', marginBottom:'36px' }}>As Featured In</span>
+          <span className="label" style={{ display:'block', textAlign:'center', marginBottom:'36px' }}>Featured In</span>
           <div className="featured-in-grid">
             {[
               { name:'NPR', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
               { name:'Newsweek', url:'https://www.newsweek.com/depression-americans-psilocybin-magic-mushrooms-1953328' },
               { name:'Forbes', url:'https://www.forbes.com/sites/tarungalagali/2024/12/05/4-leadership-lessons-from-americas-psychiatrist' },
-              { name:'U.S. News', url:'https://www.usnews.com/news/health-news/articles/2024-09-13/over-5-million-americans-could-benefit-if-psilocybin-approved-for-depression-study' },
+              { name:'MAPS', url:'https://maps.org/news/bulletin/psychedelic-leadership-study' },
               { name:'CNN', url:'https://www.cnn.com/2026/04/22/health/ibogaine-psychedelics-what-to-know' },
               { name:'Emory News', url:'https://news.emory.edu/stories/2024/11/hs_psychedelic_eligibility_01-11-2024/story.html' },
             ].map(({ name, url }) => (
