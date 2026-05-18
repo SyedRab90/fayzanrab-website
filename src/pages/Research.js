@@ -193,13 +193,6 @@ const talks = [
     title: 'Many voices: Expanding the narrative on religious experiences in psychedelics.',
     note: 'Annual Meeting',
   },
-  {
-    venue: 'Chacruna Community Forum',
-    location: 'Virtual',
-    date: 'June 26, 2024',
-    title: 'Islam and psychedelics.',
-    note: 'Chacruna Institute',
-  },
 ];
 
 export default function Research() {

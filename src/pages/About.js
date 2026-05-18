@@ -103,7 +103,7 @@ export default function About() {
             <div>
               <span className="label">A Word on AI</span>
               <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
-                I am an AI power user. I use it in every faculty of my life (including building this website). I believe in it and its awesome potential. And yet the more time I (and my clients) spend there, the clearer something becomes: AI has no skin in the game.
+                I am an AI power user. I use it in every faculty of my life (including building this website). I believe in it and its awesome potential. And yet the more time I spend there, the clearer something becomes: AI has no skin in the game.
               </p>
               <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'15px' }}>
                 It can reflect your patterns back with precision. But it cannot answer the question that you are not even aware of. It cannot feel the shift in the room when you're about to make a decision you'll regret. It won't sit with you in the discomfort long enough for something deep to shift.

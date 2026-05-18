@@ -37,7 +37,7 @@ export default function Navbar() {
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
         {/* Logo mark */}
         <img
-          src="/images/fr-logo.png"
+          src="/images/fr-logo-square.png"
           alt="FR"
           style={{
             width: '34px', height: '34px',

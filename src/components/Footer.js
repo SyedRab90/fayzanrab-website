@@ -26,7 +26,6 @@ export default function Footer() {
                 WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
               }}>MD PCC</span>
             </div>
-            <p style={{ fontSize:'12px', color:'var(--text-3)' }}>Doctor and Executive Coach.</p>
           </div>
 
           <nav style={{ display:'flex', gap:'4px', flexWrap:'wrap' }}>
