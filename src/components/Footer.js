@@ -19,7 +19,7 @@ export default function Footer() {
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'24px' }}>
           <div>
             <div style={{ display:'flex', alignItems:'baseline', gap:'6px', marginBottom:'5px' }}>
-              <span style={{ fontFamily:"'Instrument Serif',serif", fontStyle:'normal', fontSize:'17px', color:'var(--text)' }}>Fayzan Rab</span>
+              <span style={{ fontFamily:"'Instrument Serif',serif", fontStyle:'italic', fontSize:'17px', color:'var(--text)' }}>Fayzan Rab</span>
               <span style={{
                 fontSize:'11px', fontWeight:700, letterSpacing:'0.1em',
                 background:'linear-gradient(135deg,#f59e0b,#ea6c1e)',

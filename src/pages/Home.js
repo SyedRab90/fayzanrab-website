@@ -245,17 +245,17 @@ export default function Home() {
             {[
               {
                 title: 'The Coaching Bet',
-                desc: 'Being coached — and coaching others — revealed the power of integration. When I stopped choosing between sides of my identity — cerebral, entrepreneurial, interpersonal, spiritual — I stepped into my power. The highest honor you can pay your own consciousness is to bet big on it.',
+                desc: 'The highest honor you can pay your own consciousness is to bet big on it. Being coached — and coaching others — was and continues to be an experiential gift in learning how to connect to one\'s deepest yearning and make that a reality. I relate to coaching as a calling and bring that reverence to those I serve.',
                 bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
               },
               {
                 title: 'The Medicine Bet',
-                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor, service, and expertise. To commit to cultivating human potential, I first needed to understand its foil: illness and suffering. Becoming a doctor taught me to find the question underneath the question.',
+                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor, service, and expertise. To commit to cultivating human potential, I first needed to understand its foil: illness and suffering. Becoming a doctor taught me to look for the question beneath the question.',
                 bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
               },
               {
                 title: 'The Psychedelic Bet',
-                desc: 'I study psychedelics because they surface what coaching and medicine have always pointed to: who we think we are is constructed and therefore malleable. By studying the ecstatic, I see in the ordinary what human beings are truly capable of.',
+                desc: 'I study altered states of consciousness because they surface what coaching and medicine have always pointed to: who we think we are is constructed and therefore malleable. By studying the ecstatic, I see in the ordinary what human beings are truly capable of.',
                 bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
               },
             ].map(({ title, desc, bg }) => (
