@@ -6,10 +6,11 @@ export default function Home() {
     <div>
 
       {/* ── HERO ── */}
-      <section style={{
-        position:'relative', minHeight:'100vh',
+      <section className="hero-section" style={{
+        position:'relative',
         display:'flex', alignItems:'center', overflow:'hidden',
       }}>
+        <style>{`.hero-section { min-height: 100vh; } @media(max-width:768px){ .hero-section { min-height: unset; } }`}</style>
         {/* Desktop: TEDx photo */}
         <div className="hero-bg" style={{
           position:'absolute', inset:0,
