@@ -136,6 +136,10 @@ export default function Home() {
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'480px', marginBottom:'36px' }}>
             I've spent seven years training at that intersection — executive coaching, clinical medicine, psychedelic research. I bring it all to a small number of founders and executives who are ready to bet big on themselves.
           </p>
+          <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
+            <Link to="/contact" className="btn btn-primary">Work with me →</Link>
+            <Link to="/about" className="btn btn-outline">Learn more</Link>
+          </div>
           <div className="stats-badge">
             <span className="stats-number">2,000+</span>
             <span className="stats-label">coaching hours with high performers</span>
