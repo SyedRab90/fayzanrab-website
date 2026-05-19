@@ -110,7 +110,7 @@ export default function Coaching() {
             <div className="service-card service-card-1">
               <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Founders & Senior Operators</span>
               <h3>You're high-performing. And quietly unfulfilled.</h3>
-              <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you are <em>supposed</em> to feel about it. You have a felt sense that there is a deeper level of fulfillment and impact you are meant to make, but something keeps holding you back. We will distinguish your unique form of self-sabotage and return the highest expression of you back into the driver's seat of your life.</p>
+              <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you are <em>supposed</em> to feel about it. You have a sense that there is a greater impact you are meant to make, but something keeps holding you back. We will distinguish your unique form of self-sabotage and allow the highest expression of you to be back in the driver seat of life.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-2">

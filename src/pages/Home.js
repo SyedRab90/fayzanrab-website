@@ -127,19 +127,15 @@ export default function Home() {
             lineHeight:1.10, maxWidth:'680px',
             marginBottom:'16px',
           }}>
-            Leadership is not about more optimization. It's about{' '}
+            Leadership is not about more optimization. It's about developing{' '}
             <span style={{
               background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
               WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
             }}>discernment.</span>
           </h1>
           <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'480px', marginBottom:'36px' }}>
-            The most important frontier is human consciousness. I've spent seven years at that intersection — executive coaching, clinical medicine, psychedelic research. I bring it all to a small number of founders and executives who are ready to bet big on themselves.
+            I've spent seven years training at that intersection — executive coaching, clinical medicine, psychedelic research. I bring it all to a small number of founders and executives who are ready to bet big on themselves.
           </p>
-          <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
-            <Link to="/contact" className="btn btn-primary">Work with me →</Link>
-            <Link to="/about" className="btn btn-outline">Learn more</Link>
-          </div>
           <div className="stats-badge">
             <span className="stats-number">2,000+</span>
             <span className="stats-label">coaching hours with high performers</span>
@@ -222,7 +218,7 @@ export default function Home() {
                 The hardest questions — what to build next, who to become, whether you're moving in the right direction — don't get answered by more data or a better framework. They require a different kind of knowing. One that no advisor or AI can deliver.
               </p>
               <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px', marginBottom:'28px' }}>
-                What reaches it is a direct, felt, and trusting relationship with your own consciousness.
+                What reaches it is a direct, felt, and trusting relationship with your own wisdom.
               </p>
               <Link to="/coaching" className="btn btn-outline">Who I work with →</Link>
             </div>
@@ -239,13 +235,13 @@ export default function Home() {
             Different Paths. Same Commitment.
           </h2>
           <p style={{ textAlign:'center', color:'var(--text-2)', fontSize:'16px', maxWidth:'560px', margin:'0 auto 48px' }}>
-            After years as a product lead at Google and an early hire at a Series A→C startup, I made three bets that map the full spectrum of human consciousness.
+            After years as a product lead at Google and an early hire at a Series A→C startup, I made three bets that map the full spectrum of human potential.
           </p>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'16px' }} className="three-col">
             {[
               {
                 title: 'The Coaching Bet',
-                desc: 'The highest honor you can pay your own consciousness is to bet big on it. Being coached — and coaching others — was and continues to be an experiential gift in learning how to connect to one\'s deepest yearning and make that a reality. I relate to coaching as a calling and bring that reverence to those I serve.',
+                desc: 'The highest honor you can pay your own wisdom is to bet big on it. Being coached — and coaching others — was and continues to be an experiential gift in learning how to connect to one\'s deepest yearning and make that a reality. I relate to coaching as a calling and bring that reverence to those I serve.',
                 bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
               },
               {
