@@ -119,7 +119,7 @@ export default function Home() {
         <style>{`@media(max-width:768px){.desktop-only-orb{display:none;}}`}</style>
 
         <div className="container" style={{ position:'relative', zIndex:2, paddingTop:'130px', paddingBottom:'100px' }}>
-          <span className="label">Executive Coach · Physician · Psychedelic Researcher</span>
+          <span className="label" style={{ display:'block', marginBottom:'16px' }}>Executive Coaching</span>
           <h1 style={{
             fontSize:'clamp(36px,5vw,68px)',
             fontFamily:"'Instrument Serif', Georgia, serif",
