@@ -79,6 +79,12 @@ const activeStudies = [
     status: 'Manuscript in Progress',
     statusColor: 'rgba(251,191,36,0.70)',
   },
+  {
+    title: 'Psilocybin-Assisted Early Palliative Care for Demoralization and Chronic Pain: A Pilot Study',
+    authors: 'Zarrabi, A.J., Mletzko, T., Grant, G., Peacock, C., Palitsky, R., McPherson, T., Shub, I., Eisenacher, S., Maples-Keller, J., Kaplan, D., Rothbaum, B.O., Rab, S.F., Dalal, N., Curseen, K.A., Raison, C., & Dunlop, B.W.',
+    status: 'Manuscript in Progress',
+    statusColor: 'rgba(251,191,36,0.70)',
+  },
 ];
 
 const podcasts = [
