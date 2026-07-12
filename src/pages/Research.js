@@ -82,8 +82,9 @@ const activeStudies = [
   {
     title: 'Psilocybin-Assisted Early Palliative Care for Demoralization and Chronic Pain: A Pilot Study',
     authors: 'Zarrabi, A.J., Mletzko, T., Grant, G., Peacock, C., Palitsky, R., McPherson, T., Shub, I., Eisenacher, S., Maples-Keller, J., Kaplan, D., Rothbaum, B.O., Rab, S.F., Dalal, N., Curseen, K.A., Raison, C., & Dunlop, B.W.',
-    status: 'Manuscript in Progress',
-    statusColor: 'rgba(251,191,36,0.70)',
+    journal: 'Journal of Palliative Medicine',
+    status: 'Under Review',
+    statusColor: 'rgba(147,197,253,0.75)',
   },
 ];
 
@@ -302,6 +303,7 @@ export default function Research() {
                 <div style={{ flex:1, minWidth:'240px' }}>
                   <p style={{ fontSize:'16px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
                   {s.authors && <p style={{ fontSize:'14px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
+                  {s.journal && <p style={{ fontSize:'13px', color:'var(--amber)', margin:'4px 0 0', fontStyle:'italic' }}>{s.journal}</p>}
                   <div style={{ display:'flex', gap:'20px', flexWrap:'wrap', marginTop:'8px' }}>
                     {s.siteUrl && (
                       <a href={s.siteUrl} target="_blank" rel="noopener noreferrer" style={{
