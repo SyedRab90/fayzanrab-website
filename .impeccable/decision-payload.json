@@ -1,0 +1,80 @@
+{
+  "title": "Choose the visual world for fayzanrab.com",
+  "question": "The roll assigned Hardcover Monograph. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Hardcover Monograph",
+      "kicker": "THE ROLL",
+      "lineage": "Academic monograph / dark bookcloth binding with foil stamp",
+      "thesis": "The coaching practice as a first-edition book — physical, permanent, earned. Not a landing page: a frontispiece. The visitor opens something that already exists and has weight.",
+      "palette": ["#0a0700", "#fdf8ed", "#f59e0b", "#92400e"],
+      "materials": ["dark bookcloth ground", "Instrument Serif italic display", "foil-stamp amber rules", "cream letterpress body ink", "book-margin pull quotes"],
+      "viewport": "Full-bleed near-black ground. Fayzan's name centered in large Instrument Serif italic — foil-stamped amber. A fine amber rule beneath it. The thesis headline below in cream, tracked wide. One discreet amber link: 'Begin a conversation →'. No orbs. No gradient text. No glowing buttons. The photo of Fayzan appears framed like a book illustration plate, not a hero backdrop.",
+      "risk": "Feels austere if the warmth of the serif and the amber are not committed to at full weight. The foil-stamp discipline must hold across every section or it reads sparse.",
+      "raised": [
+        { "from": "variety-telop", "raise": "Typography is the primary visual material — no decoration fills the space that good typography leaves." },
+        { "from": "cloud-quarry", "raise": "Sections are separated by generous vertical space, not gradient backgrounds or border cards." },
+        { "from": "paper-menagerie", "raise": "Pull quotes float visually above body text in weight and size, creating a layered reading depth." },
+        { "from": "drum-machine", "raise": "A single fine amber horizontal rule threads through every section break as the page's one structural mark." }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Clinical Case Report",
+      "kicker": "IMPECCABLE'S PICK",
+      "lineage": "Peer-reviewed journal / clinical case presentation format",
+      "thesis": "The coaching engagement as a published case study — structured, evidence-based, precise. Every section is a journal section: Abstract, Methods, Findings, Discussion. The visitor reads a case report about their own situation.",
+      "palette": ["#0a0700", "#fdf8ed", "#f59e0b", "#d1c4a8"],
+      "materials": ["double-column body text", "abstract box treatment", "numbered section heads", "journal citation style", "amber annotation marks"],
+      "viewport": "The page opens like a paper: title and authors at top center in Instrument Serif, a slim abstract box below with the coaching thesis, then two-column body. Testimonials are formatted as case findings. Publications are formatted as the bibliography.",
+      "risk": "Also the direction most runs in this category land on. The journal format is elegant and earned for Fayzan, but it is familiar enough that execution must be flawless to escape the category standard.",
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-riley",
+      "kind": "challenger",
+      "catalogId": "design-canon-riley-moire-gallery",
+      "label": "Riley / Moiré Gallery",
+      "verdict": "competitive",
+      "lineage": "Bridget Riley op-art / white gallery",
+      "thesis": "The coaching site as a perceptual experience — the page itself demonstrates that seeing shifts. Flat matte black and cream only; all contrast is optical.",
+      "palette": ["#0a0700", "#fdf8ed"],
+      "materials": ["flat matte black", "gallery white margins", "optical line patterns", "neutral grotesk captions"],
+      "viewport": "A white margin column left, body text right. A subtle line-frequency pattern behind the content areas generates depth without color. Typography holds every hierarchy with no decorative support.",
+      "case": "Holds product clarity — the optical discipline matches the coaching message (perception changes, then everything changes). Loses narrowly on audience identification: founders may read it as art-world rather than coaching.",
+      "risk": "Stripped of the amber brand, this could read as cold. Needs the existing amber accent carefully placed to reconnect to Fayzan's identity.",
+      "comp": ".impeccable/mocks/decision/challenger-riley.webp",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-riley-moire-gallery-hero.webp"
+    },
+    {
+      "id": "challenger-shader",
+      "kind": "challenger",
+      "catalogId": "webgl-shader-portal",
+      "label": "Shader Portal",
+      "verdict": "competitive",
+      "lineage": "Experiential studio / GPU fragment shader background",
+      "thesis": "The site as a living field — a subtle shader breathes behind everything, referencing the altered-states research without naming it. Interface recedes. Content leads.",
+      "palette": ["#0a0700", "#fdf8ed", "#f59e0b"],
+      "materials": ["deep single-hue fragment shader", "fine film grain", "thin tracked-out type", "incandescent amber hover"],
+      "viewport": "Full-screen shader field in the existing amber-dark palette. Thin uppercase navigation floats at top. A single oversized headline and one action. The shader displaces slowly under the cursor — the only motion.",
+      "case": "Holds audience identification — tech founders recognize GPU craft and the depth of the visual resonates with psychedelic research. Loses on product clarity: the atmospheric quality competes with conversion.",
+      "risk": "Expensive to build well; a poorly-rendered shader reads as the same AI-aesthetic the user wants to leave behind.",
+      "comp": ".impeccable/mocks/decision/challenger-shader.webp",
+      "hero": "https://impeccable.style/worlds/cards/webgl-shader-portal-hero.webp"
+    },
+    {
+      "id": "canon",
+      "kind": "grounded",
+      "label": "The category standard",
+      "thesis": "Clean editorial coaching site — what high-end coaches ship when they want to be taken seriously. Warm serif headline, photography, testimonials, a clear CTA. Executed at full fidelity against the best in class.",
+      "palette": ["#0a0700", "#fdf8ed", "#f59e0b", "#92400e"],
+      "materials": ["clean grid", "editorial serif display", "professional photography", "card-based testimonials"]
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false }
+}
