@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const ink    = '#fdf8ed';
+const inkMid = 'rgba(253,248,237,0.65)';
+const inkFaint = 'rgba(253,248,237,0.35)';
+const amber  = '#f59e0b';
+const bg2    = '#160b02';
+const card   = '#160b02';
+const border = 'rgba(253,248,237,0.10)';
+
 const publications = [
   {
     authors: 'Rab, S.F. & Zelner, B.',
@@ -57,7 +65,7 @@ const activeStudies = [
     title: 'An Investigation of the Motivations, Perceptions, and Attitudes Toward Psychedelics Among Entrepreneurs, Executives, and Investors',
     authors: 'Rab, S.F., Zelner, B., Gaglani, S., Alonso, N., & Palitsky, R.',
     status: 'Recruitment Open',
-    statusColor: 'rgba(52,211,153,0.75)',
+    statusColor: '#059669',
     url: 'https://survey.qualtrics.emory.edu/jfe/form/SV_0liig6iQs6hn4sC',
     siteUrl: 'https://psychedelicleadershipstudy.com',
   },
@@ -65,26 +73,33 @@ const activeStudies = [
     title: 'Muslim Lived Experiences with Psychedelics: A Mixed Methods Study of Understanding and Integration',
     authors: 'Rab, S.F., Choksi, J., Dhaaban, L., Kak, A., Salako, Z., Ahmad, S.S., & Palitsky, R.',
     status: 'Manuscript in Progress',
-    statusColor: 'rgba(251,191,36,0.70)',
+    statusColor: '#f59e0b',
   },
   {
     title: 'An Estimate of the Number of People with PTSD in the United States Eligible for MDMA-Assisted Therapy',
     authors: 'Rab, S.F. & Marseille, E.',
     status: 'Manuscript in Progress',
-    statusColor: 'rgba(251,191,36,0.70)',
+    statusColor: '#f59e0b',
   },
   {
     title: 'Outcomes and Measures in Psychedelic-Assisted Therapy Trials for Patients with Serious Illness: A Systematic Review to Inform Core Outcome Measures',
     authors: 'Zarrabi, A.J., Oyerinde, E., Kavalieratos, D., Rab, S.F., Barokas, G., Garcia, A.C., Beaussant, Y., Maia, L.O., & Dunlop, B.W.',
     status: 'Manuscript in Progress',
-    statusColor: 'rgba(251,191,36,0.70)',
+    statusColor: '#f59e0b',
+  },
+  {
+    title: 'New-Onset Mania or Autoimmune Encephalitis? Managing Diagnostic Uncertainty',
+    authors: 'Rab, S.F., Thompson, N., Robbins-Welty, G.A., Ruikar, K., & Schwartz, A.C.',
+    journal: 'Primary Care Companion for CNS Disorders',
+    status: 'Under Review',
+    statusColor: '#38bdf8',
   },
   {
     title: 'Psilocybin-Assisted Early Palliative Care for Demoralization and Chronic Pain: A Pilot Study',
     authors: 'Zarrabi, A.J., Mletzko, T., Grant, G., Peacock, C., Palitsky, R., McPherson, T., Shub, I., Eisenacher, S., Maples-Keller, J., Kaplan, D., Rothbaum, B.O., Rab, S.F., Dalal, N., Curseen, K.A., Raison, C., & Dunlop, B.W.',
     journal: 'Journal of Palliative Medicine',
     status: 'Under Review',
-    statusColor: 'rgba(147,197,253,0.75)',
+    statusColor: '#38bdf8',
   },
 ];
 
@@ -121,7 +136,7 @@ const podcasts = [
     episode: null,
     host: 'Tarun Galagali and Dr. Tom Insel',
     date: 'December 5, 2024',
-    title: 'Leadership lessons from America\'s psychiatrist.',
+    title: "Leadership lessons from America's psychiatrist.",
     url: 'https://redcircle.com/shows/mandala-podcast',
     icon: '🎙',
   },
@@ -204,36 +219,52 @@ const talks = [
 
 export default function Research() {
   return (
-    <div>
+    <div style={{ background: '#0c0500', color: ink }}>
+
+      <style>{`
+        .res-hero      { max-width: 760px; margin: 0 auto; padding: 140px 48px 72px; text-align: center; }
+        .res-hero h1   { font-family: 'Raleway', sans-serif; font-size: clamp(34px, 5vw, 62px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.09; color: ${ink}; margin-bottom: 22px; }
+        .res-hero p    { font-size: 16px; color: ${inkMid}; line-height: 1.75; max-width: 560px; margin: 0 auto; }
+        .res-rule      { border: none; border-top: 1px solid ${border}; margin: 0; }
+        .res-section   { max-width: 1080px; margin: 0 auto; padding: 72px 48px; }
+        .res-section h2 { font-family: 'Raleway', sans-serif; font-size: clamp(24px, 3vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 44px; }
+        .res-affil     { background: ${bg2}; padding: 56px 0; }
+        .res-affil-inner { max-width: 700px; margin: 0 auto; padding: 0 48px; text-align: center; }
+        .res-affil-h2  { font-family: 'Raleway', sans-serif; font-size: clamp(22px, 2.6vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 14px; }
+        .res-talks-bg  { background: ${bg2}; padding: 72px 0; }
+        .res-cta       { max-width: 1080px; margin: 0 auto; padding: 72px 48px 90px; }
+        .res-cta h2    { font-family: 'Raleway', sans-serif; font-size: clamp(28px, 3.4vw, 50px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.10; color: ${ink}; max-width: 560px; margin-bottom: 20px; }
+        .res-cta p     { font-size: 17px; color: ${inkMid}; line-height: 1.72; max-width: 440px; margin-bottom: 36px; }
+        .res-btn       { display: inline-block; padding: 14px 32px; background: ${amber}; color: #fff; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 15px; border-radius: 5px; text-decoration: none; }
+
+        @media (max-width: 768px) {
+          .res-hero     { padding: 100px 24px 48px !important; }
+          .res-section  { padding: 48px 24px !important; }
+          .res-talks-bg { padding: 48px 0 !important; }
+          .res-affil    { padding: 40px 0 !important; }
+          .res-affil-inner { padding: 0 24px !important; }
+          .res-cta      { padding: 56px 24px 72px !important; }
+        }
+      `}</style>
 
       {/* ── HERO ── */}
-      <section style={{
-        display: 'flex', alignItems: 'flex-start',
-        position: 'relative', overflow: 'hidden',
-        paddingTop: '160px', paddingBottom: '100px',
-      }}>
-        <div className="orb" style={{ width:580, height:580, top:'0%', right:'-8%', background:'radial-gradient(circle,rgba(245,158,11,0.13) 0%,transparent 68%)' }} />
-        <div className="orb" style={{ width:400, height:400, bottom:'-10%', left:'-6%', background:'radial-gradient(circle,rgba(234,108,30,0.10) 0%,transparent 70%)' }} />
-
-        <div className="container" style={{ position:'relative', zIndex:1, textAlign:'center', maxWidth:'760px', margin:'0 auto' }}>
-          <span className="label">Research & Media</span>
-          <h1 style={{ fontSize:'clamp(34px,5vw,62px)', fontWeight:500, marginBottom:'22px' }}>
-            Peer-reviewed science and{' '}
-            <span style={{
-              background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
-              WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
-            }}>a public body of work.</span>
+      <section>
+        <div className="res-hero">
+          <h1>
+            Peer-reviewed science and a public body of work.
           </h1>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.75', maxWidth:'560px', margin:'0 auto' }}>
+          <p>
             Active researcher at Emory's Center for Psychedelics and Spirituality. Published in peer-reviewed journals. Featured in mainstream press and presented at major academic institutions.
           </p>
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── AS FEATURED IN ── */}
-      <section style={{ padding:'0 0 80px' }}>
-        <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center', marginBottom:'36px' }}>Featured In</span>
+      <section>
+        <div className="res-section" style={{ paddingBottom: '80px' }}>
+          <h2 style={{ textAlign: 'center' }}>Featured In</h2>
           <div className="featured-in-grid">
             {[
               { name:'NPR', url:'https://www.npr.org/2025/01/03/nx-s1-5227041/muslims-navigate-the-tension-between-psychedelics-for-mental-health-and-koran-teachings' },
@@ -246,19 +277,19 @@ export default function Research() {
               <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{
                 display:'flex', flexDirection:'column', alignItems:'center',
                 padding:'18px 28px',
-                background:'rgba(255,255,255,0.03)',
-                border:'1px solid rgba(245,158,11,0.10)',
-                borderRadius:'14px',
+                background: 'rgba(253,248,237,0.07)',
+                border:'1px solid rgba(253,248,237,0.18)',
+                borderRadius:'6px',
                 textDecoration:'none',
                 transition:'all 0.22s ease',
               }}
-              onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.28)'; e.currentTarget.style.background='rgba(245,158,11,0.05)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.10)'; e.currentTarget.style.background='rgba(255,255,255,0.03)'; }}
+              onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(253,248,237,0.35)'; e.currentTarget.style.background='rgba(253,248,237,0.12)'; }}
+              onMouseLeave={e=>{ e.currentTarget.style.borderColor='rgba(253,248,237,0.18)'; e.currentTarget.style.background='rgba(253,248,237,0.07)'; }}
               >
                 <span style={{
-                  fontFamily:"'Instrument Serif',serif",
-                  fontSize:'20px', fontStyle:'italic',
-                  color:'rgba(253,248,237,0.72)',
+                  fontFamily:"'Raleway',sans-serif",
+                  fontSize:'18px', fontWeight:700,
+                  color: ink,
                   lineHeight:1.1,
                 }}>{name}</span>
               </a>
@@ -267,49 +298,46 @@ export default function Research() {
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── AFFILIATION ── */}
-      <section style={{
-        padding:'64px 0',
-        background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
-        position:'relative', overflow:'hidden',
-      }}>
-        <div className="orb" style={{ width:400, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.07) 0%,transparent 70%)' }} />
-        <div className="container" style={{ position:'relative', zIndex:1, maxWidth:'700px', margin:'0 auto', textAlign:'center' }}>
-          <span className="label">Institutional Affiliation</span>
-          <h2 style={{ fontSize:'clamp(22px,2.6vw,32px)', fontWeight:500, marginBottom:'14px' }}>
+      <section className="res-affil">
+        <div className="res-affil-inner">
+          <h2 className="res-affil-h2">
             Emory Center for Psychedelics and Spirituality
           </h2>
-          <p style={{ color:'var(--text-2)', lineHeight:'1.80', fontSize:'15px' }}>
+          <p style={{ color: inkMid, lineHeight:'1.80', fontSize:'15px' }}>
             Researcher under Drs. Dunlop and Zarrabi. Current work includes a landmark investigation of psychedelic use among executives, entrepreneurs, and investors — alongside studies on Muslim attitudes and lived experiences with psychedelics, and MDMA-assisted therapy eligibility for PTSD. Previous co-investigator in psychedelic clinical trials at the Aquilino Cancer Institute involving MDMA, psilocybin, and 5-MeO-DMT.
           </p>
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── ACTIVE STUDIES ── */}
-      <section className="section" style={{ paddingBottom:'100px' }}>
-        <div className="container">
-          <span className="label">Current Work</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Active Studies</h2>
+      <section>
+        <div className="res-section">
+          <h2>Active Studies</h2>
           <div style={{ display:'flex', flexDirection:'column', gap:'12px' }}>
             {activeStudies.map((s, i) => (
               <div key={i} style={{
                 display:'flex', alignItems:'flex-start', justifyContent:'space-between',
                 gap:'20px', flexWrap:'wrap',
                 padding:'28px 32px',
-                background:'linear-gradient(140deg, rgba(245,158,11,0.07) 0%, rgba(234,108,30,0.04) 100%)',
-                border:'1px solid rgba(245,158,11,0.22)',
-                borderRadius:'20px',
+                background: card,
+                border:`1px solid ${border}`,
+                borderRadius:'6px',
               }}>
                 <div style={{ flex:1, minWidth:'240px' }}>
-                  <p style={{ fontSize:'16px', color:'var(--text)', lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
-                  {s.authors && <p style={{ fontSize:'14px', color:'var(--text-3)', margin:0 }}>{s.authors}</p>}
-                  {s.journal && <p style={{ fontSize:'13px', color:'var(--amber)', margin:'4px 0 0', fontStyle:'italic' }}>{s.journal}</p>}
+                  <p style={{ fontSize:'16px', color: ink, lineHeight:'1.55', margin:'0 0 6px' }}>{s.title}</p>
+                  {s.authors && <p style={{ fontSize:'14px', color: inkMid, margin:0 }}>{s.authors}</p>}
+                  {s.journal && <p style={{ fontSize:'13px', color: amber, margin:'4px 0 0', fontStyle:'italic' }}>{s.journal}</p>}
                   <div style={{ display:'flex', gap:'20px', flexWrap:'wrap', marginTop:'8px' }}>
                     {s.siteUrl && (
                       <a href={s.siteUrl} target="_blank" rel="noopener noreferrer" style={{
                         display:'inline-flex', alignItems:'center', gap:'4px',
                         fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
-                        textTransform:'uppercase', color:'var(--amber)',
+                        textTransform:'uppercase', color: amber,
                         textDecoration:'none',
                       }}>View study →</a>
                     )}
@@ -317,7 +345,7 @@ export default function Research() {
                       <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
                         display:'inline-flex', alignItems:'center', gap:'4px',
                         fontSize:'14px', fontWeight:700, letterSpacing:'0.08em',
-                        textTransform:'uppercase', color:'var(--amber)',
+                        textTransform:'uppercase', color: amber,
                         textDecoration:'none',
                       }}>Enroll →</a>
                     )}
@@ -326,7 +354,7 @@ export default function Research() {
                 <span style={{
                   fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
                   textTransform:'uppercase', color:s.statusColor,
-                  background:'rgba(255,255,255,0.04)',
+                  background:'rgba(255,255,255,0.05)',
                   border:`1px solid ${s.statusColor}`,
                   padding:'4px 12px', borderRadius:'100px',
                   whiteSpace:'nowrap', flexShrink:0,
@@ -337,88 +365,96 @@ export default function Research() {
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── PUBLICATIONS ── */}
-      <section style={{ padding:'0 0 100px' }}>
-        <div className="container">
-          <span className="label">Peer-Reviewed Work</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Publications</h2>
+      <section>
+        <div className="res-section">
+          <h2>Publications</h2>
           <div style={{ display:'flex', flexDirection:'column', gap:'16px' }}>
-            {publications.map((p, i) => (
-              <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{
+            {publications.map((p, i) => {
+              const cardStyle = {
                 display:'block',
                 padding:'28px 32px',
-                background:'rgba(20,12,2,0.50)',
-                border:'1px solid rgba(245,158,11,0.12)',
-                borderRadius:'16px',
+                background: card,
+                border:`1px solid ${border}`,
+                borderRadius:'6px',
                 textDecoration:'none',
                 transition:'all 0.22s ease',
-                position:'relative', overflow:'hidden',
-              }}
-              onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.30)'; e.currentTarget.style.background='rgba(245,158,11,0.05)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.12)'; e.currentTarget.style.background='rgba(20,12,2,0.50)'; }}
-              >
-                <div style={{ position:'absolute', top:0, left:0, width:'3px', height:'100%', background:'linear-gradient(180deg,#f59e0b,#ea6c1e)', borderRadius:'16px 0 0 16px' }} />
-                <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'16px', flexWrap:'wrap' }}>
-                  <div style={{ flex:1, minWidth:'240px' }}>
-                    <p style={{ fontSize:'16px', fontWeight:500, color:'var(--text)', lineHeight:'1.55', marginBottom:'8px' }}>{p.title}</p>
-                    <p style={{ fontSize:'14px', color:'var(--text-3)', marginBottom:'6px' }}>{p.authors}</p>
-                    <div style={{ display:'flex', alignItems:'center', gap:'12px', flexWrap:'wrap' }}>
-                      <span style={{ fontSize:'14px', color:'var(--amber)', fontWeight:600 }}>{p.journal}</span>
-                      <span style={{ fontSize:'14px', color:'var(--text-3)' }}>{p.year}</span>
-                      {p.tag && (
-                        <span style={{
-                          fontSize:'12px', fontWeight:700, letterSpacing:'0.10em',
-                          textTransform:'uppercase', color:'var(--amber)',
-                          background:'rgba(245,158,11,0.10)',
-                          padding:'2px 8px', borderRadius:'100px',
-                        }}>{p.tag}</span>
-                      )}
+              };
+              const inner = (
+                <>
+                  <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'16px', flexWrap:'wrap' }}>
+                    <div style={{ flex:1, minWidth:'240px' }}>
+                      <p style={{ fontSize:'16px', fontWeight:500, color: ink, lineHeight:'1.55', marginBottom:'8px' }}>{p.title}</p>
+                      <p style={{ fontSize:'14px', color: inkMid, marginBottom:'6px' }}>{p.authors}</p>
+                      <div style={{ display:'flex', alignItems:'center', gap:'12px', flexWrap:'wrap' }}>
+                        <span style={{ fontSize:'14px', color: amber, fontWeight:600 }}>{p.journal}</span>
+                        <span style={{ fontSize:'14px', color: inkFaint }}>{p.year}</span>
+                        {p.tag && (
+                          <span style={{
+                            fontSize:'12px', fontWeight:700, letterSpacing:'0.10em',
+                            textTransform:'uppercase', color: amber,
+                            background:'rgba(180,83,9,0.08)',
+                            padding:'2px 8px', borderRadius:'100px',
+                          }}>{p.tag}</span>
+                        )}
+                      </div>
                     </div>
+                    {p.url && <span style={{ fontSize:'14px', color: amber, whiteSpace:'nowrap', paddingTop:'2px' }}>Read →</span>}
                   </div>
-                  <span style={{ fontSize:'14px', color:'var(--amber)', whiteSpace:'nowrap', paddingTop:'2px' }}>Read →</span>
-                </div>
-              </a>
-            ))}
+                </>
+              );
+              return p.url ? (
+                <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={cardStyle}
+                  onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(253,248,237,0.22)'; e.currentTarget.style.background=bg2; }}
+                  onMouseLeave={e=>{ e.currentTarget.style.borderColor=border; e.currentTarget.style.background=card; }}
+                >{inner}</a>
+              ) : (
+                <div key={i} style={cardStyle}>{inner}</div>
+              );
+            })}
           </div>
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── PODCASTS & MEDIA ── */}
-      <section style={{ padding:'0 0 100px' }}>
-        <div className="container">
-          <span className="label">Conversations</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Podcasts & Media</h2>
+      <section>
+        <div className="res-section">
+          <h2>Podcasts & Media</h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(300px,1fr))', gap:'16px' }}>
             {podcasts.map((p, i) => (
               <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{
                 display:'flex', flexDirection:'column',
                 padding:'24px 26px',
-                background:'rgba(20,12,2,0.50)',
-                border:'1px solid rgba(245,158,11,0.12)',
-                borderRadius:'16px',
+                background: card,
+                border:`1px solid ${border}`,
+                borderRadius:'6px',
                 textDecoration:'none',
                 transition:'all 0.22s ease',
               }}
-              onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.30)'; e.currentTarget.style.transform='translateY(-3px)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.borderColor='rgba(245,158,11,0.12)'; e.currentTarget.style.transform='none'; }}
+              onMouseEnter={e=>{ e.currentTarget.style.borderColor='rgba(253,248,237,0.22)'; e.currentTarget.style.transform='translateY(-3px)'; }}
+              onMouseLeave={e=>{ e.currentTarget.style.borderColor=border; e.currentTarget.style.transform='none'; }}
               >
                 <div style={{ display:'flex', alignItems:'center', gap:'10px', marginBottom:'12px' }}>
                   <div style={{
-                    width:'36px', height:'36px', borderRadius:'10px',
-                    background:'linear-gradient(135deg,rgba(245,158,11,0.22),rgba(234,108,30,0.18))',
-                    border:'1px solid rgba(245,158,11,0.20)',
+                    width:'36px', height:'36px', borderRadius:'6px',
+                    background: bg2,
+                    border:`1px solid ${border}`,
                     display:'flex', alignItems:'center', justifyContent:'center',
                     fontSize:'16px', flexShrink:0,
                   }}>{p.icon}</div>
                   <div>
-                    <div style={{ fontSize:'14px', fontWeight:600, color:'var(--text)' }}>{p.show}</div>
-                    {p.episode && <div style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.episode}</div>}
+                    <div style={{ fontSize:'14px', fontWeight:600, color: ink }}>{p.show}</div>
+                    {p.episode && <div style={{ fontSize:'12px', color: inkFaint }}>{p.episode}</div>}
                   </div>
                 </div>
-                <p style={{ fontSize:'14px', lineHeight:'1.60', color:'rgba(253,248,237,0.68)', flex:1, marginBottom:'16px' }}>{p.title}</p>
+                <p style={{ fontSize:'14px', lineHeight:'1.60', color: inkMid, flex:1, marginBottom:'16px' }}>{p.title}</p>
                 <div style={{ display:'flex', flexDirection:'column', gap:'3px' }}>
-                  {p.host && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>with {p.host}</span>}
-                  {p.date && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{p.date}</span>}
+                  {p.host && <span style={{ fontSize:'12px', color: inkFaint }}>with {p.host}</span>}
+                  {p.date && <span style={{ fontSize:'12px', color: inkFaint }}>{p.date}</span>}
                 </div>
               </a>
             ))}
@@ -426,70 +462,67 @@ export default function Research() {
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── TALKS ── */}
-      <section style={{
-        padding:'80px 0 100px',
-        background:'linear-gradient(135deg,rgba(245,158,11,0.03) 0%,rgba(234,108,30,0.05) 100%)',
-      }}>
-        <div className="container">
-          <span className="label">Selected Talks</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px' }}>Presentations & Lectures</h2>
-          <div style={{ display:'flex', flexDirection:'column', gap:'0' }}>
-            {talks.map((t, i) => (
-              <div key={i} style={{
-                display:'flex', gap:'28px', alignItems:'flex-start',
-                padding:'16px 0',
-                borderBottom: i < talks.length - 1 ? '1px solid rgba(245,158,11,0.08)' : 'none',
-              }}>
-                <div style={{ width:'140px', flexShrink:0 }}>
-                  <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.date || ''}</span>
-                </div>
-                <div style={{ flex:1 }}>
-                  <p style={{ fontSize:'16px', color:'var(--text)', fontWeight:500, marginBottom:'4px', lineHeight:'1.45' }}>{t.title}</p>
-                  {t.url && (
-                    <div style={{ display:'flex', alignItems:'center', gap:'8px', marginBottom:'4px' }}>
-                      <a href={t.url} target="_blank" rel="noopener noreferrer" style={{
-                        fontSize:'12px', fontWeight:700, letterSpacing:'0.08em',
-                        textTransform:'uppercase', color:'var(--amber)',
-                        textDecoration:'none',
-                      }}>Watch →</a>
-                      {t.urlNote && <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.urlNote}</span>}
-                    </div>
-                  )}
-                  <div style={{ display:'flex', gap:'8px', flexWrap:'wrap', alignItems:'center' }}>
-                    <span style={{
-                      fontSize:'12px', fontWeight:700, letterSpacing:'0.10em',
-                      textTransform:'uppercase', color:'var(--amber)',
-                    }}>{t.venue}</span>
-                    <span style={{ fontSize:'12px', color:'var(--text-3)' }}>{t.location}</span>
-                    {t.note && (
-                      <span style={{
-                        fontSize:'12px', color:'var(--amber)',
-                        background:'rgba(245,158,11,0.08)',
-                        padding:'2px 8px', borderRadius:'100px',
-                      }}>{t.note}</span>
+      <section className="res-talks-bg">
+        <div className="res-section" style={{ padding: '0 48px' }}>
+          <div style={{ maxWidth: '1080px', margin: '0 auto', paddingTop: '0', paddingBottom: '0' }}>
+            <h2>Presentations & Lectures</h2>
+            <div style={{ display:'flex', flexDirection:'column', gap:'0' }}>
+              {talks.map((t, i) => (
+                <div key={i} style={{
+                  display:'flex', gap:'28px', alignItems:'flex-start',
+                  padding:'16px 0',
+                  borderBottom: i < talks.length - 1 ? `1px solid ${border}` : 'none',
+                }}>
+                  <div style={{ width:'140px', flexShrink:0 }}>
+                    <span style={{ fontSize:'12px', color: inkFaint }}>{t.date || ''}</span>
+                  </div>
+                  <div style={{ flex:1 }}>
+                    <p style={{ fontSize:'16px', color: ink, fontWeight:500, marginBottom:'4px', lineHeight:'1.45' }}>{t.title}</p>
+                    {t.url && (
+                      <div style={{ display:'flex', alignItems:'center', gap:'8px', marginBottom:'4px' }}>
+                        <a href={t.url} target="_blank" rel="noopener noreferrer" style={{
+                          fontSize:'12px', fontWeight:700, letterSpacing:'0.08em',
+                          textTransform:'uppercase', color: amber,
+                          textDecoration:'none',
+                        }}>Watch →</a>
+                        {t.urlNote && <span style={{ fontSize:'12px', color: inkFaint }}>{t.urlNote}</span>}
+                      </div>
                     )}
+                    <div style={{ display:'flex', gap:'8px', flexWrap:'wrap', alignItems:'center' }}>
+                      <span style={{
+                        fontSize:'12px', fontWeight:700, letterSpacing:'0.10em',
+                        textTransform:'uppercase', color: amber,
+                      }}>{t.venue}</span>
+                      <span style={{ fontSize:'12px', color: inkFaint }}>{t.location}</span>
+                      {t.note && (
+                        <span style={{
+                          fontSize:'12px', color: inkMid,
+                          background:'rgba(255,255,255,0.05)',
+                          padding:'2px 8px', borderRadius:'100px',
+                        }}>{t.note}</span>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      <hr className="res-rule" />
+
       {/* ── CTA ── */}
-      <section style={{ padding:'80px 0 100px' }}>
-        <div className="container" style={{ textAlign:'center' }}>
-          <span className="label">Work Together</span>
-          <h2 style={{ fontSize:'clamp(22px,2.8vw,36px)', fontWeight:500, marginBottom:'12px' }}>
-            Interested in the intersection of all this?
-          </h2>
-          <p style={{ color:'var(--text-2)', marginBottom:'28px', fontSize:'16px', maxWidth:'480px', margin:'0 auto 28px' }}>
-            Research and coaching are not separate entities. My experience in both feed and build on each other. If something here resonates, reach out.
-          </p>
-          <Link to="/contact" className="btn btn-primary">Start a conversation →</Link>
-        </div>
-      </section>
+      <div className="res-cta">
+        <h2>Interested in the intersection of all this?</h2>
+        <p>
+          Research and coaching are not separate entities. My experience in both feed and build on each other. If something here resonates, reach out.
+        </p>
+        <Link to="/contact" className="res-btn">Start a conversation →</Link>
+      </div>
 
     </div>
   );

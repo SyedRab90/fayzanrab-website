@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const ink    = '#fdf8ed';
+const inkMid = 'rgba(253,248,237,0.65)';
+const amber  = '#f59e0b';
+
 const testimonials = [
   {
     id:1, colorClass:'t1',
@@ -78,49 +82,64 @@ const testimonials = [
 
 export default function Coaching() {
   return (
-    <div>
+    <div style={{ background: '#0c0500', color: ink }}>
+
+      <style>{`
+        .coaching-hero     { max-width: 780px; margin: 0 auto; padding: 140px 48px 64px; text-align: center; }
+        .coaching-hero h1  { font-family: 'Raleway', sans-serif; font-size: clamp(34px, 5vw, 66px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.09; color: ${ink}; margin-bottom: 22px; }
+        .coaching-hero p   { font-size: 16px; color: ${inkMid}; line-height: 1.75; max-width: 560px; margin: 0 auto 36px; }
+        .coaching-rule     { border: none; border-top: 1px solid rgba(253,248,237,0.08); margin: 0; }
+        .coaching-services { max-width: 1080px; margin: 0 auto; padding: 72px 48px; }
+        .coaching-services h2 { font-family: 'Raleway', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 44px; }
+        .coaching-cta      { max-width: 1080px; margin: 0 auto; padding: 64px 48px 80px; }
+        .coaching-cta h2   { font-family: 'Raleway', sans-serif; font-size: clamp(28px, 3.4vw, 50px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.10; color: ${ink}; max-width: 560px; margin-bottom: 20px; }
+        .coaching-cta p    { font-size: 17px; color: ${inkMid}; line-height: 1.72; max-width: 440px; margin-bottom: 36px; }
+        .coaching-btn      { display: inline-block; padding: 14px 32px; background: ${amber}; color: #fff; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 15px; border-radius: 5px; text-decoration: none; }
+        .coaching-testi    { max-width: 1080px; margin: 0 auto; padding: 0 48px 72px; }
+        .coaching-testi h2 { font-family: 'Raleway', sans-serif; font-size: clamp(24px, 3vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 44px; }
+
+        @media (max-width: 768px) {
+          .coaching-hero     { padding: 100px 24px 48px !important; }
+          .coaching-services { padding: 48px 24px !important; }
+          .coaching-testi    { padding: 0 24px 48px !important; }
+          .coaching-cta      { padding: 48px 24px 64px !important; }
+        }
+      `}</style>
 
       {/* ── HERO ── */}
-      <section style={{ display:'flex', alignItems:'flex-start', position:'relative', overflow:'hidden', paddingTop:'160px', paddingBottom:'80px' }}>
-        <div className="orb" style={{ width:580, height:580, top:'0%', right:'-8%', background:'radial-gradient(circle,rgba(245,158,11,0.14) 0%,transparent 68%)' }} />
-        <div className="orb" style={{ width:400, height:400, bottom:'-10%', left:'-6%', background:'radial-gradient(circle,rgba(234,108,30,0.11) 0%,transparent 70%)' }} />
-
-        <div className="container" style={{ position:'relative', zIndex:1, textAlign:'center', maxWidth:'780px', margin:'0 auto' }}>
-          <span className="label">Coaching</span>
-          <h1 style={{ fontSize:'clamp(34px,5vw,66px)', fontWeight:500, marginBottom:'22px' }}>
-            For founders and senior operators at{' '}
-            <span style={{
-              background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
-              WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
-            }}>inflection points.</span>
+      <section>
+        <div className="coaching-hero">
+          <h1>
+            For founders and senior operators at inflection points.
           </h1>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.75', maxWidth:'560px', margin:'0 auto 36px' }}>
+          <p>
             I work with tech founders, senior operators, and high performers navigating strategic pivots, leadership transitions, co-founder tension, or the identity questions that come after a major win — or loss.
           </p>
           <Link to="/contact" className="btn btn-primary">Schedule a conversation →</Link>
         </div>
       </section>
 
+      <hr className="coaching-rule" />
+
       {/* ── SERVICES ── */}
-      <section className="section">
-        <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>Who I Work With</span>
-          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'44px' }}>The situations</h2>
+      <section>
+        <div className="coaching-services">
+          <h2>The situations</h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'18px' }} className="three-col">
             <div className="service-card service-card-1">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Founders & Senior Operators</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color: amber, marginBottom:'14px' }}>Founders & Senior Operators</span>
               <h3>You're high-performing. And quietly unfulfilled.</h3>
               <p>Something is off — with your role, the direction you're heading, or the gap between what you've built and how you are <em>supposed</em> to feel about it. You have a sense that there is a greater impact you are meant to make, but something keeps holding you back. We will distinguish your unique form of self-sabotage and allow the highest expression of you to be back in the driver seat of life.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-2">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Co-Founder Tension</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color: amber, marginBottom:'14px' }}>Co-Founder Tension</span>
               <h3>The relationship with your co-founder is fraying.</h3>
               <p>Decisions are slower. Conversations are tenser. You're not sure if the problem is the business or each other. A structured process — individual and joint sessions — designed to surface what's actually happening, restore trust and communication, and find a clear path forward before the relationship becomes the company's biggest liability. And regret.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
             </div>
             <div className="service-card service-card-3">
-              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.90)', marginBottom:'14px' }}>Post-Exit</span>
+              <span style={{ display:'inline-block', fontSize:'12px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color: amber, marginBottom:'14px' }}>Post-Exit</span>
               <h3>You sold. Now what?</h3>
               <p>For the first time in years, there's no deal to make and no obvious north star. The disorientation after a major exit is real and oftentimes belittled, ignored, and lonely. What you need isn't another advisor with a framework. It's someone who has worked with countless others to help you figure out what now.</p>
               <Link to="/contact" className="learn-more">Get started →</Link>
@@ -129,11 +148,12 @@ export default function Coaching() {
         </div>
       </section>
 
+      <hr className="coaching-rule" />
+
       {/* ── TESTIMONIALS ── */}
-      <section style={{ padding:'0 0 100px' }}>
-        <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>Client Experiences</span>
-          <h2 style={{ fontSize:'clamp(24px,3vw,38px)', fontWeight:500, marginBottom:'44px', textAlign:'center' }}>What people say</h2>
+      <section>
+        <div className="coaching-testi" style={{ paddingTop: '64px' }}>
+          <h2>What people say</h2>
           <div className="testimonials-masonry" style={{ columns:3, columnGap:'16px' }}>
             {testimonials.map(t => (
               <div key={t.id} className={`testimonial-card ${t.colorClass}`}>
@@ -151,32 +171,14 @@ export default function Coaching() {
         </div>
       </section>
 
+      <hr className="coaching-rule" />
+
       {/* ── CTA ── */}
-      <section style={{ padding:'0 0 100px' }}>
-        <div className="container">
-          <div style={{
-            borderRadius:'22px', padding:'68px 52px', textAlign:'center',
-            background:'linear-gradient(135deg,#3b1007 0%,#7c2d12 45%,#92400e 100%)',
-            position:'relative', overflow:'hidden',
-          }}>
-            <div className="orb" style={{ width:280, height:280, top:'-70px', right:'-50px', background:'radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%)' }} />
-            <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
-            <h2 style={{ fontSize:'clamp(22px,3.5vw,38px)', color:'#fff', fontWeight:500, marginBottom:'10px', position:'relative' }}>
-              The first conversation is where it starts.
-            </h2>
-            <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'28px', position:'relative', fontSize:'16px' }}>
-              I keep my client load small. Let's find out if this is the right fit.
-            </p>
-            <Link to="/contact" style={{
-              display:'inline-block', padding:'13px 32px', borderRadius:'100px',
-              background:'linear-gradient(135deg, #f59e0b, #ea6c1e)',
-              color:'#fff', fontSize:'14px', fontWeight:600,
-              textDecoration:'none', position:'relative',
-              boxShadow:'0 0 28px rgba(245,158,11,0.40)',
-            }}>Start a conversation →</Link>
-          </div>
-        </div>
-      </section>
+      <div className="coaching-cta">
+        <h2>The first conversation is where it starts.</h2>
+        <p>I keep my client load small. Let's find out if this is the right fit.</p>
+        <Link to="/contact" className="coaching-btn">Start a conversation →</Link>
+      </div>
 
     </div>
   );

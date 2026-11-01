@@ -27,15 +27,17 @@ export default function Navbar() {
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-      padding: '0 28px', height: '66px',
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      background: scrolled ? 'rgba(12,8,0,0.88)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(18px)' : 'none',
+      height: '66px',
+      background: scrolled ? 'rgba(12,8,0,0.92)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(12px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(245,158,11,0.08)' : 'none',
-      transition: 'all 0.3s ease',
+      transition: 'background 0.3s ease, border-color 0.3s ease',
     }}>
+      <div style={{
+        maxWidth: '1080px', margin: '0 auto', padding: '0 32px', height: '100%',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-        {/* Logo mark */}
         <img
           src="/images/fr-logo-square.png"
           alt="FR"
@@ -44,15 +46,14 @@ export default function Navbar() {
             borderRadius: '9px',
             flexShrink: 0,
             objectFit: 'cover',
+            filter: 'brightness(0) invert(1)',
           }}
         />
-        {/* Wordmark */}
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
           <span style={{
-            fontFamily: "'Instrument Serif', serif",
-            fontStyle: 'italic',
+            fontFamily: "'Raleway', sans-serif",
             fontSize: '16px',
-            fontWeight: 500,
+            fontWeight: 700,
             color: '#fdf8ed',
             letterSpacing: '-0.01em',
             lineHeight: 1,
@@ -62,7 +63,7 @@ export default function Navbar() {
             fontWeight: 700,
             letterSpacing: '0.13em',
             textTransform: 'uppercase',
-            color: 'rgba(245,158,11,0.80)',
+            color: 'rgba(253,248,237,0.50)',
             lineHeight: 1,
           }}>MD · PCC</span>
         </div>
@@ -73,19 +74,22 @@ export default function Navbar() {
         {navLinks.map(({ to, label }) => (
           <Link key={to} to={to} style={{
             padding: '7px 15px', borderRadius: '100px', fontSize: '14px', fontWeight: 500,
-            color: isActive(to) ? '#fef9ee' : 'rgba(254,249,238,0.52)',
-            background: isActive(to) ? 'rgba(245,158,11,0.1)' : 'transparent',
-            transition: 'all 0.2s ease', textDecoration: 'none',
+            color: isActive(to) ? '#fdf8ed' : 'rgba(253,248,237,0.55)',
+            background: 'transparent',
+            transition: 'color 0.2s ease', textDecoration: 'none',
           }}>{label}</Link>
         ))}
         <Link to="/contact" style={{
-          marginLeft: '8px', padding: '9px 22px', borderRadius: '100px',
+          marginLeft: '8px', padding: '9px 20px', borderRadius: '5px',
           fontSize: '14px', fontWeight: 600,
-          background: 'linear-gradient(135deg, #f59e0b, #ea6c1e)',
+          background: '#f59e0b',
           color: '#fff', textDecoration: 'none',
-          boxShadow: '0 0 22px rgba(245,158,11,0.28)',
-          transition: 'all 0.22s ease',
-        }}>Work with me</Link>
+          boxShadow: 'none',
+          transition: 'opacity 0.22s ease',
+        }}
+        onMouseEnter={e => { e.currentTarget.style.opacity = '0.88'; }}
+        onMouseLeave={e => { e.currentTarget.style.opacity = '1'; }}
+        >Work with me</Link>
       </div>
 
       {/* Hamburger */}
@@ -94,29 +98,29 @@ export default function Navbar() {
         padding: '4px', background: 'none', border: 'none', cursor: 'pointer',
       }} className="hamburger" aria-label="Toggle menu">
         {[0,1,2].map(i => (
-          <span key={i} style={{ display: 'block', width: '22px', height: '2px', background: '#fef9ee', borderRadius: '2px' }} />
+          <span key={i} style={{ display: 'block', width: '22px', height: '2px', background: '#fdf8ed', borderRadius: '2px' }} />
         ))}
       </button>
 
       {menuOpen && (
         <div style={{
           position: 'fixed', top: '66px', left: 0, right: 0,
-          background: 'rgba(12,8,0,0.97)', backdropFilter: 'blur(18px)',
+          background: 'rgba(12,8,0,0.97)',
           padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '4px',
           borderBottom: '1px solid rgba(245,158,11,0.08)',
         }}>
           {navLinks.map(({ to, label }) => (
             <Link key={to} to={to} style={{
-              padding: '13px 16px', borderRadius: '10px', fontSize: '16px', fontWeight: 500,
-              color: isActive(to) ? '#fef9ee' : 'rgba(254,249,238,0.55)',
-              background: isActive(to) ? 'rgba(245,158,11,0.07)' : 'transparent',
+              padding: '13px 16px', borderRadius: '6px', fontSize: '16px', fontWeight: 500,
+              color: isActive(to) ? '#fdf8ed' : 'rgba(253,248,237,0.55)',
+              background: isActive(to) ? 'rgba(253,248,237,0.06)' : 'transparent',
               textDecoration: 'none',
             }}>{label}</Link>
           ))}
           <Link to="/contact" style={{
-            marginTop: '10px', padding: '13px 22px', borderRadius: '100px',
+            marginTop: '10px', padding: '13px 22px', borderRadius: '5px',
             fontSize: '15px', fontWeight: 600,
-            background: 'linear-gradient(135deg, #f59e0b, #ea6c1e)',
+            background: '#f59e0b',
             color: '#fff', textDecoration: 'none', textAlign: 'center',
           }}>Work with me</Link>
         </div>
@@ -128,6 +132,7 @@ export default function Navbar() {
           .hamburger { display: flex !important; }
         }
       `}</style>
+      </div>
     </nav>
   );
 }

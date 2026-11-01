@@ -1,420 +1,233 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const ink      = '#fdf8ed';
+const inkMid   = 'rgba(253,248,237,0.65)';
+const bg       = '#0c0500';
+const amber    = '#f59e0b';
+
 export default function Home() {
   return (
-    <div>
+    <div style={{ background: bg, color: ink, fontFamily: "'DM Sans', sans-serif" }}>
 
-      {/* ── HERO ── */}
-      <section className="hero-section" style={{
-        position:'relative',
-        display:'flex', alignItems:'center', overflow:'hidden',
-      }}>
-        <style>{`.hero-section { min-height: 100vh; } @media(max-width:768px){ .hero-section { min-height: unset; } }`}</style>
-        {/* Desktop: TEDx photo */}
-        <div className="hero-bg" style={{
-          position:'absolute', inset:0,
-          backgroundSize:'cover', backgroundPosition:'40% center',
-          zIndex:0,
-        }} />
+      <style>{`
+        .v6-hero        { min-height: 96vh; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding-top: 66px; }
+        .v6-hero-img    { position: absolute; inset: 0; object-fit: cover; object-position: 50% 18%; width: 100%; height: 100%; display: block; }
+        .v6-hero-veil   { position: absolute; inset: 0; background: linear-gradient(to right, rgba(15,9,2,0.82) 0%, rgba(15,9,2,0.60) 42%, rgba(15,9,2,0.10) 100%); }
+        .v6-hero-inner  { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; padding: 80px 48px; width: 100%; }
+        .v6-hero-h1     { font-family: 'Raleway', sans-serif; font-size: clamp(34px, 4.2vw, 62px); font-weight: 700; line-height: 1.09; letter-spacing: -0.025em; color: #fef9f5; max-width: 620px; margin-bottom: 28px; }
+        .v6-hero-sub    { font-size: 17px; color: rgba(254,249,245,0.70); line-height: 1.72; max-width: 460px; margin-bottom: 40px; }
+        .v6-hero-cta    { display: inline-block; padding: 13px 30px; background: ${amber}; color: #fff; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 15px; border-radius: 5px; text-decoration: none; }
 
-        {/* Mobile: animated gradient scene */}
-        <div className="hero-mobile-bg" aria-hidden="true">
-          <div className="hmb-orb hmb-orb-1" />
-          <div className="hmb-orb hmb-orb-2" />
-          <div className="hmb-orb hmb-orb-3" />
-          <div className="hmb-orb hmb-orb-4" />
-          <div className="hmb-noise" />
-        </div>
+        .v6-intro       { max-width: 680px; margin: 0 auto; padding: 80px 32px 72px; text-align: center; }
+        .v6-intro p     { font-size: clamp(20px, 2.2vw, 26px); color: ${inkMid}; line-height: 1.70; }
+        .v6-intro em    { color: ${ink}; font-style: normal; }
 
-        <style>{`
-          /* Desktop */
-          .hero-bg { background-image: url(/images/fayzan-ted.jpg); }
-          .hero-mobile-bg { display: none; }
+        .v6-rule        { border: none; border-top: 1px solid rgba(253,248,237,0.08); margin: 0; }
 
-          /* Mobile */
-          @media (max-width: 768px) {
-            .hero-bg { display: none; }
-            .hero-mobile-bg {
-              display: block;
-              position: absolute; inset: 0; z-index: 0;
-              background: #0c0500;
-              overflow: hidden;
-            }
+        .v6-profile     { max-width: 1080px; margin: 0 auto; padding: 72px 48px; display: grid; grid-template-columns: 5fr 4fr; gap: 72px; align-items: center; }
+        .v6-profile-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: 50% 12%; display: block; }
+        .v6-profile-h2  { font-family: 'Raleway', sans-serif; font-size: clamp(24px, 2.6vw, 38px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.16; color: ${ink}; margin-bottom: 24px; }
+        .v6-profile p   { font-size: 16px; color: ${inkMid}; line-height: 1.82; margin-bottom: 18px; }
+        .v6-cta-link    { display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: ${amber}; text-decoration: none; border-bottom: 1.5px solid ${amber}; padding-bottom: 2px; }
 
-            /* Floating glow orbs */
-            .hmb-orb {
-              position: absolute;
-              border-radius: 50%;
-              filter: blur(60px);
-            }
-            .hmb-orb-1 {
-              width: 340px; height: 340px;
-              top: -60px; left: -80px;
-              background: radial-gradient(circle, rgba(245,158,11,0.55) 0%, rgba(234,108,30,0.25) 50%, transparent 75%);
-              animation: orbFloat1 8s ease-in-out infinite;
-            }
-            .hmb-orb-2 {
-              width: 280px; height: 280px;
-              bottom: 5%; right: -60px;
-              background: radial-gradient(circle, rgba(220,87,30,0.60) 0%, rgba(180,50,0,0.25) 55%, transparent 75%);
-              animation: orbFloat2 11s ease-in-out infinite;
-            }
-            .hmb-orb-3 {
-              width: 220px; height: 220px;
-              top: 42%; left: 30%;
-              background: radial-gradient(circle, rgba(251,191,36,0.40) 0%, rgba(245,158,11,0.15) 55%, transparent 75%);
-              animation: orbFloat3 9s ease-in-out infinite;
-            }
-            .hmb-orb-4 {
-              width: 180px; height: 180px;
-              top: 15%; right: 5%;
-              background: radial-gradient(circle, rgba(146,64,14,0.55) 0%, transparent 70%);
-              animation: orbFloat4 13s ease-in-out infinite;
-            }
+        .v6-pullquote   { padding: 56px 32px; text-align: center; }
+        .v6-pullquote q { display: block; font-family: 'Raleway', sans-serif; font-size: clamp(22px, 2.8vw, 38px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.40; color: ${ink}; max-width: 800px; margin: 0 auto 28px; quotes: none; }
+        .v6-pullquote cite { font-size: 14px; color: ${inkMid}; font-style: normal; letter-spacing: 0.06em; text-transform: uppercase; }
 
-            /* Subtle grain texture for depth */
-            .hmb-noise {
-              position: absolute; inset: 0;
-              background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
-              background-repeat: repeat;
-              background-size: 128px;
-              opacity: 0.35;
-              mix-blend-mode: overlay;
-            }
+        .v6-bets        { background: #160b02; padding: 72px 0; }
+        .v6-bets-inner  { max-width: 780px; margin: 0 auto; padding: 0 48px; }
+        .v6-bets h2     { font-family: 'Raleway', sans-serif; font-size: clamp(22px, 2.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 56px; }
+        .v6-bet         { padding-bottom: 44px; margin-bottom: 44px; border-bottom: 1px solid rgba(253,248,237,0.10); }
+        .v6-bet:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+        .v6-bet strong  { display: block; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 18px; color: ${ink}; margin-bottom: 10px; }
+        .v6-bet p       { font-size: 16px; color: ${inkMid}; line-height: 1.80; margin: 0; }
 
-            @keyframes orbFloat1 {
-              0%,100% { transform: translate(0,0) scale(1); }
-              33%      { transform: translate(40px, 55px) scale(1.08); }
-              66%      { transform: translate(-20px, 30px) scale(0.94); }
-            }
-            @keyframes orbFloat2 {
-              0%,100% { transform: translate(0,0) scale(1); }
-              40%      { transform: translate(-50px,-40px) scale(1.12); }
-              70%      { transform: translate(20px,-20px) scale(0.92); }
-            }
-            @keyframes orbFloat3 {
-              0%,100% { transform: translate(0,0) scale(1); opacity:0.8; }
-              50%      { transform: translate(-30px,40px) scale(1.15); opacity:1; }
-            }
-            @keyframes orbFloat4 {
-              0%,100% { transform: translate(0,0) scale(1); }
-              45%      { transform: translate(30px, 50px) scale(1.18); }
-              80%      { transform: translate(-15px, 20px) scale(0.88); }
-            }
-          }
-        `}</style>
+        .v6-quotes      { max-width: 1080px; margin: 0 auto; padding: 72px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+        .v6-quote-item  { border-top: 1px solid rgba(253,248,237,0.10); padding-top: 28px; }
+        .v6-quote-item p { font-size: 16px; color: ${ink}; line-height: 1.72; margin-bottom: 20px; }
+        .v6-quote-name  { font-size: 14px; font-weight: 600; color: ${ink}; }
+        .v6-quote-role  { font-size: 13px; color: ${inkMid}; }
 
-        {/* Dark gradient overlay (desktop only, mobile handled by orbs) */}
-        <div className="hero-overlay" style={{
-          position:'absolute', inset:0,
-          background:'linear-gradient(110deg, rgba(10,7,0,0.93) 0%, rgba(26,14,0,0.82) 50%, rgba(10,7,0,0.60) 100%)',
-          zIndex:1,
-        }} />
-        <style>{`.hero-overlay { } @media(max-width:768px){.hero-overlay{background:linear-gradient(180deg,rgba(10,7,0,0.45) 0%,rgba(10,7,0,0.25) 40%,rgba(10,7,0,0.55) 100%) !important;}}`}</style>
+        .v6-cta-section { padding: 64px 48px 72px; max-width: 1080px; margin: 0 auto; }
+        .v6-cta-section h2 { font-family: 'Raleway', sans-serif; font-size: clamp(28px, 3.4vw, 50px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.10; color: ${ink}; max-width: 560px; margin-bottom: 20px; }
+        .v6-cta-section p  { font-size: 17px; color: ${inkMid}; line-height: 1.72; max-width: 440px; margin-bottom: 36px; }
+        .v6-btn-primary    { display: inline-block; padding: 14px 32px; background: ${amber}; color: #fff; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 15px; border-radius: 5px; text-decoration: none; }
 
-        {/* Desktop orbs */}
-        <div className="orb desktop-only-orb" style={{ zIndex:1, width:560, height:560, bottom:'-80px', left:'-80px', background:'radial-gradient(circle,rgba(245,158,11,0.18) 0%,transparent 68%)' }} />
-        <div className="orb desktop-only-orb" style={{ zIndex:1, width:400, height:400, top:'10%', right:'12%', background:'radial-gradient(circle,rgba(234,108,30,0.10) 0%,transparent 70%)' }} />
-        <style>{`@media(max-width:768px){.desktop-only-orb{display:none;}}`}</style>
+        @media (max-width: 768px) {
+          .v6-hero        { min-height: 0; height: 100svh; align-items: flex-end !important; }
+          .v6-hero-img    { object-position: 62% 10% !important; }
+          .v6-hero-veil   { background: linear-gradient(to top, rgba(15,9,2,0.90) 0%, rgba(15,9,2,0.55) 45%, rgba(15,9,2,0.15) 100%) !important; }
+          .v6-hero-inner  { padding: 36px 24px 36px !important; }
+          .v6-intro       { padding: 56px 24px 48px !important; }
+          .v6-profile    { grid-template-columns: 1fr !important; padding: 48px 24px !important; gap: 32px !important; }
+          .v6-pullquote  { padding: 40px 24px !important; }
+          .v6-bets       { padding: 56px 0 !important; }
+          .v6-bets-inner { padding: 0 24px !important; }
+          .v6-bets h2    { margin-bottom: 36px !important; }
+          .v6-quotes     { grid-template-columns: 1fr !important; padding: 48px 24px !important; gap: 32px !important; }
+          .v6-cta-section { padding: 56px 24px 72px !important; }
+        }
+      `}</style>
 
-        <div className="container" style={{ position:'relative', zIndex:2, paddingTop:'130px', paddingBottom:'100px' }}>
-          <span className="label" style={{ display:'block', marginBottom:'16px' }}>Executive Coaching</span>
-          <h1 style={{
-            fontSize:'clamp(36px,5vw,68px)',
-            fontFamily:"'Instrument Serif', Georgia, serif",
-            fontWeight:400, fontStyle:'normal',
-            lineHeight:1.10, maxWidth:'680px',
-            marginBottom:'16px',
-          }}>
-            Leadership is not about more optimization. It's about developing{' '}
-            <span style={{
-              background:'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
-              WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
-            }}>discernment.</span>
+      {/* ── HERO: full-bleed photo, text floated over left side ── */}
+      <section className="v6-hero">
+        <img className="v6-hero-img" src="/images/fayzan-ted.jpg" alt="Fayzan Rab at TEDxEmory" />
+        <div className="v6-hero-veil" />
+        <div className="v6-hero-inner">
+          <h1 className="v6-hero-h1">
+            Leadership is not about more optimization. It's about developing discernment.
           </h1>
-          <p style={{ fontSize:'16px', color:'var(--text-2)', lineHeight:'1.72', maxWidth:'480px', marginBottom:'36px' }}>
-            I've spent seven years training at that intersection — executive coaching, clinical medicine, psychedelic research. I bring it all to a small number of founders and executives who are ready to bet big on themselves.
-          </p>
-          <div style={{ display:'flex', gap:'12px', flexWrap:'wrap', marginBottom:'52px' }}>
-            <Link to="/contact" className="btn btn-primary">Work with me →</Link>
-            <Link to="/about" className="btn btn-outline">Learn more</Link>
-          </div>
-          <div className="stats-badge">
-            <span className="stats-number">2,000+</span>
-            <span className="stats-label">coaching hours with high performers</span>
-          </div>
+          <Link to="/contact" className="v6-hero-cta">Begin a conversation</Link>
         </div>
       </section>
 
-
-      {/* ── CLIENT COMPANIES STRIP ── */}
-      <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(245,158,11,0.07)' }}>
-        <div className="container">
-          <p style={{ textAlign:'center', fontSize:'12px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--text-3)', marginBottom:'20px' }}>
-            Clients come from
-          </p>
-          <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'16px 40px', flexWrap:'wrap' }}>
-            {[
-              { name:'Google',       slug:'google' },
-              { name:'Anthropic',    slug:'anthropic' },
-              { name:'Y Combinator', slug:'ycombinator' },
-              { name:'Netflix',      slug:'netflix' },
-              { name:'Microsoft',    svgPath:'M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z' },
-              { name:'Databricks',   slug:'databricks' },
-              { name:'LinkedIn',     svgPath:'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
-              { name:'Spotify',      slug:'spotify' },
-            ].map(({ name, slug, svgPath }) => (
-              <div key={name} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'6px', width:'90px' }}>
-                {svgPath ? (
-                  <svg title={name} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" style={{ height:'20px', opacity:0.55, fill:'#fdf8ed', flexShrink:0 }}>
-                    <path d={svgPath}/>
-                  </svg>
-                ) : (
-                  <img
-                    src={`https://cdn.simpleicons.org/${slug}/fdf8ed`}
-                    alt={name}
-                    height="20"
-                    style={{ height:'20px', opacity:0.55 }}
-                  />
-                )}
-                <span style={{ fontSize:'10px', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', color:'rgba(253,248,237,0.35)' }}>{name}</span>
-              </div>
-            ))}
-          </div>
+      {/* ── CLIENT LOGOS ── */}
+      <div style={{ padding:'28px 0', borderBottom:'1px solid rgba(253,248,237,0.08)', background:'transparent' }}>
+        <p style={{ textAlign:'center', fontSize:'11px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(253,248,237,0.35)', marginBottom:'20px' }}>
+          Clients come from
+        </p>
+        <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'16px 40px', flexWrap:'wrap', padding:'0 24px' }}>
+          {[
+            { name:'Google',       slug:'google' },
+            { name:'Anthropic',    slug:'anthropic' },
+            { name:'Y Combinator', slug:'ycombinator' },
+            { name:'Netflix',      slug:'netflix' },
+            { name:'Microsoft',    svgPath:'M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z' },
+            { name:'Databricks',   slug:'databricks' },
+            { name:'LinkedIn',     svgPath:'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
+            { name:'Spotify',      slug:'spotify' },
+          ].map(({ name, slug, svgPath }) => (
+            <div key={name} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'6px', width:'90px' }}>
+              {svgPath ? (
+                <svg title={name} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" style={{ height:'20px', opacity:0.45, fill:'#fdf8ed', flexShrink:0 }}>
+                  <path d={svgPath}/>
+                </svg>
+              ) : (
+                <img
+                  src={`https://cdn.simpleicons.org/${slug}/fdf8ed`}
+                  alt={name}
+                  height="20"
+                  style={{ height:'20px', opacity:0.45 }}
+                />
+              )}
+              <span style={{ fontSize:'10px', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', color:'rgba(253,248,237,0.35)' }}>{name}</span>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* ── THE PROBLEM ── */}
-      <section className="section" style={{ paddingTop:'60px' }}>
-        <div className="container">
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'72px', alignItems:'center' }} className="two-col">
-
-            {/* Photo */}
-            <div style={{ position:'relative' }}>
-              <div className="orb" style={{ width:340, height:340, top:'-40px', left:'-40px', background:'radial-gradient(circle,rgba(245,158,11,0.14) 0%,transparent 70%)', zIndex:0 }} />
-              <div style={{ position:'relative', borderRadius:'20px', overflow:'hidden', zIndex:1, aspectRatio:'3/4' }}>
-                <img
-                  src="/images/fayzan-rita.jpeg"
-                  alt="Fayzan Rab"
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'50% 20%' }}
-                />
-                <div style={{
-                  position:'absolute', inset:0,
-                  background:'linear-gradient(160deg,rgba(245,158,11,0.16) 0%,rgba(120,53,15,0.30) 100%)',
-                  mixBlendMode:'multiply',
-                }} />
-                <div style={{ position:'absolute', inset:0, border:'1px solid rgba(245,158,11,0.14)', borderRadius:'20px' }} />
-              </div>
-            </div>
-
-            {/* Text */}
-            <div>
-              <h2 style={{ fontSize:'clamp(26px,3vw,42px)', fontWeight:500, marginBottom:'28px', lineHeight:1.15 }}>
-                The clarity you are seeking won't come from more information.
-              </h2>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
-                You've raised the round. Built the team. You have advisors, AI, and more inputs than any leader before you. And the signal is harder to hear than ever.
-              </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', marginBottom:'16px', fontSize:'16px' }}>
-                The hardest questions — what to build next, who to become, whether you're moving in the right direction — don't get answered by more data or a better framework. They require a different kind of knowing. One that no advisor or AI can deliver.
-              </p>
-              <p style={{ color:'var(--text-2)', lineHeight:'1.85', fontSize:'16px', marginBottom:'28px' }}>
-                What reaches it is a direct, felt, and trusting relationship with your own wisdom.
-              </p>
-              <Link to="/coaching" className="btn btn-outline">Who I work with →</Link>
-            </div>
-
-          </div>
-        </div>
+      {/* ── INTRO: wide centered prose, no heading ── */}
+      <section className="v6-intro">
+        <p>
+          You've raised the round. Built the team. You have advisors, AI, and more inputs than any leader before you.{' '}
+          <em>And the signal is harder to hear than ever.</em>{' '}
+          The hardest questions don't get answered by more data or a better framework. They require a different kind of knowing.
+        </p>
       </section>
 
-      {/* ── THREE BETS ── */}
-      <section className="section" style={{ paddingTop:0 }}>
-        <div className="container">
-          <span className="label" style={{ display:'block', textAlign:'center' }}>The Three Bets</span>
-          <h2 style={{ fontSize:'clamp(26px,3vw,40px)', fontWeight:500, textAlign:'center', marginBottom:'16px' }}>
-            Different Paths. Same Commitment.
-          </h2>
-          <p style={{ textAlign:'center', color:'var(--text-2)', fontSize:'16px', maxWidth:'560px', margin:'0 auto 48px' }}>
-            After years as a product lead at Google and an early hire at a Series A→C startup, I made three bets that map the full spectrum of human potential.
-          </p>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'16px' }} className="three-col">
-            {[
-              {
-                title: 'The Coaching Bet',
-                desc: 'The highest honor you can pay your own wisdom is to bet big on it. Being coached — and coaching others — was and continues to be an experiential gift in learning how to connect to one\'s deepest yearning and make that a reality. I relate to coaching as a calling and bring that reverence to those I serve.',
-                bg: 'linear-gradient(140deg,#3b1007 0%,#7c2d12 100%)',
-              },
-              {
-                title: 'The Medicine Bet',
-                desc: 'I left Silicon Valley for medical school — not for the credential, but for the rigor, service, and expertise. To commit to cultivating human potential, I first needed to understand its foil: illness and suffering. Becoming a doctor taught me to look for the question beneath the question.',
-                bg: 'linear-gradient(140deg,#1c0f00 0%,#92400e 100%)',
-              },
-              {
-                title: 'The Psychedelic Bet',
-                desc: 'I study altered states of consciousness because they surface what coaching and medicine have always pointed to: who we think we are is constructed and therefore malleable. By studying the ecstatic, I see in the ordinary what human beings are truly capable of.',
-                bg: 'linear-gradient(140deg,#2d1b00 0%,#78350f 100%)',
-              },
-            ].map(({ title, desc, bg }) => (
-              <div key={title} style={{
-                background:bg, borderRadius:'18px', padding:'32px 26px',
-                position:'relative', overflow:'hidden',
-                border:'1px solid rgba(245,158,11,0.12)',
-                transition:'transform 0.25s ease, box-shadow 0.25s ease',
-              }}
-              onMouseEnter={e=>{ e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 24px 56px rgba(245,158,11,0.14)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.transform='none'; e.currentTarget.style.boxShadow='none'; }}
-              >
-                <h3 style={{
-                  fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
-                  fontSize:'20px', fontWeight:500,
-                  color:'#fff', marginBottom:'12px',
-                }}>{title}</h3>
-                <p style={{ fontSize:'14px', lineHeight:'1.78', color:'rgba(255,255,255,0.82)' }}>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <hr className="v6-rule" />
 
-      {/* ── TESTIMONIALS TEASER ── */}
-      <section className="section" style={{
-        position:'relative', overflow:'hidden',
-        background:'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
-      }}>
-        <div className="orb" style={{ width:500, height:400, top:'-60px', right:'-80px', background:'radial-gradient(ellipse,rgba(245,158,11,0.10) 0%,transparent 70%)' }} />
-        <div className="orb" style={{ width:380, height:380, bottom:'-60px', left:'-60px', background:'radial-gradient(circle,rgba(234,108,30,0.08) 0%,transparent 70%)' }} />
-
-        <div className="container" style={{ position:'relative', zIndex:1 }}>
-          {/* Featured pull quote */}
-          <div style={{ textAlign:'center', maxWidth:'620px', margin:'0 auto 64px' }}>
-            <div style={{ width:'36px', height:'2px', background:'linear-gradient(90deg,#f59e0b,#ea6c1e)', borderRadius:'2px', margin:'0 auto 28px' }} />
-            <p style={{
-              fontSize:'clamp(22px,2.8vw,36px)',
-              fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
-              fontWeight:400, lineHeight:'1.42', color:'var(--text)', marginBottom:'20px',
-            }}>
-              "Coaching has felt like a jet pack for my life. More useful than almost anything else I could have invested in this past year."
-            </p>
-            <p style={{ fontSize:'12px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
-              Deepan Mehta, Co-Founder, Struct AI (YC S24)
-            </p>
-          </div>
-
-          {/* Three teaser cards — dark glass */}
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'16px', marginBottom:'36px' }} className="three-col">
-            {[
-              {
-                quote: 'Working with Fayzan allowed me to rapidly step into the best version of myself in a way that feels genuine and lasting.',
-                name: 'Aatash Parikh', role: 'Founder, Inkwire',
-                avatar: '/images/headshots/aatash-parikh.webp',
-                bar: 'linear-gradient(90deg,#f59e0b,#ea6c1e)',
-              },
-              {
-                quote: "Fayzan's mix of sharp questions, frameworks, and calm nature helped me turn a half-formed idea into a business. I went from employee to founder with an owner's mindset.",
-                name: 'Tayyab Rizvi', role: 'Founder, Scalemates',
-                avatar: '/images/headshots/tayyab-rizvi.jpeg',
-                bar: 'linear-gradient(90deg,#fbbf24,#f59e0b)',
-              },
-              {
-                quote: "Fayzan's unique value is at the intersection of the worlds he has been in — business, entrepreneurship, medical, psychiatric, and the psychedelic medicine work. All of that is wrapped in a spirituality and vulnerability that is rare.",
-                name: 'Andrew Barakat', role: 'AI Health PM, Google',
-                avatar: '/images/headshots/andrew-barakat.jpeg',
-                bar: 'linear-gradient(90deg,#ea6c1e,#fbbf24)',
-              },
-            ].map((t, i) => (
-              <div key={i} style={{
-                background:'rgba(20,12,2,0.60)',
-                border:'1px solid rgba(245,158,11,0.13)',
-                borderRadius:'18px',
-                padding:'28px 26px',
-                position:'relative',
-                overflow:'hidden',
-                backdropFilter:'blur(12px)',
-                transition:'all 0.28s ease',
-                display:'flex', flexDirection:'column', justifyContent:'space-between',
-                minHeight:'260px',
-              }}
-              onMouseEnter={e=>{ e.currentTarget.style.transform='translateY(-5px)'; e.currentTarget.style.borderColor='rgba(245,158,11,0.30)'; e.currentTarget.style.boxShadow='0 20px 48px rgba(0,0,0,0.40)'; }}
-              onMouseLeave={e=>{ e.currentTarget.style.transform='none'; e.currentTarget.style.borderColor='rgba(245,158,11,0.13)'; e.currentTarget.style.boxShadow='none'; }}
-              >
-                {/* Top gradient bar */}
-                <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:t.bar }} />
-                {/* Quote mark */}
-                <div style={{
-                  fontFamily:"'Instrument Serif',serif", fontSize:'32px', lineHeight:1,
-                  color:'rgba(245,158,11,0.45)', marginBottom:'14px',
-                }}>"</div>
-                {/* Quote text */}
-                <p style={{
-                  fontSize:'14px', lineHeight:'1.80',
-                  color:'rgba(253,248,237,0.68)',
-                  flex:1, marginBottom:'24px',
-                }}>{t.quote}</p>
-                {/* Person */}
-                <div style={{ display:'flex', alignItems:'center', gap:'11px' }}>
-                  <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" width="38" height="38" style={{
-                    width:'38px', height:'38px', borderRadius:'50%',
-                    objectFit:'cover', border:'1.5px solid rgba(245,158,11,0.22)',
-                    flexShrink:0,
-                  }} />
-                  <div>
-                    <div style={{ fontSize:'14px', fontWeight:600, color:'var(--text)' }}>{t.name}</div>
-                    <div style={{ fontSize:'12px', color:'var(--text-3)', marginTop:'2px' }}>{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Link to coaching page */}
-          <div style={{ textAlign:'center' }}>
-            <Link to="/coaching" style={{
-              fontSize:'12px', fontWeight:700, letterSpacing:'0.12em',
-              textTransform:'uppercase', color:'var(--amber)',
-              textDecoration:'none',
-            }}>Read more client stories →</Link>
-          </div>
-        </div>
-      </section>
-
-
-      {/* ── CTA ── */}
-      <section style={{ padding:'60px 0 100px' }}>
-        <div className="container">
-          <div style={{
-            borderRadius:'22px', padding:'68px 52px',
-            textAlign:'center', position:'relative', overflow:'hidden',
-            background:'linear-gradient(135deg,#3b1007 0%,#7c2d12 45%,#92400e 100%)',
-          }}>
-            <div className="orb" style={{ width:300, height:300, top:'-80px', right:'-60px', background:'radial-gradient(circle,rgba(255,255,255,0.07) 0%,transparent 70%)' }} />
-            <div className="orb" style={{ width:240, height:240, bottom:'-60px', left:'5%', background:'radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%)' }} />
-            <span className="label" style={{ color:'rgba(255,255,255,0.80)' }}>Start here</span>
-            <h2 style={{ fontSize:'clamp(24px,3.5vw,40px)', color:'#fff', marginBottom:'10px', position:'relative', fontWeight:500 }}>
-              Ready to bet big on yourself?
+      {/* ── PROFILE: large photo left, text right ── */}
+      <section>
+        <div className="v6-profile">
+          <img
+            className="v6-profile-img"
+            src="/images/fayzan-rita.jpeg"
+            alt="Fayzan Rab"
+            loading="lazy"
+          />
+          <div>
+            <h2 className="v6-profile-h2">
+              I work with a small number of people. Intentionally.
             </h2>
-            <p style={{ color:'rgba(255,255,255,0.82)', marginBottom:'30px', position:'relative', fontSize:'16px' }}>
-              I keep my client load small. Let's find out if this is the right fit.
+            <p>
+              My clients are high performers who aren't stuck because they lack information. They're stuck because the thing they need to figure out can't be found on Claude or delegated to anyone else.
             </p>
-            <Link to="/contact" style={{
-              display:'inline-block', padding:'13px 32px', borderRadius:'100px',
-              background:'linear-gradient(135deg, #f59e0b, #ea6c1e)',
-              color:'#fff', fontSize:'14px', fontWeight:600,
-              textDecoration:'none', position:'relative',
-              boxShadow:'0 0 28px rgba(245,158,11,0.40)',
-              transition:'all 0.22s ease',
-            }}
-            onMouseEnter={e=>{ e.currentTarget.style.opacity='0.88'; }}
-            onMouseLeave={e=>{ e.currentTarget.style.opacity='1'; }}
-            >
-              Start a conversation →
-            </Link>
+            <p>
+              I'm a physician who has studied and coached leadership over the past 7 years. 2,000+ hours. A practice built on the belief that the right conversation at the right time changes everything.
+            </p>
+            <Link to="/coaching" className="v6-cta-link">Who I work with →</Link>
           </div>
         </div>
       </section>
+
+      <hr className="v6-rule" />
+
+      {/* ── PULL QUOTE: one testimonial, full width, large ── */}
+      <section className="v6-pullquote">
+        <q>
+          Coaching has felt like a jet pack for my life. More useful than almost anything else I could have invested in this past year.
+        </q>
+        <cite>Deepan Mehta — Co-Founder, Struct AI (YC S24)</cite>
+      </section>
+
+      <hr className="v6-rule" />
+
+      {/* ── THE THREE BETS: warm tinted background, flowing prose ── */}
+      <section className="v6-bets">
+        <div className="v6-bets-inner">
+          <h2>Three bets. One through-line.</h2>
+          <p style={{ fontSize:'16px', color: inkMid, lineHeight:'1.80', marginTop:'-36px', marginBottom:'44px' }}>Everything I've done points to the same question: what does it actually take for a person to evolve?</p>
+          {[
+            {
+              title: 'The Coaching Bet',
+              body: 'I left Google and a Series A→C startup to pursue a calling in coaching. I bring reverence to every client engagement, treating it as a sacred privilege to serve others in growing past what they believe is possible.',
+            },
+            {
+              title: 'The Medicine Bet',
+              body: 'I went to medical school not for the credential, but for the rigor. Becoming a physician taught me to look for the question beneath the question — and to notice what isn\'t being said.',
+            },
+            {
+              title: 'The Psychedelic Bet',
+              body: 'I study altered states because they surface what coaching and medicine keep pointing to: who we think we are is constructed, and therefore malleable. That changes what I believe is possible for the people I work with.',
+            },
+          ].map(({ title, body }) => (
+            <div key={title} className="v6-bet">
+              <strong>{title}</strong>
+              <p>{body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECONDARY TESTIMONIALS: two columns, minimal ── */}
+      <div className="v6-quotes">
+        {[
+          {
+            quote: 'Working with Fayzan allowed me to rapidly step into the best version of myself in a way that feels genuine and lasting.',
+            name: 'Aatash Parikh',
+            role: 'Founder, Inkwire',
+            avatar: '/images/headshots/aatash-parikh.webp',
+          },
+          {
+            quote: "Fayzan's unique value is at the intersection of the worlds he has been in — business, medical, psychiatric, and the psychedelic medicine work. Rare.",
+            name: 'Andrew Barakat',
+            role: 'AI Health PM, Google',
+            avatar: '/images/headshots/andrew-barakat.jpeg',
+          },
+        ].map((t) => (
+          <div key={t.name} className="v6-quote-item">
+            <p>"{t.quote}"</p>
+            <div style={{ display:'flex', alignItems:'center', gap:'10px', marginTop:'4px' }}>
+              <img src={t.avatar} alt={t.name} loading="lazy" style={{ width:'36px', height:'36px', borderRadius:'50%', objectFit:'cover', border:'1.5px solid rgba(253,248,237,0.15)', flexShrink:0 }} />
+              <div>
+                <div className="v6-quote-name">{t.name}</div>
+                <div className="v6-quote-role">{t.role}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <hr className="v6-rule" />
+
+      {/* ── CTA: left-aligned, clean ── */}
+      <div className="v6-cta-section">
+        <h2>Ready to bet big on yourself?</h2>
+        <p>I keep my client load small. If something here resonated, let's find out if this is the right fit.</p>
+        <Link to="/contact" className="v6-btn-primary">Start a conversation</Link>
+      </div>
 
     </div>
   );

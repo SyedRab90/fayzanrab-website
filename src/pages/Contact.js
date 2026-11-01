@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 
+const ink    = '#fdf8ed';
+const inkMid = 'rgba(253,248,237,0.65)';
+const inkFaint = 'rgba(253,248,237,0.35)';
+const amber  = '#f59e0b';
+const bg2    = '#160b02';
+const border = 'rgba(253,248,237,0.15)';
+
 const labelStyle = {
   display: 'block',
-  fontSize: '12px',
-  fontWeight: 700,
-  letterSpacing: '0.12em',
-  textTransform: 'uppercase',
-  color: 'rgba(253,248,237,0.65)',
-  marginBottom: '8px',
+  fontSize: '13px',
+  fontWeight: 600,
+  letterSpacing: 'normal',
+  textTransform: 'none',
+  color: 'rgba(253,248,237,0.70)',
+  marginBottom: '6px',
 };
 
 const inputStyle = {
   width: '100%',
-  background: 'rgba(253,248,237,0.04)',
-  border: '1px solid rgba(245,158,11,0.18)',
-  borderRadius: '10px',
-  color: 'var(--text)',
+  background: 'rgba(255,255,255,0.06)',
+  border: `1px solid ${border}`,
+  borderRadius: '6px',
+  color: ink,
   fontFamily: 'inherit',
   fontSize: '16px',
-  padding: '14px 16px',
-  outline: 'none', /* :focus-visible override in index.css */
+  padding: '13px 16px',
+  outline: 'none',
   transition: 'border-color 0.2s',
 };
 
@@ -49,52 +56,49 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div style={{ background: '#0c0500', color: ink }}>
+
+      <style>{`
+        .contact-hero   { max-width: 700px; margin: 0 auto; padding: 160px 32px 80px; }
+        .contact-hero h1 { font-family: 'Raleway', sans-serif; font-size: clamp(52px, 7vw, 90px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.06; color: ${ink}; margin-bottom: 16px; }
+        .contact-hero p  { font-size: 16px; color: ${inkMid}; line-height: 1.78; max-width: 460px; }
+        .contact-form   { max-width: 700px; margin: 0 auto; padding: 0 32px 120px; }
+        .contact-rule   { border: none; border-top: 1px solid rgba(253,248,237,0.08); margin: 0; }
+        .contact-testi  { background: ${bg2}; padding: 100px 0; }
+        .contact-testi-inner { max-width: 660px; margin: 0 auto; padding: 0 32px; text-align: center; }
+
+        .contact-input:focus { border-color: ${amber} !important; outline: none; }
+
+        @media (max-width: 768px) {
+          .contact-hero { padding: 120px 24px 64px !important; }
+          .contact-form { padding: 0 24px 80px !important; }
+        }
+      `}</style>
 
       {/* ── HEADER ── */}
-      <section style={{
-        paddingTop: '160px', paddingBottom: '80px',
-        position: 'relative', overflow: 'hidden',
-      }}>
-        <div className="orb" style={{ width:560, height:560, top:'5%', right:'-8%', background:'radial-gradient(circle,rgba(245,158,11,0.15) 0%,transparent 68%)' }} />
-        <div className="orb" style={{ width:380, height:380, bottom:'10%', left:'-6%', background:'radial-gradient(circle,rgba(234,108,30,0.11) 0%,transparent 70%)' }} />
-
-        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '700px' }}>
-          <span className="label">Contact</span>
-          <h1 style={{
-            fontSize: 'clamp(52px,7vw,90px)',
-            fontWeight: 500, lineHeight: '1.06',
-            marginBottom: '16px',
-          }}>
-            Let's{' '}
-            <span style={{
-              background: 'linear-gradient(135deg,#fbbf24,#f59e0b,#ea6c1e)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-            }}>talk.</span>
-          </h1>
-          <p style={{
-            fontSize: '16px', color: 'var(--text-2)',
-            lineHeight: '1.78', maxWidth: '460px',
-          }}>
+      <section>
+        <div className="contact-hero">
+          <h1>Let's talk.</h1>
+          <p>
             Whether you have a specific goal or just a sense that something needs to change, reach out. I'll respond in 1-2 business days.
           </p>
         </div>
       </section>
 
       {/* ── FORM ── */}
-      <section style={{ paddingBottom: '120px', position: 'relative' }}>
-        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '700px' }}>
+      <section>
+        <div className="contact-form">
 
           {status === 'success' ? (
             <div style={{
-              background: 'rgba(245,158,11,0.07)',
-              border: '1px solid rgba(245,158,11,0.25)',
-              borderRadius: '16px',
+              background: bg2,
+              border: '1px solid rgba(253,248,237,0.10)',
+              borderRadius: '6px',
               padding: '56px 40px',
               textAlign: 'center',
             }}>
-              <p style={{ fontSize: '22px', fontWeight: 500, marginBottom: '12px' }}>Message sent.</p>
-              <p style={{ color: 'var(--text-2)', fontSize: '16px' }}>I'll be in touch within a couple of days.</p>
+              <p style={{ fontSize: '22px', fontWeight: 700, fontFamily: "'Raleway', sans-serif", marginBottom: '12px', color: ink }}>Message sent.</p>
+              <p style={{ color: inkMid, fontSize: '16px' }}>I'll be in touch within a couple of days.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -103,24 +107,24 @@ export default function Contact() {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="two-col">
                 <div>
                   <label style={labelStyle}>First Name *</label>
-                  <input type="text" name="first_name" required style={inputStyle} />
+                  <input type="text" name="first_name" required style={inputStyle} className="contact-input" />
                 </div>
                 <div>
                   <label style={labelStyle}>Last Name *</label>
-                  <input type="text" name="last_name" required style={inputStyle} />
+                  <input type="text" name="last_name" required style={inputStyle} className="contact-input" />
                 </div>
               </div>
 
               {/* Phone */}
               <div>
                 <label style={labelStyle}>Phone *</label>
-                <input type="tel" name="phone" required style={inputStyle} />
+                <input type="tel" name="phone" required style={inputStyle} className="contact-input" />
               </div>
 
               {/* Email */}
               <div>
                 <label style={labelStyle}>Email *</label>
-                <input type="email" name="email" required style={inputStyle} />
+                <input type="email" name="email" required style={inputStyle} className="contact-input" />
               </div>
 
               {/* Message */}
@@ -129,6 +133,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   required
+                  className="contact-input"
                   style={{ ...inputStyle, minHeight: '160px', resize: 'vertical' }}
                 />
               </div>
@@ -140,16 +145,26 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="btn btn-primary"
-                style={{ width: '100%', justifyContent: 'center', marginTop: '4px', opacity: status === 'sending' ? 0.7 : 1 }}
+                style={{
+                  width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  padding: '13px 28px', borderRadius: '5px',
+                  fontFamily: 'inherit', fontSize: '14px', fontWeight: 600,
+                  background: amber, color: '#fff',
+                  border: 'none', cursor: 'pointer',
+                  marginTop: '4px',
+                  opacity: status === 'sending' ? 0.7 : 1,
+                  transition: 'opacity 0.22s ease',
+                }}
+                onMouseEnter={e => { if (status !== 'sending') e.currentTarget.style.opacity = '0.88'; }}
+                onMouseLeave={e => { e.currentTarget.style.opacity = status === 'sending' ? '0.7' : '1'; }}
               >
                 {status === 'sending' ? 'Sending…' : 'Send message →'}
               </button>
 
               {status === 'error' && (
-                <p style={{ color: '#f87171', fontSize: '14px', textAlign: 'center' }}>
+                <p style={{ color: '#dc2626', fontSize: '14px', textAlign: 'center' }}>
                   Something went wrong. Email me directly at{' '}
-                  <a href="mailto:fayzanrabcoaching@gmail.com" style={{ color: 'var(--amber)' }}>
+                  <a href="mailto:fayzanrabcoaching@gmail.com" style={{ color: amber }}>
                     fayzanrabcoaching@gmail.com
                   </a>
                 </p>
@@ -160,24 +175,22 @@ export default function Contact() {
         </div>
       </section>
 
+      <hr className="contact-rule" />
+
       {/* ── TESTIMONIAL ── */}
-      <section style={{
-        padding: '100px 0',
-        background: 'linear-gradient(135deg,rgba(245,158,11,0.04) 0%,rgba(234,108,30,0.06) 100%)',
-        position: 'relative', overflow: 'hidden',
-      }}>
-        <div className="orb" style={{ width:440, height:300, top:'50%', left:'50%', transform:'translate(-50%,-50%)', background:'radial-gradient(ellipse,rgba(245,158,11,0.08) 0%,transparent 70%)' }} />
-        <div className="container" style={{ textAlign:'center', maxWidth:'660px', margin:'0 auto', position:'relative', zIndex:1 }}>
-          <div style={{ width:'36px', height:'2px', background:'linear-gradient(90deg,#f59e0b,#ea6c1e)', borderRadius:'2px', margin:'0 auto 30px' }} />
+      <section className="contact-testi">
+        <div className="contact-testi-inner">
           <p style={{
             fontSize:'clamp(19px,2.4vw,30px)',
-            fontFamily:"'Instrument Serif',serif", fontStyle:'normal',
-            fontWeight:400, lineHeight:'1.50',
-            color:'var(--text)', marginBottom:'24px',
+            fontFamily:"'Raleway', sans-serif",
+            fontWeight: 600,
+            lineHeight:'1.50',
+            color: ink, marginBottom:'24px',
+            letterSpacing: '-0.01em',
           }}>
             "Working with Fayzan allowed me to rapidly step into the best version of myself in a way that feels genuine and lasting."
           </p>
-          <p style={{ fontSize:'12px', fontWeight:700, letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--amber)' }}>
+          <p style={{ fontSize:'13px', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', color: inkFaint }}>
             — Aatash Parikh, Founder at Inkwire
           </p>
         </div>
