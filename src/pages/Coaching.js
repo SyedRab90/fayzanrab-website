@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const ink    = '#fdf8ed';
 const inkMid = 'rgba(253,248,237,0.65)';
@@ -81,6 +81,18 @@ const testimonials = [
 ];
 
 export default function Coaching() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.slice(1));
+      if (el) setTimeout(() => {
+          const top = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }, 50);
+    }
+  }, [location]);
+
   return (
     <div style={{ background: '#0c0500', color: ink }}>
 
@@ -152,7 +164,7 @@ export default function Coaching() {
 
       {/* ── TESTIMONIALS ── */}
       <section>
-        <div className="coaching-testi" style={{ paddingTop: '64px' }}>
+        <div id="testimonials" className="coaching-testi" style={{ paddingTop: '64px' }}>
           <h2>What people say</h2>
           <div className="testimonials-masonry" style={{ columns:3, columnGap:'16px' }}>
             {testimonials.map(t => (

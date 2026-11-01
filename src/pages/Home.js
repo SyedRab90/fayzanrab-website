@@ -37,7 +37,7 @@ export default function Home() {
 
         .v6-bets        { background: #160b02; padding: 72px 0; }
         .v6-bets-inner  { max-width: 780px; margin: 0 auto; padding: 0 48px; }
-        .v6-bets h2     { font-family: 'Raleway', sans-serif; font-size: clamp(22px, 2.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 56px; }
+        .v6-bets h2     { font-family: 'Raleway', sans-serif; font-size: clamp(22px, 2.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: ${ink}; margin-bottom: 16px; }
         .v6-bet         { padding-bottom: 44px; margin-bottom: 44px; border-bottom: 1px solid rgba(253,248,237,0.10); }
         .v6-bet:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
         .v6-bet strong  { display: block; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 18px; color: ${ink}; margin-bottom: 10px; }
@@ -159,7 +159,13 @@ export default function Home() {
         <q>
           Coaching has felt like a jet pack for my life. More useful than almost anything else I could have invested in this past year.
         </q>
-        <cite>Deepan Mehta — Co-Founder, Struct AI (YC S24)</cite>
+        <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'6px' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:'10px' }}>
+            <img src="/images/headshots/deepan-mehta.jpeg" alt="Deepan Mehta" loading="lazy" style={{ width:'36px', height:'36px', borderRadius:'50%', objectFit:'cover', border:'1.5px solid rgba(253,248,237,0.15)', flexShrink:0 }} />
+            <cite>Deepan Mehta — Co-Founder, Struct AI (YC S24)</cite>
+          </div>
+          <Link to="/coaching#testimonials" style={{ fontSize:'13px', color: amber, textDecoration:'none', letterSpacing:'0.03em' }}>Read more from clients →</Link>
+        </div>
       </section>
 
       <hr className="v6-rule" />
@@ -167,8 +173,8 @@ export default function Home() {
       {/* ── THE THREE BETS: warm tinted background, flowing prose ── */}
       <section className="v6-bets">
         <div className="v6-bets-inner">
-          <h2>Three bets. One through-line.</h2>
-          <p style={{ fontSize:'16px', color: inkMid, lineHeight:'1.80', marginTop:'-36px', marginBottom:'44px' }}>Everything I've done points to the same question: what does it actually take for a person to evolve?</p>
+          <h2>I only work with those ready to bet big on themselves.</h2>
+          <p style={{ fontSize:'16px', color: inkMid, lineHeight:'1.80', marginTop:'0px', marginBottom:'44px' }}>My three bets all focus on a singular commitment: what does it take to bring out the highest potential in others.</p>
           {[
             {
               title: 'The Coaching Bet',
@@ -191,34 +197,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECONDARY TESTIMONIALS: two columns, minimal ── */}
-      <div className="v6-quotes">
-        {[
-          {
-            quote: 'Working with Fayzan allowed me to rapidly step into the best version of myself in a way that feels genuine and lasting.',
-            name: 'Aatash Parikh',
-            role: 'Founder, Inkwire',
-            avatar: '/images/headshots/aatash-parikh.webp',
-          },
-          {
-            quote: "Fayzan's unique value is at the intersection of the worlds he has been in — business, medical, psychiatric, and the psychedelic medicine work. Rare.",
-            name: 'Andrew Barakat',
-            role: 'AI Health PM, Google',
-            avatar: '/images/headshots/andrew-barakat.jpeg',
-          },
-        ].map((t) => (
-          <div key={t.name} className="v6-quote-item">
-            <p>"{t.quote}"</p>
-            <div style={{ display:'flex', alignItems:'center', gap:'10px', marginTop:'4px' }}>
-              <img src={t.avatar} alt={t.name} loading="lazy" style={{ width:'36px', height:'36px', borderRadius:'50%', objectFit:'cover', border:'1.5px solid rgba(253,248,237,0.15)', flexShrink:0 }} />
-              <div>
-                <div className="v6-quote-name">{t.name}</div>
-                <div className="v6-quote-role">{t.role}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
 
       <hr className="v6-rule" />
 
