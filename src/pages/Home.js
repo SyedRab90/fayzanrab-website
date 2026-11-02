@@ -178,7 +178,7 @@ export default function Home() {
           {[
             {
               title: 'The Coaching Bet',
-              body: 'I left Google and a Series A→C startup to pursue a calling in coaching. I bring reverence to every client engagement, treating it as a sacred privilege to serve others in growing past what they believe is possible.',
+              body: 'Coaching, when practiced from a place of deep fulfillment, can reach the parts of a person that nothing else touches. My first coach showed me that. It\'s why I left a career in Product at Google and a Series A→C startup to pursue this as a calling.',
             },
             {
               title: 'The Medicine Bet',
