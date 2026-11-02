@@ -174,7 +174,7 @@ export default function Home() {
       <section className="v6-bets">
         <div className="v6-bets-inner">
           <h2>I only work with those ready to bet big on themselves.</h2>
-          <p style={{ fontSize:'16px', color: inkMid, lineHeight:'1.80', marginTop:'0px', marginBottom:'44px' }}>My three bets all focus on a singular commitment: what does it take to bring out the highest potential in others.</p>
+          <p style={{ fontSize:'16px', color: inkMid, lineHeight:'1.80', marginTop:'0px', marginBottom:'44px' }}>My big bet was to become masterful in the most powerful tools for human transformation.</p>
           {[
             {
               title: 'The Coaching Bet',
